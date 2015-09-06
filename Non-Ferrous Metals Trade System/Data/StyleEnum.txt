@@ -1,0 +1,18 @@
+﻿资金流水类型  FundsLogType
+	出金 FundsOut
+	入金 FundsIn
+	冲销 Reverse
+
+库存流水类型 StockLogType
+	出库 StockOut
+	入库 StockIn
+	冲销 Reverse
+	质押 Pledge
+	回购 Repo
+
+发票流水类型 InvoiceType
+	开票 InvoiceOut
+	收票 InvoiceIn
+	冲销 Reverse
+
+

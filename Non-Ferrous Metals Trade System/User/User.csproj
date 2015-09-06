@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D10C059F-3A20-4F98-A5DD-D16FC215A4E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFMT.User</RootNamespace>
+    <AssemblyName>NFMT.User</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AuthGroupDetailBLL.cs" />
+    <Compile Include="BLL\AuthOperateBLL.cs" />
+    <Compile Include="BLL\CorpDetailAttachBLL.cs" />
+    <Compile Include="BLL\CorporationDetailBLL.cs" />
+    <Compile Include="BLL\EmpMenuBLL.cs" />
+    <Compile Include="BLL\RoleDeptBLL.cs" />
+    <Compile Include="BLL\RoleDeptMenuBLL.cs" />
+    <Compile Include="BLL\RoleMenuOperateBLL.cs" />
+    <Compile Include="CorpTypeEnum.cs" />
+    <Compile Include="DAL\AuthGroupDetailDAL.cs" />
+    <Compile Include="DAL\AuthOperateDAL.cs" />
+    <Compile Include="DAL\CorpDeptDAL.cs" />
+    <Compile Include="DAL\CorpDetailAttachDAL.cs" />
+    <Compile Include="DAL\CorporationDetailDAL.cs" />
+    <Compile Include="DAL\EmpMenuDAL.cs" />
+    <Compile Include="DAL\Partial\CorporationDetailDAL.cs" />
+    <Compile Include="DAL\RoleDeptDAL.cs" />
+    <Compile Include="DAL\RoleDeptMenuDAL.cs" />
+    <Compile Include="DAL\RoleMenuOperateDAL.cs" />
+    <Compile Include="IDAL\IAuthGroupDetailDAL.cs" />
+    <Compile Include="IDAL\IAuthOperateDAL.cs" />
+    <Compile Include="IDAL\ICorpDeptDAL.cs" />
+    <Compile Include="IDAL\ICorpDetailAttachDAL.cs" />
+    <Compile Include="IDAL\ICorporationDetailDAL.cs" />
+    <Compile Include="IDAL\IEmpMenuDAL.cs" />
+    <Compile Include="IDAL\IRoleDeptDAL.cs" />
+    <Compile Include="IDAL\IRoleDeptMenuDAL.cs" />
+    <Compile Include="IDAL\IRoleMenuOperateDAL.cs" />
+    <Compile Include="MenuEnum.cs" />
+    <Compile Include="MenuProvider.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="BLL\AccountBLL.cs" />
+    <Compile Include="DAL\AccountDAL.cs" />
+    <Compile Include="Model\AuthGroup.cs" />
+    <Compile Include="BLL\AuthGroupBLL.cs" />
+    <Compile Include="DAL\AuthGroupDAL.cs" />
+    <Compile Include="Model\AuthGroupDetail.cs" />
+    <Compile Include="Model\AuthOperate.cs" />
+    <Compile Include="Model\AuthOption.cs" />
+    <Compile Include="Model\AuthOptionDetail.cs" />
+    <Compile Include="Model\AuthOptionDetailEmpRef.cs" />
+    <Compile Include="Model\Bloc.cs" />
+    <Compile Include="BLL\BlocBLL.cs" />
+    <Compile Include="DAL\BlocDAL.cs" />
+    <Compile Include="Model\Contact.cs" />
+    <Compile Include="BLL\ContactBLL.cs" />
+    <Compile Include="DAL\ContactDAL.cs" />
+    <Compile Include="Model\CorpDept.cs" />
+    <Compile Include="Model\CorpDetailAttach.cs" />
+    <Compile Include="Model\CorpEmp.cs" />
+    <Compile Include="Model\Corporation.cs" />
+    <Compile Include="BLL\CorporationBLL.cs" />
+    <Compile Include="DAL\CorporationDAL.cs" />
+    <Compile Include="Model\CorporationDetail.cs" />
+    <Compile Include="Model\Department.cs" />
+    <Compile Include="BLL\DepartmentBLL.cs" />
+    <Compile Include="DAL\DepartmentDAL.cs" />
+    <Compile Include="Model\DeptEmp.cs" />
+    <Compile Include="BLL\DeptEmpBLL.cs" />
+    <Compile Include="DAL\DeptEmpDAL.cs" />
+    <Compile Include="Model\EmpAuthGroup.cs" />
+    <Compile Include="BLL\EmpAuthGroupBLL.cs" />
+    <Compile Include="DAL\EmpAuthGroupDAL.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="BLL\EmployeeBLL.cs" />
+    <Compile Include="Model\EmployeeContact.cs" />
+    <Compile Include="BLL\EmployeeContactBLL.cs" />
+    <Compile Include="DAL\EmployeeContactDAL.cs" />
+    <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="Model\EmpMenu.cs" />
+    <Compile Include="Model\EmpRole.cs" />
+    <Compile Include="BLL\EmpRoleBLL.cs" />
+    <Compile Include="DAL\EmpRoleDAL.cs" />
+    <Compile Include="IDAL\IAccountDAL.cs" />
+    <Compile Include="IDAL\IAuthGroupDAL.cs" />
+    <Compile Include="IDAL\IBlocDAL.cs" />
+    <Compile Include="IDAL\IContactDAL.cs" />
+    <Compile Include="IDAL\ICorpEmpDAL.cs" />
+    <Compile Include="IDAL\ICorporationDAL.cs" />
+    <Compile Include="IDAL\IDepartmentDAL.cs" />
+    <Compile Include="IDAL\IDeptEmpDAL.cs" />
+    <Compile Include="IDAL\IEmpAuthGroupDAL.cs" />
+    <Compile Include="IDAL\IEmployeeContactDAL.cs" />
+    <Compile Include="IDAL\IEmployeeDAL.cs" />
+    <Compile Include="IDAL\IEmpRoleDAL.cs" />
+    <Compile Include="IDAL\IMenuDAL.cs" />
+    <Compile Include="IDAL\IRoleDAL.cs" />
+    <Compile Include="IDAL\IRoleMenuDAL.cs" />
+    <Compile Include="IDAL\IUserLoginDAL.cs" />
+    <Compile Include="IDAL\IUserOperationDAL.cs" />
+    <Compile Include="Model\Menu.cs" />
+    <Compile Include="BLL\MenuBLL.cs" />
+    <Compile Include="DAL\MenuDAL.cs" />
+    <Compile Include="Model\RoleDept.cs" />
+    <Compile Include="Model\RoleDeptMenu.cs" />
+    <Compile Include="Model\RoleMenuOperate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="BLL\RoleBLL.cs" />
+    <Compile Include="DAL\RoleDAL.cs" />
+    <Compile Include="Model\RoleMenu.cs" />
+    <Compile Include="BLL\RoleMenuBLL.cs" />
+    <Compile Include="DAL\RoleMenuDAL.cs" />
+    <Compile Include="Model\UserLogin.cs" />
+    <Compile Include="Model\UserOperation.cs" />
+    <Compile Include="UserProvider.cs" />
+    <Compile Include="UserSecurity.cs" />
+    <Compile Include="WorkStatusEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="用户权限表.txt" />
+    <Content Include="角色权限关系说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Authority\Authority.csproj">
+      <Project>{570900bd-88d6-45cb-88b4-f6b7b2de95d7}</Project>
+      <Name>Authority</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2ce37c4e-daee-4370-bf0e-56f7628bb299}</Project>
+      <Name>Common %28Common\Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{f80e8ea5-0e37-498a-9f8a-28057009ce76}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{97ea2492-4499-40da-a305-1538d4406ce1}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Operate\Operate.csproj">
+      <Project>{d0506c4b-c48a-426a-bbcb-732165c28e85}</Project>
+      <Name>Operate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>@Attrib -R "$(SolutionDir)DLLModel/$(TargetFileName)"
+@Copy "$(TargetPath)" "$(SolutionDir)DLLModel/"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,474 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Description="Generates a very simple business object."  %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+<%@ Property Name="NameSpace" Type="System.String" Default="" Category="Text" Description="Namespace for this class" %>
+<%--<%@ Property Name="DBName" Type="System.String" Default="" Category="Text" Description="Database Name" %>--%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Assembly Src="D:\work\软件\CodeSmith\Template\Templates\MyTemplate\SQLHelper.cs"%>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Data.SqlClient" %>
+<%@ Import Namespace="DBUtility" %>
+
+/*----------------------------------------------------------------
+// Copyright (C) 2014-2015 上海迪亮信息科技有限公司 版权所有。 
+// 文件名：<%= GetClassName(SourceTable) %>DAL.cs
+// 文件功能描述：<%= SourceTable.Description + SourceTable.FullName %>数据交互类。
+// 创建人：CodeSmith
+// 创建时间： <% =DateTime.Now.ToLongDateString() %>
+----------------------------------------------------------------*/
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using <%= NameSpace %>.Model;
+using <%= NameSpace.Substring(0,NameSpace.IndexOf(".")) %>.DBUtility;
+using <%= NameSpace %>.IDAL;
+using <%= NameSpace.Substring(0,NameSpace.IndexOf(".")) %>.Common;
+
+namespace <%= NameSpace %>.DAL
+{
+    /// <summary>
+    /// <%= SourceTable.Description + SourceTable.FullName %>数据交互类。
+    /// </summary>
+    public partial class <%= GetClassName(SourceTable) %>DAL : DataOperate , I<%= GetClassName(SourceTable) %>DAL
+    {
+		#region 构造函数
+        
+		/// <summary>
+		/// 构造函数
+		/// </summary>
+		public <%= GetClassName(SourceTable) %>DAL()
+		{
+		}
+        
+		#endregion
+
+        #region 数据库操作
+		
+        public override string ConnectString
+        {
+            get
+            {
+                return NFMT.DBUtility.SqlHelper.ConnectionStringNFMT;
+            }
+        }
+        
+        public override List<SqlParameter> CreateInsertParameters(IModel obj, ref SqlParameter returnValue)
+        {
+            <%= GetClassName(SourceTable) %> <%=GetModuleInstanceName(SourceTable)%> = (<%= GetClassName(SourceTable) %>)obj;
+
+            List<SqlParameter> paras = new List<SqlParameter>();
+                <% for (int i=0; i < SourceTable.Columns.Count; ++i) 
+               { %>
+                <% if (!SourceTable.Columns[i].IsPrimaryKeyMember) 
+                   { if(SourceTable.Columns[i].Name.ToString() == GetTableStatusCode(SourceTable))
+                     {%>
+                        <%=GetParamStringForSpecial(SourceTable.Columns[i],"(int)StatusEnum.已录入")%>
+                        <%continue;
+                     }%>
+                     <%if(SourceTable.Columns[i].Name.ToString()== "CreatorId"){%>
+                         <%=GetParamStringForSpecial(SourceTable.Columns[i],"obj.CreatorId")%>
+                         <%continue;
+                     }%>
+                     <%if(SourceTable.Columns[i].Name.ToString()== "CreateTime"||SourceTable.Columns[i].Name.ToString()== "LastModifyId"||SourceTable.Columns[i].Name.ToString()== "LastModifyTime"){%>
+                       <% continue; }%>
+			    <%= GetAddParametersString(SourceTable.Columns[i]) %>
+			     <%}
+                   else
+                   {%>
+                <%= AddOutParameter(SourceTable.Columns[i]) %>
+                 <%}
+			   }%>
+
+            return paras;
+        }
+        
+		public override IModel CreateModel(DataRow dr)
+        {
+            <%= GetClassName(SourceTable) %> <%= GetClassName(SourceTable).ToLower() %> = new <%= GetClassName(SourceTable) %>();
+
+            <% for (int i=0; i < SourceTable.Columns.Count; ++i) 
+                       {%>
+                    <%if(SourceTable.Columns[i].AllowDBNull) {%>
+                    if(dr["<%= SourceTable.Columns[i].Name %>"] != DBNull.Value)
+                    {
+                    <%if(SourceTable.Columns[i].Name.ToString()==GetTableStatusCode(SourceTable)) {%>
+                    <%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = (Common.StatusEnum)Enum.Parse(typeof(Common.StatusEnum), dr["<%= SourceTable.Columns[i].Name %>"].ToString());
+                    <%}else {%>
+                    <%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = <%= GetConvertString(SourceTable.Columns[i])%>dr["<%= SourceTable.Columns[i].Name %>"]);
+                    <%} %>
+                    }
+                    <%}else{ %>
+                    <%if(SourceTable.Columns[i].Name.ToString()==GetTableStatusCode(SourceTable)) {%>
+                    <%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = (Common.StatusEnum)Enum.Parse(typeof(Common.StatusEnum), dr["<%= SourceTable.Columns[i].Name %>"].ToString());
+                    <%}else {%>
+                    <%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = <%= GetConvertString(SourceTable.Columns[i])%>dr["<%= SourceTable.Columns[i].Name %>"]);
+                    <%} %>
+                    <%} %>
+                    <%--<%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = <%= GetConvertString(SourceTable.Columns[i])%>dr["<%= SourceTable.Columns[i].Name %>"]);--%>
+                    
+        	         <%}%>
+
+            return <%= GetClassName(SourceTable).ToLower() %>;
+        }
+        
+        public override IModel CreateModel(SqlDataReader dr)
+        {
+            <%= GetClassName(SourceTable) %> <%= GetClassName(SourceTable).ToLower() %> = new <%= GetClassName(SourceTable) %>();
+
+            <% for (int i=0; i < SourceTable.Columns.Count; ++i) 
+                       {%>
+                    int index<%= SourceTable.Columns[i].Name %> = dr.GetOrdinal("<%= SourceTable.Columns[i].Name %>");
+                    <%if(SourceTable.Columns[i].AllowDBNull) {%>
+                    if(dr["<%= SourceTable.Columns[i].Name %>"] != DBNull.Value)
+                    {
+                    <%if(SourceTable.Columns[i].Name.ToString()==GetTableStatusCode(SourceTable)) {%>
+                    <%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = (Common.StatusEnum)Enum.Parse(typeof(Common.StatusEnum), dr[index<%= SourceTable.Columns[i].Name %>].ToString());
+                    <%}else {%>
+                    <%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = <%= GetConvertString(SourceTable.Columns[i])%>dr[index<%= SourceTable.Columns[i].Name %>]);
+                    <%} %>
+                    }
+                    <%}else{ %>
+                    <%if(SourceTable.Columns[i].Name.ToString()==GetTableStatusCode(SourceTable)) {%>
+                    <%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = (Common.StatusEnum)Enum.Parse(typeof(Common.StatusEnum), dr[index<%= SourceTable.Columns[i].Name %>].ToString());
+                    <%}else {%>
+                    <%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = <%= GetConvertString(SourceTable.Columns[i])%>dr[index<%= SourceTable.Columns[i].Name %>]);
+                    <%} %>
+                    <%} %>
+                    <%--<%= GetClassName(SourceTable).ToLower() %>.<%= SourceTable.Columns[i].Name %> = <%= GetConvertString(SourceTable.Columns[i])%>dr["<%= SourceTable.Columns[i].Name %>"]);--%>
+                    
+        	         <%}%>
+
+            return <%= GetClassName(SourceTable).ToLower() %>;
+        }
+
+        public override string TableName
+        {
+            get
+            {
+                return "<%= SourceTable.Name %>";
+            }
+        }
+		
+        public override List<SqlParameter> CreateUpdateParameters(IModel obj) 
+        { 
+            <%= GetClassName(SourceTable) %> <%=GetModuleInstanceName(SourceTable)%> = (<%= GetClassName(SourceTable) %>)obj;
+            
+            List<SqlParameter> paras = new List<SqlParameter>();
+                
+            <% for (int i=0; i < SourceTable.Columns.Count; ++i) %>
+                   <%{ if(SourceTable.Columns[i].Name.ToString()=="LastModifyId"){%>
+            <%= GetParamStringForSpecial(SourceTable.Columns[i],"obj.LastModifyId") %>
+                   <%}%>
+                   <%else if(SourceTable.Columns[i].Name.ToString()== "CreatorId"||SourceTable.Columns[i].Name.ToString()== "CreateTime"||SourceTable.Columns[i].Name.ToString()== "LastModifyTime"){%>
+                   <% continue; }else{%>
+		    <%= GetAddParametersString(SourceTable.Columns[i]) %>
+			     <%}}%>    
+             
+             return paras;
+        }    
+        
+        #endregion
+    }
+}
+
+<script runat="template">
+    public string GetTableStatusCode(TableSchema table)
+    {
+        try 
+        {	        
+        	return SqlHelper.ExecuteScalar(SqlHelper.ConnectionStringNFMT,CommandType.Text,"select StatusNameCode from dbo.BDStatus where TableName = '"+ table.FullName +"'",null).ToString();
+        }
+        catch
+        {
+        	return string.Empty;
+        }
+    }
+               
+    public string GetConvertString(ColumnSchema column)
+    {
+        switch(column.DataType)
+        {
+            case DbType.Int32:
+                return "Convert.ToInt32(";
+            case DbType.DateTime:
+            case DbType.Date:
+                return "Convert.ToDateTime(";
+            case DbType.Decimal:
+                return "Convert.ToDecimal(";
+            case DbType.AnsiString:
+            case DbType.String:
+                return "Convert.ToString(";
+            case DbType.Boolean:
+                return "Convert.ToBoolean(";
+            default:
+                return "(";
+        }
+    }
+    
+    public string ConvertDbTypeToSqlDbType(DbType _dbtype)
+    {
+        switch(_dbtype)
+        {
+            case DbType.AnsiString:
+                return "SqlDbType.VarChar";
+            case DbType.Boolean:
+                return "SqlDbType.Bit";
+            case DbType.DateTime:
+                return "SqlDbType.DateTime";
+            case DbType.Decimal:
+                return "SqlDbType.Decimal";
+            case DbType.Int32:
+                return "SqlDbType.Int";
+            default:
+                return "SqlDbType.VarChar";
+        }
+    }
+    
+    public string AddOutParameter(ColumnSchema column)
+    {
+        return  "          returnValue.Direction = ParameterDirection.Output;\r\n"
+            + "            returnValue.SqlDbType = " + ConvertDbTypeToSqlDbType(column.DataType) + ";\r\n"
+            + "            returnValue.ParameterName =\"@" + column.Name + "\";\r\n" 
+            + "            returnValue.Size = " + column.Size + ";\r\n"
+            + "            paras.Add(returnValue);\r\n";
+    }
+    
+    public string GetParamStringForSpecial(ColumnSchema column,string ValueString)
+    {
+        DbType dbtype = column.DataType;
+        string result = String.Empty;
+//        if(column.AllowDBNull)
+//		{
+//			result = "if(" + GetModuleInstanceName(column.Table) + "." + column.Name + ">0)\r\n"
+//            +"            {\r\n"
+//            +"              SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+//            +"              "+column.Name.ToLower()+ "para.Value = "+ValueString+";\r\n"
+//            +"              paras.Add("+column.Name.ToLower()+ "para);\r\n"
+//            +"            }\r\n";
+//		}
+//		else
+//		{
+			result = "SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+            +"            "+column.Name.ToLower()+ "para.Value = "+ValueString +";\r\n"
+            +"            paras.Add("+column.Name.ToLower()+ "para);\r\n";
+//		}
+        return result;
+    }
+    
+    public string GetAddParametersString(ColumnSchema column)
+	{
+		DbType dbtype = column.DataType;
+		string result = String.Empty;
+	    switch (dbtype)
+        {
+			case DbType.Byte:
+			case DbType.Currency:
+			case DbType.Decimal:
+			case DbType.Int16:
+			case DbType.Int32:
+			case DbType.Int64:
+//			if(column.AllowDBNull)
+//			{
+//				result = "if(" + GetModuleInstanceName(column.Table) + "." + column.Name + ">0)\r\n"
+//                +"            {\r\n"
+//                +"              SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+//                +"              "+column.Name.ToLower()+ "para.Value = "+GetModuleInstanceName(column.Table) + "." + column.Name +";\r\n"
+//                +"              paras.Add("+column.Name.ToLower()+ "para);\r\n"
+//                +"            }\r\n";
+//			}
+//			else
+//			{
+				result = "SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+                +"            "+column.Name.ToLower()+ "para.Value = "+GetModuleInstanceName(column.Table) + "." + column.Name +";\r\n"
+                +"            paras.Add("+column.Name.ToLower()+ "para);\r\n";
+//			}
+			break;
+			case DbType.AnsiStringFixedLength:
+			case DbType.AnsiString:
+			case DbType.String:
+			case DbType.StringFixedLength:
+			case DbType.Binary:
+			if(column.AllowDBNull)
+			{
+                result = "if(!string.IsNullOrEmpty("+GetModuleInstanceName(column.Table) + "." + column.Name+"))\r\n"
+//				result = "if(" + GetModuleInstanceName(column.Table) + "." + column.Name + "!=null&&" + GetModuleInstanceName(column.Table) + "." + column.Name + ".Length>0)\r\n"
+                +"            {\r\n"
+                +"               SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+                +"               "+column.Name.ToLower()+ "para.Value = "+GetModuleInstanceName(column.Table) + "." + column.Name +";\r\n"
+                +"               paras.Add("+column.Name.ToLower()+ "para);\r\n"
+                +"            }\r\n";
+			}
+			else
+			{
+				result = "SqlParameter " + column.Name.ToLower() + "para = new SqlParameter(\"@"+column.Name+"\"," + ConvertDbTypeToSqlDbType(dbtype) + "," + column.Size+");\r\n"
+                +"            " + column.Name.ToLower() + "para.Value = " + GetModuleInstanceName(column.Table) + "." + column.Name + ";\r\n"
+                +"            paras.Add("+column.Name.ToLower()+ "para);\r\n";
+			}
+			break;
+			case DbType.Guid:
+			if(column.AllowDBNull)
+			{
+				result = "if(" + GetModuleInstanceName(column.Table) + "." + column.Name + ".ToString()!=null)\r\n"
+                +"            {\r\n"
+                +"              SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+                +"              "+column.Name.ToLower()+ "para.Value = "+GetModuleInstanceName(column.Table) + "." + column.Name +";\r\n"
+                +"              paras.Add("+column.Name.ToLower()+ "para);\r\n"
+                +"            }\r\n";
+			}
+			else
+			{
+				result = "SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+                +"            "+column.Name.ToLower()+ "para.Value = "+GetModuleInstanceName(column.Table) + "." + column.Name +";\r\n"
+                +"            paras.Add("+column.Name.ToLower()+ "para);\r\n";
+			}
+			break;
+			case DbType.DateTime:
+			case DbType.Date:
+			if(column.AllowDBNull)
+			{
+				result = "          SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+                +"          "+column.Name.ToLower()+ "para.Value = "+GetModuleInstanceName(column.Table) + "." + column.Name +";\r\n"
+                +"          paras.Add("+column.Name.ToLower()+ "para);\r\n";
+                
+			}
+			else
+			{
+				result = "SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+                +"            "+column.Name.ToLower()+ "para.Value = "+GetModuleInstanceName(column.Table) + "." + column.Name +";\r\n"
+                +"            paras.Add("+column.Name.ToLower()+ "para);\r\n";
+			}
+			break;
+			default:
+		    result = "SqlParameter "+column.Name.ToLower()+ "para = new SqlParameter(\"@"+column.Name+"\","+ConvertDbTypeToSqlDbType(dbtype)+","+column.Size+");\r\n"
+                +"             "+column.Name.ToLower()+ "para.Value = "+GetModuleInstanceName(column.Table) + "." + column.Name +";\r\n"
+                +"             paras.Add("+column.Name.ToLower()+ "para);\r\n";
+			break;
+		} 
+		return result;
+	}
+
+    public string GetCamelCaseName(string value)
+    {
+        return value.Substring(0, 1).ToLower() + value.Substring(1);
+    }
+
+//    public string ConvertFirstCharToUpper(string value)
+//    {
+//        return value.Substring(0, 1).ToUpper() + value.Substring(1);
+//    }
+//
+    public  string GetClassName(TableSchema table)
+    {
+		if(table==null)
+    	{
+    	    return string.Empty;
+    	}
+        
+    	string result = table.Name.Trim();
+        
+        if (table.Name.EndsWith("_Ref"))
+        {
+            result = result.Substring(0, table.Name.Length - 4);
+        }
+        
+        if(result.Split('_').Length>1)
+        {
+            result = result.Split('_')[1];
+        }
+    	
+    	return result ;
+    }
+
+	public string GetLowerCaseName(string value)
+    {
+	    return value.ToLower();
+    }
+
+	public string GetModuleInstanceName(TableSchema table)
+	{
+		return table.Name.ToLower();
+	}
+	
+	public string GetCSharpVariableType(ColumnSchema column)
+    {
+		if (column.Name.EndsWith("TypeCode")) return column.Name;
+		
+		switch (column.DataType)
+		{
+			case DbType.AnsiString: return "string";
+			case DbType.AnsiStringFixedLength: return "string";
+			case DbType.Binary: return "byte[]";
+			case DbType.Boolean: return "bool";
+			case DbType.Byte: return "byte";
+			case DbType.Currency: return "decimal";
+			case DbType.Date: return "DateTime";
+			case DbType.DateTime: return "DateTime";
+			case DbType.Decimal: return "decimal";
+			case DbType.Double: return "double";
+			case DbType.Guid: return "Guid";
+			case DbType.Int16: return "short";
+			case DbType.Int32: return "int";
+			case DbType.Int64: return "long";
+			case DbType.Object: return "object";
+            case DbType.SByte: return "sbyte";
+			case DbType.Single: return "float";
+			case DbType.String: return "string";
+			case DbType.StringFixedLength: return "string";
+			case DbType.Time: return "TimeSpan";
+			case DbType.UInt16: return "ushort";
+			case DbType.UInt32: return "uint";
+			case DbType.UInt64: return "ulong";
+			case DbType.VarNumeric: return "decimal";
+			default:
+			{
+				return "__UNKNOWN__" + column.NativeType;
+			}
+		}
+	}
+    
+	public string GetPrimaryKeyCSharpType()
+	{
+		return GetCSharpVariableType(SourceTable.PrimaryKey.MemberColumns[0]);
+	}
+    
+	public string GetValidateInputString()
+	{
+		DbType dbtype = SourceTable.PrimaryKey.MemberColumns[0].DataType;
+		string result = String.Empty;
+		switch(dbtype)
+		{
+			case DbType.Byte:
+			case DbType.Currency:
+			case DbType.Decimal:
+			case DbType.Int16:
+			case DbType.Int32:
+			case DbType.Int64:
+			    result = "if(" + GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) + "<1)";
+			    break;
+			case DbType.AnsiStringFixedLength:
+			case DbType.AnsiString:
+			case DbType.String:
+			case DbType.StringFixedLength:
+			case DbType.Binary:
+			    result = "if(" + GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) + ".Length==0)";
+			    break;
+//			break;
+			case DbType.Guid:
+			    result = "if(" + GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) + "==null)";
+			    break;
+			case DbType.DateTime:
+			case DbType.Date:
+			    result = "if(" + GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) + "==null)";
+			    break;
+			default:
+		        result = "if(" + GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) + "==null)";
+			    break;
+		}
+		return result;
+	}
+</script>

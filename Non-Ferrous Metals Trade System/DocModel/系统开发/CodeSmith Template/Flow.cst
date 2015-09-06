@@ -1,0 +1,123 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Description="Generates a very simple business object." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+<%@ Property Name="NameSpace" Type="System.String" Default="" Category="Text" Description="Namespace for this class" %>
+<%--<%@ Property Name="DBName" Type="System.String" Default="" Category="Text" Description="Database Name" %>--%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+
+/*----------------------------------------------------------------
+// Copyright (C) 2014-2015 上海迪亮信息科技有限公司 版权所有。 
+// 文件名：<%= GetClassName(SourceTable) %>Flow.cs
+// 文件功能描述：<%= SourceTable.Description + SourceTable.FullName %>工作流操作类。
+// 创建人：CodeSmith
+// 创建时间： <% =DateTime.Now.ToLongDateString() %>
+----------------------------------------------------------------*/
+
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Text;
+
+namespace <%= NameSpace %>.Flow
+{
+    /// <summary>
+    /// <%= SourceTable.Description+SourceTable.FullName %>工作流操作类。
+    /// </summary>
+    public class <%= GetClassName(SourceTable) %>Flow : NFMT.WorkFlow.IFlow
+    {
+        private DAL.<%= GetClassName(SourceTable) %>DAL dal = new DAL.<%= GetClassName(SourceTable) %>DAL();
+        
+        /// <summary>
+        /// 审核拒绝回调
+        /// </summary>
+        /// <param name="user">当前用户</param>
+        /// <param name="source">数据源</param>
+        /// <returns></returns>
+        public Common.ResultModel RefusalCallBack(Common.UserModel user, WorkFlow.Model.DataSource source)
+        {
+            Common.ResultModel result = new Common.ResultModel();
+
+            try
+            {
+                using (System.Transactions.TransactionScope scope = new System.Transactions.TransactionScope(System.Transactions.TransactionScopeOption.Required))
+                {
+                    result = dal.Get(user, source.RowId);
+                    if (result.ResultStatus != 0)
+                        return result;
+
+                    Model.<%= GetClassName(SourceTable) %> <%= GetCamelCaseName(GetClassName(SourceTable))%> = result.ReturnValue as Model.<%= GetClassName(SourceTable) %>;
+
+                    result = dal.Audit(user, <%= GetCamelCaseName(GetClassName(SourceTable))%>, false);
+
+                    if (result.ResultStatus != 0)
+                        return result;
+
+                    scope.Complete();
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Message = ex.Message;
+            }
+
+            return result;
+        }
+        
+        /// <summary>
+        /// 审核通过回调
+        /// </summary>
+        /// <param name="user">当前用户</param>
+        /// <param name="source">数据源</param>
+        /// <returns></returns>
+        public Common.ResultModel SuccessCallBack(Common.UserModel user, WorkFlow.Model.DataSource source)
+        {
+            Common.ResultModel result = new Common.ResultModel();
+
+            try
+            {
+                using (System.Transactions.TransactionScope scope = new System.Transactions.TransactionScope(System.Transactions.TransactionScopeOption.Required))
+                {
+                    result = dal.Get(user, source.RowId);
+                    if (result.ResultStatus != 0)
+                        return result;
+
+                    Model.<%= GetClassName(SourceTable) %> <%= GetCamelCaseName(GetClassName(SourceTable))%> = result.ReturnValue as Model.<%= GetClassName(SourceTable) %>;
+
+                    result = dal.Audit(user, <%= GetCamelCaseName(GetClassName(SourceTable))%>, true);
+
+                    if (result.ResultStatus != 0)
+                        return result;
+
+                    scope.Complete();
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Message = ex.Message;
+            }
+
+            return result;
+        }
+    }
+}
+
+<script runat="template">
+
+    public string GetCamelCaseName(string value)
+    {
+        return value.Substring(0, 1).ToLower() + value.Substring(1);
+    }
+
+    public string GetClassName(TableSchema table)
+    {
+		if(table==null)
+		{
+		    return null;
+		}
+		return table.Name;
+    }
+</script>

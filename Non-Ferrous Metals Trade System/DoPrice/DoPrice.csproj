@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8B0233B-8D38-4A8D-BB2F-8D3B13685986}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFMT.DoPrice</RootNamespace>
+    <AssemblyName>NFMT.DoPrice</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\InterestBLL.cs" />
+    <Compile Include="BLL\InterestDetailBLL.cs" />
+    <Compile Include="BLL\PriceConfirmBLL.cs" />
+    <Compile Include="BLL\PriceConfirmDetailBLL.cs" />
+    <Compile Include="BLL\PricingApplyBLL.cs" />
+    <Compile Include="BLL\PricingApplyDelayBLL.cs" />
+    <Compile Include="BLL\PricingApplyDetailBLL.cs" />
+    <Compile Include="BLL\PricingBLL.cs" />
+    <Compile Include="BLL\PricingDetailBLL.cs" />
+    <Compile Include="BLL\PricingPersonBLL.cs" />
+    <Compile Include="BLL\StopLossApplyBLL.cs" />
+    <Compile Include="BLL\StopLossApplyDetailBLL.cs" />
+    <Compile Include="BLL\StopLossBLL.cs" />
+    <Compile Include="BLL\StopLossDetailBLL.cs" />
+    <Compile Include="DAL\InterestDAL.cs" />
+    <Compile Include="DAL\InterestDetailDAL.cs" />
+    <Compile Include="DAL\Partial\InterestDAL.cs" />
+    <Compile Include="DAL\Partial\InterestDetailDAL.cs" />
+    <Compile Include="DAL\Partial\PriceConfirmDAL.cs" />
+    <Compile Include="DAL\Partial\PriceConfirmDetailDAL.cs" />
+    <Compile Include="DAL\Partial\PricingApplyDAL.cs" />
+    <Compile Include="DAL\PriceConfirmDAL.cs" />
+    <Compile Include="DAL\PriceConfirmDetailDAL.cs" />
+    <Compile Include="DAL\PricingApplyDAL.cs" />
+    <Compile Include="DAL\PricingApplyDelayDAL.cs" />
+    <Compile Include="DAL\PricingApplyDetailDAL.cs" />
+    <Compile Include="DAL\PricingDAL.cs" />
+    <Compile Include="DAL\PricingDetailDAL.cs" />
+    <Compile Include="DAL\PricingPersonDAL.cs" />
+    <Compile Include="DAL\StopLossApplyDAL.cs" />
+    <Compile Include="DAL\StopLossApplyDetailDAL.cs" />
+    <Compile Include="DAL\StopLossDAL.cs" />
+    <Compile Include="DAL\StopLossDetailDAL.cs" />
+    <Compile Include="IDAL\IInterestDAL.cs" />
+    <Compile Include="IDAL\IInterestDetailDAL.cs" />
+    <Compile Include="IDAL\IPriceConfirmDAL.cs" />
+    <Compile Include="IDAL\IPriceConfirmDetailDAL.cs" />
+    <Compile Include="IDAL\IPricingApplyDAL.cs" />
+    <Compile Include="IDAL\IPricingApplyDelayDAL.cs" />
+    <Compile Include="IDAL\IPricingApplyDetailDAL.cs" />
+    <Compile Include="IDAL\IPricingDAL.cs" />
+    <Compile Include="IDAL\IPricingDetailDAL.cs" />
+    <Compile Include="IDAL\IPricingPersonDAL.cs" />
+    <Compile Include="IDAL\IStopLossApplyDAL.cs" />
+    <Compile Include="IDAL\IStopLossApplyDetailDAL.cs" />
+    <Compile Include="IDAL\IStopLossDAL.cs" />
+    <Compile Include="IDAL\IStopLossDetailDAL.cs" />
+    <Compile Include="InterestStyleEnum.cs" />
+    <Compile Include="InterestTypeEnum.cs" />
+    <Compile Include="Model\Interest.cs" />
+    <Compile Include="Model\InterestDetail.cs" />
+    <Compile Include="Model\PriceConfirm.cs" />
+    <Compile Include="Model\PriceConfirmDetail.cs" />
+    <Compile Include="Model\Pricing.cs" />
+    <Compile Include="Model\PricingApply.cs" />
+    <Compile Include="Model\PricingApplyDelay.cs" />
+    <Compile Include="Model\PricingApplyDetail.cs" />
+    <Compile Include="Model\PricingDetail.cs" />
+    <Compile Include="Model\PricingPerson.cs" />
+    <Compile Include="Model\StopLoss.cs" />
+    <Compile Include="Model\StopLossApply.cs" />
+    <Compile Include="Model\StopLossApplyDetail.cs" />
+    <Compile Include="Model\StopLossDetail.cs" />
+    <Compile Include="PricingDirection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskProvider\InterestTaskProvider.cs" />
+    <Compile Include="TaskProvider\PriceConfirmTaskProvider.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Authority\Authority.csproj">
+      <Project>{570900bd-88d6-45cb-88b4-f6b7b2de95d7}</Project>
+      <Name>Authority</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2ce37c4e-daee-4370-bf0e-56f7628bb299}</Project>
+      <Name>Common %28Common\Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{6a58d209-0eba-4e67-8570-78e7f609d1ef}</Project>
+      <Name>Contract %28Contract\Contract%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{f80e8ea5-0e37-498a-9f8a-28057009ce76}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{97ea2492-4499-40da-a305-1538d4406ce1}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Funds\Funds.csproj">
+      <Project>{0206444d-2496-44aa-8a48-0d90518d6a36}</Project>
+      <Name>Funds %28Funds\Funds%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Operate\Operate.csproj">
+      <Project>{d0506c4b-c48a-426a-bbcb-732165c28e85}</Project>
+      <Name>Operate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{d10c059f-3a20-4f98-a5dd-d16fc215a4e0}</Project>
+      <Name>User %28User\User%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WareHouse\WareHouse.csproj">
+      <Project>{b379fdab-4cf5-4b2d-a55c-17a091e94459}</Project>
+      <Name>WareHouse %28WareHouse\WareHouse%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkFlow\WorkFlow.csproj">
+      <Project>{b0fd1659-24f8-44d8-ad2f-1695385dd55b}</Project>
+      <Name>WorkFlow %28WorkFlow\WorkFlow%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

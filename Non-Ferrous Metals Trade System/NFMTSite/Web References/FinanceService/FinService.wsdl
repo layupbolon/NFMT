@@ -1,0 +1,2800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetFinancingPledgeApplyList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="bankId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="assetId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pledgeApplyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinancingPledgeApplyListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyStockDetailList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyStockDetailListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinancingPledgeApplyStockDetailListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyStockDetailForHandList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyStockDetailForHandListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinancingPledgeApplyStockDetailForHandListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyCashDetailList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyCashDetailListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinancingPledgeApplyCashDetailListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyCashInfoList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyCashInfoListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinancingPledgeApplyCashInfoListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockInfoFromBusinessSystem">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetStockInfoFromBusinessSystemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockInfoFromBusinessSystemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinStockInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="refNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinStockInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinStockInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="tns:UserModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="pledgeApply" type="tns:PledgeApply" />
+            <s:element minOccurs="0" maxOccurs="1" name="details" type="tns:ArrayOfPledgeApplyStockDetail" />
+            <s:element minOccurs="1" maxOccurs="1" name="isSubmitAudit" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserModel">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AccountId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EmpId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmpName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BlocId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CorpId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeptId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CookieValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PledgeApply">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PledgeApplyId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PledgeApplyNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeptId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplyTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinancingBankId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FinancingAccountId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AssetId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SwitchBack" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExchangeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SumNetAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="SumHands" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PledgeApplyStatus" type="tns:StatusEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatorId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastModifyId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastModifyTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:StatusEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="StatusEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="无效数据" />
+          <s:enumeration value="已作废" />
+          <s:enumeration value="已关闭" />
+          <s:enumeration value="已录入" />
+          <s:enumeration value="已撤返" />
+          <s:enumeration value="录入禁提交" />
+          <s:enumeration value="审核拒绝" />
+          <s:enumeration value="待审核" />
+          <s:enumeration value="绑定合约" />
+          <s:enumeration value="已生效" />
+          <s:enumeration value="已冻结" />
+          <s:enumeration value="执行修改" />
+          <s:enumeration value="已完成" />
+          <s:enumeration value="部分完成" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfPledgeApplyStockDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PledgeApplyStockDetail" nillable="true" type="tns:PledgeApplyStockDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PledgeApplyStockDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StockDetailId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PledgeApplyId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContractNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NetAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="StockId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RefNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Deadline" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Hands" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Memo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DetailStatus" type="tns:StatusEnum" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreatorId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastModifyId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastModifyTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:StatusEnum" />
+          <s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FinancingPledgeApplyCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyCreateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pledgeApplyStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detailsStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyInvalid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyInvalidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyInvalidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyGoBack">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyGoBackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyGoBackResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyIdComplete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyIdCompleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyIdCompleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyIdCompleteCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyIdCompleteCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyIdCompleteCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyClose">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyCloseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyCloseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyUpdateHands">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detailsStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyUpdateHandsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyUpdateHandsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyUpdateCash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detailsStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingPledgeApplyUpdateCashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingPledgeApplyUpdateCashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingRepoApplyList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pledgeApplyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="repoApplyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingRepoApplyListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinancingRepoApplyListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinPledgeApplyStockDetailForRepoList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinPledgeApplyStockDetailForRepoListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinPledgeApplyStockDetailForRepoListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinRepoApplyCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="repoApplyStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="repoApplyDetailsStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isSubmitAudit" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinRepoApplyCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinRepoApplyCreateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinRepoApplyStockDetailForUpdateUp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinRepoApplyStockDetailForUpdateUpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinRepoApplyStockDetailForUpdateUpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinRepoApplyStockDetailForUpdateDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinRepoApplyStockDetailForUpdateDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinRepoApplyStockDetailForUpdateDownResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinRepoApplyUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="repoApplyStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="repoApplyDetailsStr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinRepoApplyUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinRepoApplyUpdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyInvalid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyInvalidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingRepoApplyInvalidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyGoBack">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyGoBackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingRepoApplyGoBackResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyIdComplete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyIdCompleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingRepoApplyIdCompleteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyIdCompleteCancel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyIdCompleteCancelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingRepoApplyIdCompleteCancelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinRepoApplyStockDetailForHands">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinRepoApplyStockDetailForHandsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinRepoApplyStockDetailForHandsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyUpdateHands">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detailsStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyUpdateHandsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingRepoApplyUpdateHandsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyUpdateCash">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userStr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detailsStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="repoApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FinancingRepoApplyUpdateCashResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FinancingRepoApplyUpdateCashResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyRepoInfoList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pledgeApplyId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyRepoInfoListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinancingPledgeApplyRepoInfoListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyListForRepoCreate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pagenum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pagesize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderStr" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="toDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="bankId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="assetId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pledgeApplyNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFinancingPledgeApplyListForRepoCreateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFinancingPledgeApplyListForRepoCreateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFinancingPledgeApplyListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyList" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyStockDetailList" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyStockDetailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailForHandListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyStockDetailForHandList" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailForHandListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyStockDetailForHandListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashDetailListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyCashDetailList" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashDetailListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyCashDetailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashInfoListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyCashInfoList" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashInfoListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyCashInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockInfoFromBusinessSystemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockInfoFromBusinessSystem" />
+  </wsdl:message>
+  <wsdl:message name="GetStockInfoFromBusinessSystemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockInfoFromBusinessSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinStockInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinStockInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFinStockInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinStockInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyCreate" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyUpdate" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyInvalidSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyInvalid" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyInvalidSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyInvalidResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyGoBackSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyGoBack" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyGoBackSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyGoBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyIdComplete" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyIdCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyIdCompleteCancel" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyIdCompleteCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyCloseSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyClose" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyCloseSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyCloseResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHandsSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyUpdateHands" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHandsSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyUpdateHandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateCashSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyUpdateCash" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateCashSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingPledgeApplyUpdateCashResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingRepoApplyListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinancingRepoApplyList" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingRepoApplyListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinancingRepoApplyListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinPledgeApplyStockDetailForRepoListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinPledgeApplyStockDetailForRepoList" />
+  </wsdl:message>
+  <wsdl:message name="GetFinPledgeApplyStockDetailForRepoListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinPledgeApplyStockDetailForRepoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:FinRepoApplyCreate" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:FinRepoApplyCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateUpSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinRepoApplyStockDetailForUpdateUp" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateUpSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinRepoApplyStockDetailForUpdateUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateDownSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinRepoApplyStockDetailForUpdateDown" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateDownSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinRepoApplyStockDetailForUpdateDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:FinRepoApplyUpdate" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:FinRepoApplyUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyInvalidSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyInvalid" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyInvalidSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyInvalidResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyGoBackSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyGoBack" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyGoBackSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyGoBackResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyIdComplete" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyIdCompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteCancelSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyIdCompleteCancel" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteCancelSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyIdCompleteCancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForHandsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinRepoApplyStockDetailForHands" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForHandsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinRepoApplyStockDetailForHandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateHandsSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyUpdateHands" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateHandsSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyUpdateHandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateCashSoapIn">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyUpdateCash" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateCashSoapOut">
+    <wsdl:part name="parameters" element="tns:FinancingRepoApplyUpdateCashResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyRepoInfoListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyRepoInfoList" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyRepoInfoListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyRepoInfoListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListForRepoCreateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyListForRepoCreate" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListForRepoCreateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFinancingPledgeApplyListForRepoCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="fromDate" type="s:string" />
+    <wsdl:part name="toDate" type="s:string" />
+    <wsdl:part name="bankId" type="s:string" />
+    <wsdl:part name="assetId" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="pledgeApplyNo" type="s:string" />
+    <wsdl:part name="refNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailListHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailForHandListHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailForHandListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashDetailListHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashDetailListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashInfoListHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashInfoListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStockInfoFromBusinessSystemHttpGetIn" />
+  <wsdl:message name="GetStockInfoFromBusinessSystemHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinStockInfoHttpGetIn">
+    <wsdl:part name="refNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinStockInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyInvalidHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyInvalidHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyGoBackHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyGoBackHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteCancelHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteCancelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyCloseHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyCloseHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHandsHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHandsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateCashHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateCashHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingRepoApplyListHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="pledgeApplyNo" type="s:string" />
+    <wsdl:part name="repoApplyNo" type="s:string" />
+    <wsdl:part name="refNo" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingRepoApplyListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinPledgeApplyStockDetailForRepoListHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinPledgeApplyStockDetailForRepoListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyCreateHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyStr" type="s:string" />
+    <wsdl:part name="repoApplyDetailsStr" type="s:string" />
+    <wsdl:part name="isSubmitAudit" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyCreateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateUpHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateUpHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateDownHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateDownHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyUpdateHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyStr" type="s:string" />
+    <wsdl:part name="repoApplyDetailsStr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyUpdateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyInvalidHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyInvalidHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyGoBackHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyGoBackHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteCancelHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteCancelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForHandsHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForHandsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateHandsHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateHandsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateCashHttpGetIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateCashHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyRepoInfoListHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyRepoInfoListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListForRepoCreateHttpGetIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="fromDate" type="s:string" />
+    <wsdl:part name="toDate" type="s:string" />
+    <wsdl:part name="bankId" type="s:string" />
+    <wsdl:part name="assetId" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="pledgeApplyNo" type="s:string" />
+    <wsdl:part name="refNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListForRepoCreateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="fromDate" type="s:string" />
+    <wsdl:part name="toDate" type="s:string" />
+    <wsdl:part name="bankId" type="s:string" />
+    <wsdl:part name="assetId" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="pledgeApplyNo" type="s:string" />
+    <wsdl:part name="refNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailListHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailForHandListHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyStockDetailForHandListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashDetailListHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashDetailListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashInfoListHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyCashInfoListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStockInfoFromBusinessSystemHttpPostIn" />
+  <wsdl:message name="GetStockInfoFromBusinessSystemHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinStockInfoHttpPostIn">
+    <wsdl:part name="refNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinStockInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyInvalidHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyInvalidHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyGoBackHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyGoBackHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteCancelHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyIdCompleteCancelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyCloseHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyCloseHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHandsHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateHandsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateCashHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingPledgeApplyUpdateCashHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingRepoApplyListHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="pledgeApplyNo" type="s:string" />
+    <wsdl:part name="repoApplyNo" type="s:string" />
+    <wsdl:part name="refNo" type="s:string" />
+    <wsdl:part name="beginDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingRepoApplyListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinPledgeApplyStockDetailForRepoListHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinPledgeApplyStockDetailForRepoListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyCreateHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyStr" type="s:string" />
+    <wsdl:part name="repoApplyDetailsStr" type="s:string" />
+    <wsdl:part name="isSubmitAudit" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyCreateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateUpHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateUpHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateDownHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForUpdateDownHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyUpdateHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyStr" type="s:string" />
+    <wsdl:part name="repoApplyDetailsStr" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinRepoApplyUpdateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyInvalidHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyInvalidHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyGoBackHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyGoBackHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteCancelHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyIdCompleteCancelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForHandsHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinRepoApplyStockDetailForHandsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateHandsHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateHandsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateCashHttpPostIn">
+    <wsdl:part name="userStr" type="s:string" />
+    <wsdl:part name="detailsStr" type="s:string" />
+    <wsdl:part name="repoApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FinancingRepoApplyUpdateCashHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyRepoInfoListHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="pledgeApplyId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyRepoInfoListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListForRepoCreateHttpPostIn">
+    <wsdl:part name="pagenum" type="s:string" />
+    <wsdl:part name="pagesize" type="s:string" />
+    <wsdl:part name="orderStr" type="s:string" />
+    <wsdl:part name="fromDate" type="s:string" />
+    <wsdl:part name="toDate" type="s:string" />
+    <wsdl:part name="bankId" type="s:string" />
+    <wsdl:part name="assetId" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="pledgeApplyNo" type="s:string" />
+    <wsdl:part name="refNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFinancingPledgeApplyListForRepoCreateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="FinServiceSoap">
+    <wsdl:operation name="GetFinancingPledgeApplyList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyListSoapIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyStockDetailListSoapIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyStockDetailListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailForHandList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyStockDetailForHandListSoapIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyStockDetailForHandListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashDetailList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyCashDetailListSoapIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyCashDetailListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashInfoList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyCashInfoListSoapIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyCashInfoListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInfoFromBusinessSystem">
+      <wsdl:input message="tns:GetStockInfoFromBusinessSystemSoapIn" />
+      <wsdl:output message="tns:GetStockInfoFromBusinessSystemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinStockInfo">
+      <wsdl:input message="tns:GetFinStockInfoSoapIn" />
+      <wsdl:output message="tns:GetFinStockInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyCreate">
+      <wsdl:input message="tns:FinancingPledgeApplyCreateSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdate">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyInvalid">
+      <wsdl:input message="tns:FinancingPledgeApplyInvalidSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyInvalidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyGoBack">
+      <wsdl:input message="tns:FinancingPledgeApplyGoBackSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyGoBackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdComplete">
+      <wsdl:input message="tns:FinancingPledgeApplyIdCompleteSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyIdCompleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdCompleteCancel">
+      <wsdl:input message="tns:FinancingPledgeApplyIdCompleteCancelSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyIdCompleteCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyClose">
+      <wsdl:input message="tns:FinancingPledgeApplyCloseSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyCloseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateHands">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateHandsSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateHandsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateCash">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateCashSoapIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateCashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingRepoApplyList">
+      <wsdl:input message="tns:GetFinancingRepoApplyListSoapIn" />
+      <wsdl:output message="tns:GetFinancingRepoApplyListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinPledgeApplyStockDetailForRepoList">
+      <wsdl:input message="tns:GetFinPledgeApplyStockDetailForRepoListSoapIn" />
+      <wsdl:output message="tns:GetFinPledgeApplyStockDetailForRepoListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyCreate">
+      <wsdl:input message="tns:FinRepoApplyCreateSoapIn" />
+      <wsdl:output message="tns:FinRepoApplyCreateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateUp">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForUpdateUpSoapIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForUpdateUpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateDown">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForUpdateDownSoapIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForUpdateDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyUpdate">
+      <wsdl:input message="tns:FinRepoApplyUpdateSoapIn" />
+      <wsdl:output message="tns:FinRepoApplyUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyInvalid">
+      <wsdl:input message="tns:FinancingRepoApplyInvalidSoapIn" />
+      <wsdl:output message="tns:FinancingRepoApplyInvalidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyGoBack">
+      <wsdl:input message="tns:FinancingRepoApplyGoBackSoapIn" />
+      <wsdl:output message="tns:FinancingRepoApplyGoBackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdComplete">
+      <wsdl:input message="tns:FinancingRepoApplyIdCompleteSoapIn" />
+      <wsdl:output message="tns:FinancingRepoApplyIdCompleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdCompleteCancel">
+      <wsdl:input message="tns:FinancingRepoApplyIdCompleteCancelSoapIn" />
+      <wsdl:output message="tns:FinancingRepoApplyIdCompleteCancelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForHands">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForHandsSoapIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForHandsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateHands">
+      <wsdl:input message="tns:FinancingRepoApplyUpdateHandsSoapIn" />
+      <wsdl:output message="tns:FinancingRepoApplyUpdateHandsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateCash">
+      <wsdl:input message="tns:FinancingRepoApplyUpdateCashSoapIn" />
+      <wsdl:output message="tns:FinancingRepoApplyUpdateCashSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyRepoInfoList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyRepoInfoListSoapIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyRepoInfoListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyListForRepoCreate">
+      <wsdl:input message="tns:GetFinancingPledgeApplyListForRepoCreateSoapIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyListForRepoCreateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="FinServiceHttpGet">
+    <wsdl:operation name="GetFinancingPledgeApplyList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyListHttpGetIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyStockDetailListHttpGetIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyStockDetailListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailForHandList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyStockDetailForHandListHttpGetIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyStockDetailForHandListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashDetailList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyCashDetailListHttpGetIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyCashDetailListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashInfoList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyCashInfoListHttpGetIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyCashInfoListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInfoFromBusinessSystem">
+      <wsdl:input message="tns:GetStockInfoFromBusinessSystemHttpGetIn" />
+      <wsdl:output message="tns:GetStockInfoFromBusinessSystemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinStockInfo">
+      <wsdl:input message="tns:GetFinStockInfoHttpGetIn" />
+      <wsdl:output message="tns:GetFinStockInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdate">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateHttpGetIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyInvalid">
+      <wsdl:input message="tns:FinancingPledgeApplyInvalidHttpGetIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyInvalidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyGoBack">
+      <wsdl:input message="tns:FinancingPledgeApplyGoBackHttpGetIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyGoBackHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdComplete">
+      <wsdl:input message="tns:FinancingPledgeApplyIdCompleteHttpGetIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyIdCompleteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdCompleteCancel">
+      <wsdl:input message="tns:FinancingPledgeApplyIdCompleteCancelHttpGetIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyIdCompleteCancelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyClose">
+      <wsdl:input message="tns:FinancingPledgeApplyCloseHttpGetIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyCloseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateHands">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateHandsHttpGetIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateHandsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateCash">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateCashHttpGetIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateCashHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingRepoApplyList">
+      <wsdl:input message="tns:GetFinancingRepoApplyListHttpGetIn" />
+      <wsdl:output message="tns:GetFinancingRepoApplyListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinPledgeApplyStockDetailForRepoList">
+      <wsdl:input message="tns:GetFinPledgeApplyStockDetailForRepoListHttpGetIn" />
+      <wsdl:output message="tns:GetFinPledgeApplyStockDetailForRepoListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyCreate">
+      <wsdl:input message="tns:FinRepoApplyCreateHttpGetIn" />
+      <wsdl:output message="tns:FinRepoApplyCreateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateUp">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForUpdateUpHttpGetIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForUpdateUpHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateDown">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForUpdateDownHttpGetIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForUpdateDownHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyUpdate">
+      <wsdl:input message="tns:FinRepoApplyUpdateHttpGetIn" />
+      <wsdl:output message="tns:FinRepoApplyUpdateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyInvalid">
+      <wsdl:input message="tns:FinancingRepoApplyInvalidHttpGetIn" />
+      <wsdl:output message="tns:FinancingRepoApplyInvalidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyGoBack">
+      <wsdl:input message="tns:FinancingRepoApplyGoBackHttpGetIn" />
+      <wsdl:output message="tns:FinancingRepoApplyGoBackHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdComplete">
+      <wsdl:input message="tns:FinancingRepoApplyIdCompleteHttpGetIn" />
+      <wsdl:output message="tns:FinancingRepoApplyIdCompleteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdCompleteCancel">
+      <wsdl:input message="tns:FinancingRepoApplyIdCompleteCancelHttpGetIn" />
+      <wsdl:output message="tns:FinancingRepoApplyIdCompleteCancelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForHands">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForHandsHttpGetIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForHandsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateHands">
+      <wsdl:input message="tns:FinancingRepoApplyUpdateHandsHttpGetIn" />
+      <wsdl:output message="tns:FinancingRepoApplyUpdateHandsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateCash">
+      <wsdl:input message="tns:FinancingRepoApplyUpdateCashHttpGetIn" />
+      <wsdl:output message="tns:FinancingRepoApplyUpdateCashHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyRepoInfoList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyRepoInfoListHttpGetIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyRepoInfoListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyListForRepoCreate">
+      <wsdl:input message="tns:GetFinancingPledgeApplyListForRepoCreateHttpGetIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyListForRepoCreateHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="FinServiceHttpPost">
+    <wsdl:operation name="GetFinancingPledgeApplyList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyListHttpPostIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyStockDetailListHttpPostIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyStockDetailListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailForHandList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyStockDetailForHandListHttpPostIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyStockDetailForHandListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashDetailList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyCashDetailListHttpPostIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyCashDetailListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashInfoList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyCashInfoListHttpPostIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyCashInfoListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInfoFromBusinessSystem">
+      <wsdl:input message="tns:GetStockInfoFromBusinessSystemHttpPostIn" />
+      <wsdl:output message="tns:GetStockInfoFromBusinessSystemHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinStockInfo">
+      <wsdl:input message="tns:GetFinStockInfoHttpPostIn" />
+      <wsdl:output message="tns:GetFinStockInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdate">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateHttpPostIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyInvalid">
+      <wsdl:input message="tns:FinancingPledgeApplyInvalidHttpPostIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyInvalidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyGoBack">
+      <wsdl:input message="tns:FinancingPledgeApplyGoBackHttpPostIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyGoBackHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdComplete">
+      <wsdl:input message="tns:FinancingPledgeApplyIdCompleteHttpPostIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyIdCompleteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdCompleteCancel">
+      <wsdl:input message="tns:FinancingPledgeApplyIdCompleteCancelHttpPostIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyIdCompleteCancelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyClose">
+      <wsdl:input message="tns:FinancingPledgeApplyCloseHttpPostIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyCloseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateHands">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateHandsHttpPostIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateHandsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateCash">
+      <wsdl:input message="tns:FinancingPledgeApplyUpdateCashHttpPostIn" />
+      <wsdl:output message="tns:FinancingPledgeApplyUpdateCashHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingRepoApplyList">
+      <wsdl:input message="tns:GetFinancingRepoApplyListHttpPostIn" />
+      <wsdl:output message="tns:GetFinancingRepoApplyListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinPledgeApplyStockDetailForRepoList">
+      <wsdl:input message="tns:GetFinPledgeApplyStockDetailForRepoListHttpPostIn" />
+      <wsdl:output message="tns:GetFinPledgeApplyStockDetailForRepoListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyCreate">
+      <wsdl:input message="tns:FinRepoApplyCreateHttpPostIn" />
+      <wsdl:output message="tns:FinRepoApplyCreateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateUp">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForUpdateUpHttpPostIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForUpdateUpHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateDown">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForUpdateDownHttpPostIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForUpdateDownHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyUpdate">
+      <wsdl:input message="tns:FinRepoApplyUpdateHttpPostIn" />
+      <wsdl:output message="tns:FinRepoApplyUpdateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyInvalid">
+      <wsdl:input message="tns:FinancingRepoApplyInvalidHttpPostIn" />
+      <wsdl:output message="tns:FinancingRepoApplyInvalidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyGoBack">
+      <wsdl:input message="tns:FinancingRepoApplyGoBackHttpPostIn" />
+      <wsdl:output message="tns:FinancingRepoApplyGoBackHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdComplete">
+      <wsdl:input message="tns:FinancingRepoApplyIdCompleteHttpPostIn" />
+      <wsdl:output message="tns:FinancingRepoApplyIdCompleteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdCompleteCancel">
+      <wsdl:input message="tns:FinancingRepoApplyIdCompleteCancelHttpPostIn" />
+      <wsdl:output message="tns:FinancingRepoApplyIdCompleteCancelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForHands">
+      <wsdl:input message="tns:GetFinRepoApplyStockDetailForHandsHttpPostIn" />
+      <wsdl:output message="tns:GetFinRepoApplyStockDetailForHandsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateHands">
+      <wsdl:input message="tns:FinancingRepoApplyUpdateHandsHttpPostIn" />
+      <wsdl:output message="tns:FinancingRepoApplyUpdateHandsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateCash">
+      <wsdl:input message="tns:FinancingRepoApplyUpdateCashHttpPostIn" />
+      <wsdl:output message="tns:FinancingRepoApplyUpdateCashHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyRepoInfoList">
+      <wsdl:input message="tns:GetFinancingPledgeApplyRepoInfoListHttpPostIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyRepoInfoListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyListForRepoCreate">
+      <wsdl:input message="tns:GetFinancingPledgeApplyListForRepoCreateHttpPostIn" />
+      <wsdl:output message="tns:GetFinancingPledgeApplyListForRepoCreateHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FinServiceSoap" type="tns:FinServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFinancingPledgeApplyList">
+      <soap:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailList">
+      <soap:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyStockDetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailForHandList">
+      <soap:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyStockDetailForHandList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashDetailList">
+      <soap:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyCashDetailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashInfoList">
+      <soap:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyCashInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInfoFromBusinessSystem">
+      <soap:operation soapAction="http://tempuri.org/GetStockInfoFromBusinessSystem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinStockInfo">
+      <soap:operation soapAction="http://tempuri.org/GetFinStockInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyCreate">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdate">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyInvalid">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyInvalid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyGoBack">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyGoBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdComplete">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyIdComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdCompleteCancel">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyIdCompleteCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyClose">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyClose" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateHands">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyUpdateHands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateCash">
+      <soap:operation soapAction="http://tempuri.org/FinancingPledgeApplyUpdateCash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingRepoApplyList">
+      <soap:operation soapAction="http://tempuri.org/GetFinancingRepoApplyList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinPledgeApplyStockDetailForRepoList">
+      <soap:operation soapAction="http://tempuri.org/GetFinPledgeApplyStockDetailForRepoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyCreate">
+      <soap:operation soapAction="http://tempuri.org/FinRepoApplyCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateUp">
+      <soap:operation soapAction="http://tempuri.org/GetFinRepoApplyStockDetailForUpdateUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateDown">
+      <soap:operation soapAction="http://tempuri.org/GetFinRepoApplyStockDetailForUpdateDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyUpdate">
+      <soap:operation soapAction="http://tempuri.org/FinRepoApplyUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyInvalid">
+      <soap:operation soapAction="http://tempuri.org/FinancingRepoApplyInvalid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyGoBack">
+      <soap:operation soapAction="http://tempuri.org/FinancingRepoApplyGoBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdComplete">
+      <soap:operation soapAction="http://tempuri.org/FinancingRepoApplyIdComplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdCompleteCancel">
+      <soap:operation soapAction="http://tempuri.org/FinancingRepoApplyIdCompleteCancel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForHands">
+      <soap:operation soapAction="http://tempuri.org/GetFinRepoApplyStockDetailForHands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateHands">
+      <soap:operation soapAction="http://tempuri.org/FinancingRepoApplyUpdateHands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateCash">
+      <soap:operation soapAction="http://tempuri.org/FinancingRepoApplyUpdateCash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyRepoInfoList">
+      <soap:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyRepoInfoList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyListForRepoCreate">
+      <soap:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyListForRepoCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FinServiceSoap12" type="tns:FinServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFinancingPledgeApplyList">
+      <soap12:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailList">
+      <soap12:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyStockDetailList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailForHandList">
+      <soap12:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyStockDetailForHandList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashDetailList">
+      <soap12:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyCashDetailList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashInfoList">
+      <soap12:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyCashInfoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInfoFromBusinessSystem">
+      <soap12:operation soapAction="http://tempuri.org/GetStockInfoFromBusinessSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinStockInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetFinStockInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyCreate">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdate">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyInvalid">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyInvalid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyGoBack">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyGoBack" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdComplete">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyIdComplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdCompleteCancel">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyIdCompleteCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyClose">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyClose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateHands">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyUpdateHands" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateCash">
+      <soap12:operation soapAction="http://tempuri.org/FinancingPledgeApplyUpdateCash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingRepoApplyList">
+      <soap12:operation soapAction="http://tempuri.org/GetFinancingRepoApplyList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinPledgeApplyStockDetailForRepoList">
+      <soap12:operation soapAction="http://tempuri.org/GetFinPledgeApplyStockDetailForRepoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyCreate">
+      <soap12:operation soapAction="http://tempuri.org/FinRepoApplyCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateUp">
+      <soap12:operation soapAction="http://tempuri.org/GetFinRepoApplyStockDetailForUpdateUp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateDown">
+      <soap12:operation soapAction="http://tempuri.org/GetFinRepoApplyStockDetailForUpdateDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyUpdate">
+      <soap12:operation soapAction="http://tempuri.org/FinRepoApplyUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyInvalid">
+      <soap12:operation soapAction="http://tempuri.org/FinancingRepoApplyInvalid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyGoBack">
+      <soap12:operation soapAction="http://tempuri.org/FinancingRepoApplyGoBack" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdComplete">
+      <soap12:operation soapAction="http://tempuri.org/FinancingRepoApplyIdComplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdCompleteCancel">
+      <soap12:operation soapAction="http://tempuri.org/FinancingRepoApplyIdCompleteCancel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForHands">
+      <soap12:operation soapAction="http://tempuri.org/GetFinRepoApplyStockDetailForHands" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateHands">
+      <soap12:operation soapAction="http://tempuri.org/FinancingRepoApplyUpdateHands" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateCash">
+      <soap12:operation soapAction="http://tempuri.org/FinancingRepoApplyUpdateCash" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyRepoInfoList">
+      <soap12:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyRepoInfoList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyListForRepoCreate">
+      <soap12:operation soapAction="http://tempuri.org/GetFinancingPledgeApplyListForRepoCreate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FinServiceHttpGet" type="tns:FinServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetFinancingPledgeApplyList">
+      <http:operation location="/GetFinancingPledgeApplyList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailList">
+      <http:operation location="/GetFinancingPledgeApplyStockDetailList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailForHandList">
+      <http:operation location="/GetFinancingPledgeApplyStockDetailForHandList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashDetailList">
+      <http:operation location="/GetFinancingPledgeApplyCashDetailList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashInfoList">
+      <http:operation location="/GetFinancingPledgeApplyCashInfoList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInfoFromBusinessSystem">
+      <http:operation location="/GetStockInfoFromBusinessSystem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinStockInfo">
+      <http:operation location="/GetFinStockInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdate">
+      <http:operation location="/FinancingPledgeApplyUpdate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyInvalid">
+      <http:operation location="/FinancingPledgeApplyInvalid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyGoBack">
+      <http:operation location="/FinancingPledgeApplyGoBack" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdComplete">
+      <http:operation location="/FinancingPledgeApplyIdComplete" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdCompleteCancel">
+      <http:operation location="/FinancingPledgeApplyIdCompleteCancel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyClose">
+      <http:operation location="/FinancingPledgeApplyClose" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateHands">
+      <http:operation location="/FinancingPledgeApplyUpdateHands" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateCash">
+      <http:operation location="/FinancingPledgeApplyUpdateCash" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingRepoApplyList">
+      <http:operation location="/GetFinancingRepoApplyList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinPledgeApplyStockDetailForRepoList">
+      <http:operation location="/GetFinPledgeApplyStockDetailForRepoList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyCreate">
+      <http:operation location="/FinRepoApplyCreate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateUp">
+      <http:operation location="/GetFinRepoApplyStockDetailForUpdateUp" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateDown">
+      <http:operation location="/GetFinRepoApplyStockDetailForUpdateDown" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyUpdate">
+      <http:operation location="/FinRepoApplyUpdate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyInvalid">
+      <http:operation location="/FinancingRepoApplyInvalid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyGoBack">
+      <http:operation location="/FinancingRepoApplyGoBack" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdComplete">
+      <http:operation location="/FinancingRepoApplyIdComplete" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdCompleteCancel">
+      <http:operation location="/FinancingRepoApplyIdCompleteCancel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForHands">
+      <http:operation location="/GetFinRepoApplyStockDetailForHands" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateHands">
+      <http:operation location="/FinancingRepoApplyUpdateHands" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateCash">
+      <http:operation location="/FinancingRepoApplyUpdateCash" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyRepoInfoList">
+      <http:operation location="/GetFinancingPledgeApplyRepoInfoList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyListForRepoCreate">
+      <http:operation location="/GetFinancingPledgeApplyListForRepoCreate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FinServiceHttpPost" type="tns:FinServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetFinancingPledgeApplyList">
+      <http:operation location="/GetFinancingPledgeApplyList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailList">
+      <http:operation location="/GetFinancingPledgeApplyStockDetailList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyStockDetailForHandList">
+      <http:operation location="/GetFinancingPledgeApplyStockDetailForHandList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashDetailList">
+      <http:operation location="/GetFinancingPledgeApplyCashDetailList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyCashInfoList">
+      <http:operation location="/GetFinancingPledgeApplyCashInfoList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockInfoFromBusinessSystem">
+      <http:operation location="/GetStockInfoFromBusinessSystem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinStockInfo">
+      <http:operation location="/GetFinStockInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdate">
+      <http:operation location="/FinancingPledgeApplyUpdate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyInvalid">
+      <http:operation location="/FinancingPledgeApplyInvalid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyGoBack">
+      <http:operation location="/FinancingPledgeApplyGoBack" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdComplete">
+      <http:operation location="/FinancingPledgeApplyIdComplete" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyIdCompleteCancel">
+      <http:operation location="/FinancingPledgeApplyIdCompleteCancel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyClose">
+      <http:operation location="/FinancingPledgeApplyClose" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateHands">
+      <http:operation location="/FinancingPledgeApplyUpdateHands" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingPledgeApplyUpdateCash">
+      <http:operation location="/FinancingPledgeApplyUpdateCash" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingRepoApplyList">
+      <http:operation location="/GetFinancingRepoApplyList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinPledgeApplyStockDetailForRepoList">
+      <http:operation location="/GetFinPledgeApplyStockDetailForRepoList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyCreate">
+      <http:operation location="/FinRepoApplyCreate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateUp">
+      <http:operation location="/GetFinRepoApplyStockDetailForUpdateUp" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForUpdateDown">
+      <http:operation location="/GetFinRepoApplyStockDetailForUpdateDown" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinRepoApplyUpdate">
+      <http:operation location="/FinRepoApplyUpdate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyInvalid">
+      <http:operation location="/FinancingRepoApplyInvalid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyGoBack">
+      <http:operation location="/FinancingRepoApplyGoBack" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdComplete">
+      <http:operation location="/FinancingRepoApplyIdComplete" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyIdCompleteCancel">
+      <http:operation location="/FinancingRepoApplyIdCompleteCancel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinRepoApplyStockDetailForHands">
+      <http:operation location="/GetFinRepoApplyStockDetailForHands" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateHands">
+      <http:operation location="/FinancingRepoApplyUpdateHands" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FinancingRepoApplyUpdateCash">
+      <http:operation location="/FinancingRepoApplyUpdateCash" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyRepoInfoList">
+      <http:operation location="/GetFinancingPledgeApplyRepoInfoList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFinancingPledgeApplyListForRepoCreate">
+      <http:operation location="/GetFinancingPledgeApplyListForRepoCreate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FinService">
+    <wsdl:port name="FinServiceSoap" binding="tns:FinServiceSoap">
+      <soap:address location="http://finservice.maikegroup.com/FinService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FinServiceSoap12" binding="tns:FinServiceSoap12">
+      <soap12:address location="http://finservice.maikegroup.com/FinService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FinServiceHttpGet" binding="tns:FinServiceHttpGet">
+      <http:address location="http://finservice.maikegroup.com/FinService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FinServiceHttpPost" binding="tns:FinServiceHttpPost">
+      <http:address location="http://finservice.maikegroup.com/FinService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

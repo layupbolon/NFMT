@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CE37C4E-DAEE-4370-BF0E-56F7628BB299}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFMT.Common</RootNamespace>
+    <AssemblyName>NFMT.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplyBLL.cs" />
+    <Compile Include="ApplyOperate.cs" />
+    <Compile Include="extention\Extention.cs" />
+    <Compile Include="model\AuditModel.cs" />
+    <Compile Include="BaseBLL.cs" />
+    <Compile Include="BasicAuth.cs" />
+    <Compile Include="config\ConfigValue.cs" />
+    <Compile Include="enum\CreateFromEnum.cs" />
+    <Compile Include="enum\DataBaseEnum.cs" />
+    <Compile Include="DataBLL.cs" />
+    <Compile Include="DataOperate.cs" />
+    <Compile Include="config\DefaultValue.cs" />
+    <Compile Include="DetailOperate.cs" />
+    <Compile Include="ExecBLL.cs" />
+    <Compile Include="ExecOperate.cs" />
+    <Compile Include="interface\IApplyBLL.cs" />
+    <Compile Include="interface\IAttachModel.cs" />
+    <Compile Include="interface\IAuthority.cs" />
+    <Compile Include="interface\IBaseBLL.cs" />
+    <Compile Include="interface\IDataBLL.cs" />
+    <Compile Include="interface\IExecOperate.cs" />
+    <Compile Include="interface\IExecBLL.cs" />
+    <Compile Include="enum\LogEnum.cs" />
+    <Compile Include="ReadyExecOperate.cs" />
+    <Compile Include="enum\ReportType.cs" />
+    <Compile Include="enum\StatusEnum.cs" />
+    <Compile Include="enum\StatusTypeEnum.cs" />
+    <Compile Include="SysTypeProvider.cs" />
+    <Compile Include="model\UserModel.cs" />
+    <Compile Include="interface\IApplyOperate.cs" />
+    <Compile Include="interface\IDataOperate.cs" />
+    <Compile Include="interface\IModel.cs" />
+    <Compile Include="interface\IOperate.cs" />
+    <Compile Include="Operate.cs" />
+    <Compile Include="enum\OperateEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="model\ResultModel.cs" />
+    <Compile Include="model\SelectModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{97ea2492-4499-40da-a305-1538d4406ce1}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>@Attrib -R "$(SolutionDir)DLLModel/$(TargetFileName)"
+@Copy "$(TargetPath)" "$(SolutionDir)DLLModel/"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

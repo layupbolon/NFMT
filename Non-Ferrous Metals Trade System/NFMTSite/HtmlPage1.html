@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <script type="text/javascript">
+
+        //var t1 = function test1() {
+
+        //    var a = 1;
+        //    var b = 2;
+        //    var c = 3;
+
+        //    var model = {
+        //        A: a,
+        //        B: b,
+        //        C: c
+        //    }
+
+        //    return function innerTest1() {
+        //        return model;
+        //    };
+        //}
+
+        //var obj = t1()();
+
+        //alert(obj.A);
+        //obj.A = 5;
+        //alert(obj.A);
+        //alert(obj.B);
+        //alert(obj.C);
+
+
+
+
+
+
+
+
+        var name = "The Window";
+        var object = {
+            name: "My Object",
+            getNameFunc: function () {
+                return function () {
+                    return this.name;
+                };
+            }
+        };
+        
+        alert(object.getNameFunc()());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

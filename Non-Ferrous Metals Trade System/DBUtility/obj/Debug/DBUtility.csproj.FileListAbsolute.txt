@@ -1,0 +1,5 @@
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\bin\Debug\NFMT.DBUtility.dll
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\bin\Debug\NFMT.DBUtility.pdb
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\obj\Debug\NFMT.DBUtility.dll
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\obj\Debug\NFMT.DBUtility.pdb
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache

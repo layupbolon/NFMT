@@ -1,0 +1,108 @@
+﻿
+#SearchDiv ul {
+    list-style-type: none;
+}
+
+    #SearchDiv ul li {
+        line-height: 30px;
+        height: 30px;
+        float: left;
+        margin: 0px 5px 0px 5px;
+    }
+
+#layOutDiv ul {
+    list-style-type: none;
+}
+
+    #layOutDiv ul li {
+        margin: 10px 5px 5px 0px;
+        width: 80%;
+        line-height: 30px;
+        height: 30px;
+    }
+
+        #layOutDiv ul li span {
+            float: left;
+            display: block;
+        }
+
+.SearchExpander {
+}
+
+    .SearchExpander ul {
+        list-style-type: none;
+    }
+
+        .SearchExpander ul li {
+            line-height: 30px;
+            height: 30px;
+            float: left;
+            margin: 0px 5px 0px 5px;
+        }
+
+.DataExpander {
+}
+
+    .DataExpander ul {
+        list-style-type: none;
+    }
+
+        .DataExpander ul li {
+            margin: 10px 5px 5px 0px;
+            width: 80%;
+            line-height: 30px;
+            height: 30px;
+        }
+
+            .DataExpander ul li span {
+                float: left;
+                display: block;
+            }
+
+            .DataExpander ul li h4 span {
+                text-align: right;
+                width: 120px;                
+            }
+
+.InfoExpander {
+}
+
+    .InfoExpander ul {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+        .InfoExpander ul li {
+            margin: 5px 2px 5px 0px;
+            float: left;
+            line-height: 25px;
+            height: 25px;
+        }
+
+            .InfoExpander ul li strong {
+                float: left;
+                /*width:90px;*/
+                display: inline;
+                text-align: right;
+            }
+
+.SplitterDiv {
+    border: 0px; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+}
+
+.GridFillNumber {
+    background-color:  ButtonFace;
+}
+
+.LineDiv {
+}
+
+.LineDiv ul {
+        list-style-type: none;
+    }
+
+    .LineDiv ul li {
+        float:none;
+    }

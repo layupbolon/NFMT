@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{177AD775-A4FB-41D9-9C11-419CB954DD2B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFMT.Invoice</RootNamespace>
+    <AssemblyName>NFMT.Invoice</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BusinessInvoiceBLL.cs" />
+    <Compile Include="BLL\BusinessInvoiceDetailBLL.cs" />
+    <Compile Include="BLL\FinanceBusinessInvoiceBLL.cs" />
+    <Compile Include="BLL\FinanceInvoiceBLL.cs" />
+    <Compile Include="BLL\FinanceInvoiceDetailBLL.cs" />
+    <Compile Include="BLL\FinBusInvAllotBLL.cs" />
+    <Compile Include="BLL\FinBusInvAllotDetailBLL.cs" />
+    <Compile Include="BLL\InvoiceApplyBLL.cs" />
+    <Compile Include="BLL\InvoiceApplyDetailBLL.cs" />
+    <Compile Include="BLL\InvoiceApplyFinanceBLL.cs" />
+    <Compile Include="BLL\InvoiceApplySIDetailBLL.cs" />
+    <Compile Include="BLL\InvoiceAttachBLL.cs" />
+    <Compile Include="BLL\SIBLL.cs" />
+    <Compile Include="BLL\SIDetailBLL.cs" />
+    <Compile Include="DAL\BusinessInvoiceDAL.cs" />
+    <Compile Include="DAL\BusinessInvoiceDetailDAL.cs" />
+    <Compile Include="DAL\FinanceBusinessInvoiceDAL.cs" />
+    <Compile Include="DAL\FinanceInvoiceDAL.cs" />
+    <Compile Include="DAL\FinanceInvoiceDetailDAL.cs" />
+    <Compile Include="DAL\FinBusInvAllotDAL.cs" />
+    <Compile Include="DAL\FinBusInvAllotDetailDAL.cs" />
+    <Compile Include="DAL\InvoiceApplyDAL.cs" />
+    <Compile Include="DAL\InvoiceApplyDetailDAL.cs" />
+    <Compile Include="DAL\InvoiceApplyFinanceDAL.cs" />
+    <Compile Include="DAL\InvoiceApplySIDetailDAL.cs" />
+    <Compile Include="DAL\Partial\BusinessInvoiceDAL.cs" />
+    <Compile Include="DAL\Partial\BusinessInvoiceDetailDAL.cs" />
+    <Compile Include="DAL\Partial\InvoiceApplyDAL.cs" />
+    <Compile Include="DAL\Partial\InvoiceApplyDetailDAL.cs" />
+    <Compile Include="DAL\SIDAL.cs" />
+    <Compile Include="DAL\SIDetailDAL.cs" />
+    <Compile Include="IDAL\IBusinessInvoiceDAL.cs" />
+    <Compile Include="IDAL\IBusinessInvoiceDetailDAL.cs" />
+    <Compile Include="IDAL\IFinanceBusinessInvoiceDAL.cs" />
+    <Compile Include="IDAL\IFinanceInvoiceDAL.cs" />
+    <Compile Include="IDAL\IFinanceInvoiceDetailDAL.cs" />
+    <Compile Include="IDAL\IFinBusInvAllotDAL.cs" />
+    <Compile Include="IDAL\IFinBusInvAllotDetailDAL.cs" />
+    <Compile Include="IDAL\IInvoiceApplyDAL.cs" />
+    <Compile Include="IDAL\IInvoiceApplyDetailDAL.cs" />
+    <Compile Include="IDAL\IInvoiceApplyFinanceDAL.cs" />
+    <Compile Include="IDAL\IInvoiceApplySIDetailDAL.cs" />
+    <Compile Include="IDAL\ISIDAL.cs" />
+    <Compile Include="IDAL\ISIDetailDAL.cs" />
+    <Compile Include="InvoiceDirectionEnum.cs" />
+    <Compile Include="InvoiceStatusEnum.cs" />
+    <Compile Include="DAL\InvoiceAttachDAL.cs" />
+    <Compile Include="IDAL\IInvoiceAttachDAL.cs" />
+    <Compile Include="InvoiceTypeEnum.cs" />
+    <Compile Include="Model\BusinessInvoice.cs" />
+    <Compile Include="Model\BusinessInvoiceDetail.cs" />
+    <Compile Include="Model\FinanceBusinessInvoice.cs" />
+    <Compile Include="Model\FinanceInvoice.cs" />
+    <Compile Include="Model\FinanceInvoiceDetail.cs" />
+    <Compile Include="Model\FinBusInvAllot.cs" />
+    <Compile Include="Model\FinBusInvAllotDetail.cs" />
+    <Compile Include="Model\InvoiceApply.cs" />
+    <Compile Include="Model\InvoiceApplyDetail.cs" />
+    <Compile Include="Model\InvoiceApplyFinance.cs" />
+    <Compile Include="Model\InvoiceApplySIDetail.cs" />
+    <Compile Include="Model\InvoiceAttach.cs" />
+    <Compile Include="Model\SI.cs" />
+    <Compile Include="Model\SIDetail.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskProvider\FinanceInvoiceTaskProvider.cs" />
+    <Compile Include="TaskProvider\InvoiceApplyTaskProvider.cs" />
+    <Compile Include="TaskProvider\InvoiceDirectFinalTaskProvider.cs" />
+    <Compile Include="TaskProvider\SITaskProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Authority\Authority.csproj">
+      <Project>{570900bd-88d6-45cb-88b4-f6b7b2de95d7}</Project>
+      <Name>Authority</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2ce37c4e-daee-4370-bf0e-56f7628bb299}</Project>
+      <Name>Common %28Common\Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{6a58d209-0eba-4e67-8570-78e7f609d1ef}</Project>
+      <Name>Contract %28Contract\Contract%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{f80e8ea5-0e37-498a-9f8a-28057009ce76}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{97ea2492-4499-40da-a305-1538d4406ce1}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Operate\Operate.csproj">
+      <Project>{d0506c4b-c48a-426a-bbcb-732165c28e85}</Project>
+      <Name>Operate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{d10c059f-3a20-4f98-a5dd-d16fc215a4e0}</Project>
+      <Name>User %28User\User%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WareHouse\WareHouse.csproj">
+      <Project>{b379fdab-4cf5-4b2d-a55c-17a091e94459}</Project>
+      <Name>WareHouse %28WareHouse\WareHouse%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkFlow\WorkFlow.csproj">
+      <Project>{b0fd1659-24f8-44d8-ad2f-1695385dd55b}</Project>
+      <Name>WorkFlow %28WorkFlow\WorkFlow%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

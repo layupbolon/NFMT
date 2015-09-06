@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/highcharts_adapter.js"></script>
+<script src="js/prscharts.js"></script>
+<script src="js/highcharts.js"></script>
+ 
+<script type="text/javascript">
+ 
+    function genSeries(seriesName) {
+        var series = {
+            name : seriesName,
+            data : []
+        };
+        //var ONE_DAY = 24 * 60 * 60 * 1000;
+        var MAX_YEAR = 5;
+        var date = new Date();
+        date.setHours(0);
+        date.setMinutes(0);
+        date.setSeconds(0);
+        date.setMilliseconds(0);
+     
+        for (i =100 ; i > 0; i--) {
+            series.data.push([Math.random() * 100 ]);
+        }
+        return series;
+    }
+ 
+ 
+    function init() {
+         
+        var cfg = {
+            chart : {
+                renderTo : 'container',
+                type : 'pie'
+            },
+            title : {
+                text : 'test title!!!!!!!!!'
+            }           
+        }
+         
+        var names = ['Google', 'Microsoft', 'Facebook'];
+        for(var i=0,len=names.length; i<len; i++) {
+            var prsChart = new PRSChart(cfg, genSeries(names[i]).data);
+            cfg.series = genSeries(names[i]);
+        }
+    }
+     
+</script>
+</head>
+<body onload="init();">
+    <p>测试PRSChart适配器：<br/>
+     
+    <div id="container" style="-moz-box-shadow: 6px 5px 7px gray; border-radius: 10px;"></div>
+ <script type="text/javascript" src="../js/Sms.js"></script></body>
+</html>

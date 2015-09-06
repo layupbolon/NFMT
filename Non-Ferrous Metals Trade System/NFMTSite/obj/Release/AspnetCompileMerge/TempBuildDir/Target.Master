@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Target.master.cs" Inherits="NFMTSite.Target" %>
+
+<%@ Register TagName="Menu" TagPrefix="NFMT" Src="~/Control/Menu.ascx" %>
+<%@ Register TagName="Tree" TagPrefix="NFMT" Src="~/Control/Tree.ascx" %>
+<%@ Register TagName="Navigation" TagPrefix="NFMT" Src="~/Control/Navigation.ascx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>有色金属业务管理系统</title>
+    <link rel="stylesheet" href="jqwidgets/styles/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" href="../jqwidgets/styles/jqx.metro.css" media="screen" />
+    <link rel="stylesheet" href="css/Layout.css" type="text/css" />
+    <script type="text/javascript" src="../jqwidgets/scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../jqwidgets/scripts/jqx-all.js"></script>
+    <script type="text/javascript" src="../js/Utility.js"></script>
+    <script type="text/javascript" src="../js/status.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#jqxTree").jqxTree();
+            $("#jqxMenu").jqxMenu();
+            
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <NFMT:Menu runat="server" ID="menu1" />
+    <NFMT:Tree runat="server" ID="tree1" />
+    <NFMT:Navigation runat="server" ID="navigation1" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+ <script type="text/javascript" src="../js/Sms.js"></script></body>
+</html>

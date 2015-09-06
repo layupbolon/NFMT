@@ -1,0 +1,2486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NFMTModelStoreContainer" CdmEntityContainer="NFMTEntities">
+    <EntitySetMapping Name="Apply">
+      <EntityTypeMapping TypeName="NFMTModel.Apply">
+        <MappingFragment StoreEntitySet="Apply">
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="ApplyNo" ColumnName="ApplyNo" />
+          <ScalarProperty Name="ApplyType" ColumnName="ApplyType" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="ApplyTime" ColumnName="ApplyTime" />
+          <ScalarProperty Name="ApplyStatus" ColumnName="ApplyStatus" />
+          <ScalarProperty Name="ApplyDept" ColumnName="ApplyDept" />
+          <ScalarProperty Name="ApplyCorp" ColumnName="ApplyCorp" />
+          <ScalarProperty Name="ApplyDesc" ColumnName="ApplyDesc" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attach">
+      <EntityTypeMapping TypeName="NFMTModel.Attach">
+        <MappingFragment StoreEntitySet="Attach">
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+          <ScalarProperty Name="AttachName" ColumnName="AttachName" />
+          <ScalarProperty Name="ServerAttachName" ColumnName="ServerAttachName" />
+          <ScalarProperty Name="AttachExt" ColumnName="AttachExt" />
+          <ScalarProperty Name="AttachType" ColumnName="AttachType" />
+          <ScalarProperty Name="AttachInfo" ColumnName="AttachInfo" />
+          <ScalarProperty Name="AttachLength" ColumnName="AttachLength" />
+          <ScalarProperty Name="AttachPath" ColumnName="AttachPath" />
+          <ScalarProperty Name="AttachStatus" ColumnName="AttachStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_Contract">
+      <EntityTypeMapping TypeName="NFMTModel.Con_Contract">
+        <MappingFragment StoreEntitySet="Con_Contract">
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="OutContractNo" ColumnName="OutContractNo" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="ContractName" ColumnName="ContractName" />
+          <ScalarProperty Name="TradeBorder" ColumnName="TradeBorder" />
+          <ScalarProperty Name="ContractLimit" ColumnName="ContractLimit" />
+          <ScalarProperty Name="ContractSide" ColumnName="ContractSide" />
+          <ScalarProperty Name="TradeDirection" ColumnName="TradeDirection" />
+          <ScalarProperty Name="HaveGoodsFlow" ColumnName="HaveGoodsFlow" />
+          <ScalarProperty Name="ContractPeriodS" ColumnName="ContractPeriodS" />
+          <ScalarProperty Name="ContractPeriodE" ColumnName="ContractPeriodE" />
+          <ScalarProperty Name="Premium" ColumnName="Premium" />
+          <ScalarProperty Name="InitQP" ColumnName="InitQP" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="SettleCurrency" ColumnName="SettleCurrency" />
+          <ScalarProperty Name="SignAmount" ColumnName="SignAmount" />
+          <ScalarProperty Name="ExeAmount" ColumnName="ExeAmount" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="PriceMode" ColumnName="PriceMode" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="DeliveryStyle" ColumnName="DeliveryStyle" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="CreateFrom" ColumnName="CreateFrom" />
+          <ScalarProperty Name="ContractStatus" ColumnName="ContractStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractAttach">
+        <MappingFragment StoreEntitySet="Con_ContractAttach">
+          <ScalarProperty Name="ContractAttachId" ColumnName="ContractAttachId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractClause_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractClause_Ref">
+        <MappingFragment StoreEntitySet="Con_ContractClause_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="MasterId" ColumnName="MasterId" />
+          <ScalarProperty Name="ClauseId" ColumnName="ClauseId" />
+          <ScalarProperty Name="RefStatus" ColumnName="RefStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractCorporationDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractCorporationDetail">
+        <MappingFragment StoreEntitySet="Con_ContractCorporationDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="CorpName" ColumnName="CorpName" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="IsDefaultCorp" ColumnName="IsDefaultCorp" />
+          <ScalarProperty Name="IsInnerCorp" ColumnName="IsInnerCorp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractDept">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractDept">
+        <MappingFragment StoreEntitySet="Con_ContractDept">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractDetail">
+        <MappingFragment StoreEntitySet="Con_ContractDetail">
+          <ScalarProperty Name="ContractDetailId" ColumnName="ContractDetailId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="DiscountBase" ColumnName="DiscountBase" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+          <ScalarProperty Name="DelayType" ColumnName="DelayType" />
+          <ScalarProperty Name="DelayRate" ColumnName="DelayRate" />
+          <ScalarProperty Name="MoreOrLess" ColumnName="MoreOrLess" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractPrice">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractPrice">
+        <MappingFragment StoreEntitySet="Con_ContractPrice">
+          <ScalarProperty Name="ContractPriceId" ColumnName="ContractPriceId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="FixedPrice" ColumnName="FixedPrice" />
+          <ScalarProperty Name="FixedPriceMemo" ColumnName="FixedPriceMemo" />
+          <ScalarProperty Name="WhoDoPrice" ColumnName="WhoDoPrice" />
+          <ScalarProperty Name="AlmostPrice" ColumnName="AlmostPrice" />
+          <ScalarProperty Name="DoPriceBeginDate" ColumnName="DoPriceBeginDate" />
+          <ScalarProperty Name="DoPriceEndDate" ColumnName="DoPriceEndDate" />
+          <ScalarProperty Name="IsQP" ColumnName="IsQP" />
+          <ScalarProperty Name="PriceFrom" ColumnName="PriceFrom" />
+          <ScalarProperty Name="PriceStyle1" ColumnName="PriceStyle1" />
+          <ScalarProperty Name="PriceStyle2" ColumnName="PriceStyle2" />
+          <ScalarProperty Name="MarginMode" ColumnName="MarginMode" />
+          <ScalarProperty Name="MarginAmount" ColumnName="MarginAmount" />
+          <ScalarProperty Name="MarginMemo" ColumnName="MarginMemo" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractSub">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractSub">
+        <MappingFragment StoreEntitySet="Con_ContractSub">
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+          <ScalarProperty Name="TradeBorder" ColumnName="TradeBorder" />
+          <ScalarProperty Name="ContractLimit" ColumnName="ContractLimit" />
+          <ScalarProperty Name="ContractSide" ColumnName="ContractSide" />
+          <ScalarProperty Name="TradeDirection" ColumnName="TradeDirection" />
+          <ScalarProperty Name="ContractPeriodS" ColumnName="ContractPeriodS" />
+          <ScalarProperty Name="ContractPeriodE" ColumnName="ContractPeriodE" />
+          <ScalarProperty Name="Premium" ColumnName="Premium" />
+          <ScalarProperty Name="SubNo" ColumnName="SubNo" />
+          <ScalarProperty Name="OutContractNo" ColumnName="OutContractNo" />
+          <ScalarProperty Name="SubName" ColumnName="SubName" />
+          <ScalarProperty Name="SettleCurrency" ColumnName="SettleCurrency" />
+          <ScalarProperty Name="SignAmount" ColumnName="SignAmount" />
+          <ScalarProperty Name="ExeAmount" ColumnName="ExeAmount" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="PriceMode" ColumnName="PriceMode" />
+          <ScalarProperty Name="ShipTime" ColumnName="ShipTime" />
+          <ScalarProperty Name="ArriveTime" ColumnName="ArriveTime" />
+          <ScalarProperty Name="InitQP" ColumnName="InitQP" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="DeliveryStyle" ColumnName="DeliveryStyle" />
+          <ScalarProperty Name="DeliveryDate" ColumnName="DeliveryDate" />
+          <ScalarProperty Name="CreateFrom" ColumnName="CreateFrom" />
+          <ScalarProperty Name="SubStatus" ColumnName="SubStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractSubAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractSubAttach">
+        <MappingFragment StoreEntitySet="Con_ContractSubAttach">
+          <ScalarProperty Name="SubAttachId" ColumnName="SubAttachId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractSubQP">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractSubQP">
+        <MappingFragment StoreEntitySet="Con_ContractSubQP">
+          <ScalarProperty Name="QPId" ColumnName="QPId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="CurQP" ColumnName="CurQP" />
+          <ScalarProperty Name="InitAmount" ColumnName="InitAmount" />
+          <ScalarProperty Name="ChgedAmount" ColumnName="ChgedAmount" />
+          <ScalarProperty Name="QPChgDate" ColumnName="QPChgDate" />
+          <ScalarProperty Name="QPFrom" ColumnName="QPFrom" />
+          <ScalarProperty Name="ThisQPFeeBala" ColumnName="ThisQPFeeBala" />
+          <ScalarProperty Name="QPMemo" ColumnName="QPMemo" />
+          <ScalarProperty Name="TotalInitFeeBala" ColumnName="TotalInitFeeBala" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_ContractTypeDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Con_ContractTypeDetail">
+        <MappingFragment StoreEntitySet="Con_ContractTypeDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractType" ColumnName="ContractType" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_Lc">
+      <EntityTypeMapping TypeName="NFMTModel.Con_Lc">
+        <MappingFragment StoreEntitySet="Con_Lc">
+          <ScalarProperty Name="LcId" ColumnName="LcId" />
+          <ScalarProperty Name="IssueBank" ColumnName="IssueBank" />
+          <ScalarProperty Name="AdviseBank" ColumnName="AdviseBank" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="FutureDay" ColumnName="FutureDay" />
+          <ScalarProperty Name="LcBala" ColumnName="LcBala" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="LCStatus" ColumnName="LCStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_LcAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Con_LcAttach">
+        <MappingFragment StoreEntitySet="Con_LcAttach">
+          <ScalarProperty Name="LcAttachId" ColumnName="LcAttachId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_Premium">
+      <EntityTypeMapping TypeName="NFMTModel.Con_Premium">
+        <MappingFragment StoreEntitySet="Con_Premium">
+          <ScalarProperty Name="PremiumId" ColumnName="PremiumId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="PremiumType" ColumnName="PremiumType" />
+          <ScalarProperty Name="PrimiumMemo" ColumnName="PrimiumMemo" />
+          <ScalarProperty Name="PrimiumStatus" ColumnName="PrimiumStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_SubCorporationDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Con_SubCorporationDetail">
+        <MappingFragment StoreEntitySet="Con_SubCorporationDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="CorpName" ColumnName="CorpName" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="DeptName" ColumnName="DeptName" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+          <ScalarProperty Name="IsDefaultCorp" ColumnName="IsDefaultCorp" />
+          <ScalarProperty Name="IsInnerCorp" ColumnName="IsInnerCorp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_SubDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Con_SubDetail">
+        <MappingFragment StoreEntitySet="Con_SubDetail">
+          <ScalarProperty Name="SubDetailId" ColumnName="SubDetailId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="DiscountBase" ColumnName="DiscountBase" />
+          <ScalarProperty Name="DiscountType" ColumnName="DiscountType" />
+          <ScalarProperty Name="DiscountRate" ColumnName="DiscountRate" />
+          <ScalarProperty Name="DelayType" ColumnName="DelayType" />
+          <ScalarProperty Name="DelayRate" ColumnName="DelayRate" />
+          <ScalarProperty Name="MoreOrLess" ColumnName="MoreOrLess" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_SubPrice">
+      <EntityTypeMapping TypeName="NFMTModel.Con_SubPrice">
+        <MappingFragment StoreEntitySet="Con_SubPrice">
+          <ScalarProperty Name="SubPriceId" ColumnName="SubPriceId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="FixedPrice" ColumnName="FixedPrice" />
+          <ScalarProperty Name="FixedPriceMemo" ColumnName="FixedPriceMemo" />
+          <ScalarProperty Name="WhoDoPrice" ColumnName="WhoDoPrice" />
+          <ScalarProperty Name="AlmostPrice" ColumnName="AlmostPrice" />
+          <ScalarProperty Name="DoPriceBeginDate" ColumnName="DoPriceBeginDate" />
+          <ScalarProperty Name="DoPriceEndDate" ColumnName="DoPriceEndDate" />
+          <ScalarProperty Name="IsQP" ColumnName="IsQP" />
+          <ScalarProperty Name="PriceFrom" ColumnName="PriceFrom" />
+          <ScalarProperty Name="PriceStyle1" ColumnName="PriceStyle1" />
+          <ScalarProperty Name="PriceStyle2" ColumnName="PriceStyle2" />
+          <ScalarProperty Name="MarginMode" ColumnName="MarginMode" />
+          <ScalarProperty Name="MarginAmount" ColumnName="MarginAmount" />
+          <ScalarProperty Name="MarginMemo" ColumnName="MarginMemo" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_SubTypeDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Con_SubTypeDetail">
+        <MappingFragment StoreEntitySet="Con_SubTypeDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="ContractType" ColumnName="ContractType" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_Summary">
+      <EntityTypeMapping TypeName="NFMTModel.Con_Summary">
+        <MappingFragment StoreEntitySet="Con_Summary">
+          <ScalarProperty Name="SummaryId" ColumnName="SummaryId" />
+          <ScalarProperty Name="SummaryApplyId" ColumnName="SummaryApplyId" />
+          <ScalarProperty Name="SummaryDate" ColumnName="SummaryDate" />
+          <ScalarProperty Name="SummaryEmpId" ColumnName="SummaryEmpId" />
+          <ScalarProperty Name="Meno" ColumnName="Meno" />
+          <ScalarProperty Name="SummaryStatus" ColumnName="SummaryStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_SummaryApply">
+      <EntityTypeMapping TypeName="NFMTModel.Con_SummaryApply">
+        <MappingFragment StoreEntitySet="Con_SummaryApply">
+          <ScalarProperty Name="SummaryApplyId" ColumnName="SummaryApplyId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="SAType" ColumnName="SAType" />
+          <ScalarProperty Name="SADate" ColumnName="SADate" />
+          <ScalarProperty Name="ApplyDept" ColumnName="ApplyDept" />
+          <ScalarProperty Name="BuyerCorp" ColumnName="BuyerCorp" />
+          <ScalarProperty Name="BuyerAddress" ColumnName="BuyerAddress" />
+          <ScalarProperty Name="PaymentStyle" ColumnName="PaymentStyle" />
+          <ScalarProperty Name="RecBankId" ColumnName="RecBankId" />
+          <ScalarProperty Name="OutPricOption" ColumnName="OutPricOption" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Curency" ColumnName="Curency" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Bala" ColumnName="Bala" />
+          <ScalarProperty Name="Meno" ColumnName="Meno" />
+          <ScalarProperty Name="SAStatus" ColumnName="SAStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_SummaryApplyAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Con_SummaryApplyAttach">
+        <MappingFragment StoreEntitySet="Con_SummaryApplyAttach">
+          <ScalarProperty Name="SAAttachId" ColumnName="SAAttachId" />
+          <ScalarProperty Name="SummaryApplyId" ColumnName="SummaryApplyId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_SummaryApplyInvoice_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Con_SummaryApplyInvoice_Ref">
+        <MappingFragment StoreEntitySet="Con_SummaryApplyInvoice_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="SAId" ColumnName="SAId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="RefStatus" ColumnName="RefStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Con_SummaryApplyStock_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Con_SummaryApplyStock_Ref">
+        <MappingFragment StoreEntitySet="Con_SummaryApplyStock_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="SAId" ColumnName="SAId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockNameId" ColumnName="StockNameId" />
+          <ScalarProperty Name="RefStatus" ColumnName="RefStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_Document">
+      <EntityTypeMapping TypeName="NFMTModel.Doc_Document">
+        <MappingFragment StoreEntitySet="Doc_Document">
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="DocumentDate" ColumnName="DocumentDate" />
+          <ScalarProperty Name="DocEmpId" ColumnName="DocEmpId" />
+          <ScalarProperty Name="PresentDate" ColumnName="PresentDate" />
+          <ScalarProperty Name="Presenter" ColumnName="Presenter" />
+          <ScalarProperty Name="AcceptanceDate" ColumnName="AcceptanceDate" />
+          <ScalarProperty Name="Acceptancer" ColumnName="Acceptancer" />
+          <ScalarProperty Name="Meno" ColumnName="Meno" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="DocumentStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_DocumentInvoice">
+      <EntityTypeMapping TypeName="NFMTModel.Doc_DocumentInvoice">
+        <MappingFragment StoreEntitySet="Doc_DocumentInvoice">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="StockDetailId" ColumnName="StockDetailId" />
+          <ScalarProperty Name="OrderInvoiceDetailId" ColumnName="OrderInvoiceDetailId" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="InvoiceBala" ColumnName="InvoiceBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_DocumentOrder">
+      <EntityTypeMapping TypeName="NFMTModel.Doc_DocumentOrder">
+        <MappingFragment StoreEntitySet="Doc_DocumentOrder">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="CommercialId" ColumnName="CommercialId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractNo" ColumnName="ContractNo" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="LCId" ColumnName="LCId" />
+          <ScalarProperty Name="LCNo" ColumnName="LCNo" />
+          <ScalarProperty Name="LCDay" ColumnName="LCDay" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="ApplyCorp" ColumnName="ApplyCorp" />
+          <ScalarProperty Name="ApplyDept" ColumnName="ApplyDept" />
+          <ScalarProperty Name="SellerCorp" ColumnName="SellerCorp" />
+          <ScalarProperty Name="BuyerCorp" ColumnName="BuyerCorp" />
+          <ScalarProperty Name="BuyerCorpName" ColumnName="BuyerCorpName" />
+          <ScalarProperty Name="BuyerAddress" ColumnName="BuyerAddress" />
+          <ScalarProperty Name="PaymentStyle" ColumnName="PaymentStyle" />
+          <ScalarProperty Name="RecBankId" ColumnName="RecBankId" />
+          <ScalarProperty Name="DiscountBase" ColumnName="DiscountBase" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="BankCode" ColumnName="BankCode" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="InvBala" ColumnName="InvBala" />
+          <ScalarProperty Name="InvGap" ColumnName="InvGap" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+          <ScalarProperty Name="Meno" ColumnName="Meno" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+          <ScalarProperty Name="ApplyEmpId" ColumnName="ApplyEmpId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_DocumentOrderAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Doc_DocumentOrderAttach">
+        <MappingFragment StoreEntitySet="Doc_DocumentOrderAttach">
+          <ScalarProperty Name="OrderAttachId" ColumnName="OrderAttachId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_DocumentOrderDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Doc_DocumentOrderDetail">
+        <MappingFragment StoreEntitySet="Doc_DocumentOrderDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="InvoiceCopies" ColumnName="InvoiceCopies" />
+          <ScalarProperty Name="InvoiceSpecific" ColumnName="InvoiceSpecific" />
+          <ScalarProperty Name="QualityCopies" ColumnName="QualityCopies" />
+          <ScalarProperty Name="QualitySpecific" ColumnName="QualitySpecific" />
+          <ScalarProperty Name="WeightCopies" ColumnName="WeightCopies" />
+          <ScalarProperty Name="WeightSpecific" ColumnName="WeightSpecific" />
+          <ScalarProperty Name="TexCopies" ColumnName="TexCopies" />
+          <ScalarProperty Name="TexSpecific" ColumnName="TexSpecific" />
+          <ScalarProperty Name="DeliverCopies" ColumnName="DeliverCopies" />
+          <ScalarProperty Name="DeliverSpecific" ColumnName="DeliverSpecific" />
+          <ScalarProperty Name="TotalInvCopies" ColumnName="TotalInvCopies" />
+          <ScalarProperty Name="TotalInvSpecific" ColumnName="TotalInvSpecific" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_DocumentOrderInvoice">
+      <EntityTypeMapping TypeName="NFMTModel.Doc_DocumentOrderInvoice">
+        <MappingFragment StoreEntitySet="Doc_DocumentOrderInvoice">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="StockDetailId" ColumnName="StockDetailId" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceBala" ColumnName="InvoiceBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_DocumentOrderStock">
+      <EntityTypeMapping TypeName="NFMTModel.Doc_DocumentOrderStock">
+        <MappingFragment StoreEntitySet="Doc_DocumentOrderStock">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="ComDetailId" ColumnName="ComDetailId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockNameId" ColumnName="StockNameId" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="ApplyAmount" ColumnName="ApplyAmount" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doc_DocumentStock">
+      <EntityTypeMapping TypeName="NFMTModel.Doc_DocumentStock">
+        <MappingFragment StoreEntitySet="Doc_DocumentStock">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderStockDetailId" ColumnName="OrderStockDetailId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockNameId" ColumnName="StockNameId" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CashIn">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CashIn">
+        <MappingFragment StoreEntitySet="Fun_CashIn">
+          <ScalarProperty Name="CashInId" ColumnName="CashInId" />
+          <ScalarProperty Name="CashInEmpId" ColumnName="CashInEmpId" />
+          <ScalarProperty Name="CashInDate" ColumnName="CashInDate" />
+          <ScalarProperty Name="CashInBlocId" ColumnName="CashInBlocId" />
+          <ScalarProperty Name="CashInCorpId" ColumnName="CashInCorpId" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CashInBala" ColumnName="CashInBala" />
+          <ScalarProperty Name="CashInBank" ColumnName="CashInBank" />
+          <ScalarProperty Name="CashInAccoontId" ColumnName="CashInAccoontId" />
+          <ScalarProperty Name="CashInMode" ColumnName="CashInMode" />
+          <ScalarProperty Name="PayBlocId" ColumnName="PayBlocId" />
+          <ScalarProperty Name="PayCorpId" ColumnName="PayCorpId" />
+          <ScalarProperty Name="PayCorpName" ColumnName="PayCorpName" />
+          <ScalarProperty Name="PayBankId" ColumnName="PayBankId" />
+          <ScalarProperty Name="PayBank" ColumnName="PayBank" />
+          <ScalarProperty Name="PayAccountId" ColumnName="PayAccountId" />
+          <ScalarProperty Name="PayAccount" ColumnName="PayAccount" />
+          <ScalarProperty Name="PayWord" ColumnName="PayWord" />
+          <ScalarProperty Name="BankLog" ColumnName="BankLog" />
+          <ScalarProperty Name="CashInStatus" ColumnName="CashInStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CashInAllot">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CashInAllot">
+        <MappingFragment StoreEntitySet="Fun_CashInAllot">
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="AllotType" ColumnName="AllotType" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="AllotDesc" ColumnName="AllotDesc" />
+          <ScalarProperty Name="Alloter" ColumnName="Alloter" />
+          <ScalarProperty Name="AllotTime" ColumnName="AllotTime" />
+          <ScalarProperty Name="AllotStatus" ColumnName="AllotStatus" />
+          <ScalarProperty Name="AllotFrom" ColumnName="AllotFrom" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CashInAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CashInAttach">
+        <MappingFragment StoreEntitySet="Fun_CashInAttach">
+          <ScalarProperty Name="CashInAttachId" ColumnName="CashInAttachId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+          <ScalarProperty Name="CashInId" ColumnName="CashInId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CashInContract_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CashInContract_Ref">
+        <MappingFragment StoreEntitySet="Fun_CashInContract_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="CorpRefId" ColumnName="CorpRefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="CashInId" ColumnName="CashInId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="FundsLogId" ColumnName="FundsLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CashInCorp_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CashInCorp_Ref">
+        <MappingFragment StoreEntitySet="Fun_CashInCorp_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="BlocId" ColumnName="BlocId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="CashInId" ColumnName="CashInId" />
+          <ScalarProperty Name="IsShare" ColumnName="IsShare" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="FundsLogId" ColumnName="FundsLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CashInInvoice_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CashInInvoice_Ref">
+        <MappingFragment StoreEntitySet="Fun_CashInInvoice_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="CorpRefId" ColumnName="CorpRefId" />
+          <ScalarProperty Name="ContractRefId" ColumnName="ContractRefId" />
+          <ScalarProperty Name="CashInId" ColumnName="CashInId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="FundsLogId" ColumnName="FundsLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CashInStcok_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CashInStcok_Ref">
+        <MappingFragment StoreEntitySet="Fun_CashInStcok_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="CorpRefId" ColumnName="CorpRefId" />
+          <ScalarProperty Name="ContractRefId" ColumnName="ContractRefId" />
+          <ScalarProperty Name="CashInId" ColumnName="CashInId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="StockNameId" ColumnName="StockNameId" />
+          <ScalarProperty Name="AllotNetAmount" ColumnName="AllotNetAmount" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="FundsLogId" ColumnName="FundsLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_ContractFundsAllotStock_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_ContractFundsAllotStock_Ref">
+        <MappingFragment StoreEntitySet="Fun_ContractFundsAllotStock_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="ReceId" ColumnName="ReceId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_ContractPayApply_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_ContractPayApply_Ref">
+        <MappingFragment StoreEntitySet="Fun_ContractPayApply_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractSubId" ColumnName="ContractSubId" />
+          <ScalarProperty Name="ApplyBala" ColumnName="ApplyBala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_ContractReceivable_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_ContractReceivable_Ref">
+        <MappingFragment StoreEntitySet="Fun_ContractReceivable_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="CorpRefId" ColumnName="CorpRefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CorpFundsAllotContract_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CorpFundsAllotContract_Ref">
+        <MappingFragment StoreEntitySet="Fun_CorpFundsAllotContract_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="ReceId" ColumnName="ReceId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="AllotGroupId" ColumnName="AllotGroupId" />
+          <ScalarProperty Name="AllotCorpId" ColumnName="AllotCorpId" />
+          <ScalarProperty Name="FundsValue" ColumnName="FundsValue" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CorpFundsAllotStock_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CorpFundsAllotStock_Ref">
+        <MappingFragment StoreEntitySet="Fun_CorpFundsAllotStock_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="ReceId" ColumnName="ReceId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_CorpReceivable_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_CorpReceivable_Ref">
+        <MappingFragment StoreEntitySet="Fun_CorpReceivable_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="BlocId" ColumnName="BlocId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="IsShare" ColumnName="IsShare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_Funds">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_Funds">
+        <MappingFragment StoreEntitySet="Fun_Funds">
+          <ScalarProperty Name="FundsId" ColumnName="FundsId" />
+          <ScalarProperty Name="FundsLimitd" ColumnName="FundsLimitd" />
+          <ScalarProperty Name="BlocId" ColumnName="BlocId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="FundsValue" ColumnName="FundsValue" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="FundsType" ColumnName="FundsType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_FundsLog">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_FundsLog">
+        <MappingFragment StoreEntitySet="Fun_FundsLog">
+          <ScalarProperty Name="FundsLogId" ColumnName="FundsLogId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+          <ScalarProperty Name="InBlocId" ColumnName="InBlocId" />
+          <ScalarProperty Name="InCorpId" ColumnName="InCorpId" />
+          <ScalarProperty Name="InBankId" ColumnName="InBankId" />
+          <ScalarProperty Name="InAccountId" ColumnName="InAccountId" />
+          <ScalarProperty Name="OutBlocId" ColumnName="OutBlocId" />
+          <ScalarProperty Name="OutCorpId" ColumnName="OutCorpId" />
+          <ScalarProperty Name="OutBankId" ColumnName="OutBankId" />
+          <ScalarProperty Name="OutBank" ColumnName="OutBank" />
+          <ScalarProperty Name="OutAccountId" ColumnName="OutAccountId" />
+          <ScalarProperty Name="OutAccount" ColumnName="OutAccount" />
+          <ScalarProperty Name="FundsBala" ColumnName="FundsBala" />
+          <ScalarProperty Name="FundsType" ColumnName="FundsType" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="LogDirection" ColumnName="LogDirection" />
+          <ScalarProperty Name="LogType" ColumnName="LogType" />
+          <ScalarProperty Name="PayMode" ColumnName="PayMode" />
+          <ScalarProperty Name="IsVirtualPay" ColumnName="IsVirtualPay" />
+          <ScalarProperty Name="FundsDesc" ColumnName="FundsDesc" />
+          <ScalarProperty Name="OpPerson" ColumnName="OpPerson" />
+          <ScalarProperty Name="LogSourceBase" ColumnName="LogSourceBase" />
+          <ScalarProperty Name="LogSource" ColumnName="LogSource" />
+          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+          <ScalarProperty Name="LogStatus" ColumnName="LogStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_FundsLogAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_FundsLogAttach">
+        <MappingFragment StoreEntitySet="Fun_FundsLogAttach">
+          <ScalarProperty Name="FundsLogAttachId" ColumnName="FundsLogAttachId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+          <ScalarProperty Name="FundsLogId" ColumnName="FundsLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_InvoicePayApply_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_InvoicePayApply_Ref">
+        <MappingFragment StoreEntitySet="Fun_InvoicePayApply_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="SIId" ColumnName="SIId" />
+          <ScalarProperty Name="ApplyBala" ColumnName="ApplyBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_InvoiceReceivable_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_InvoiceReceivable_Ref">
+        <MappingFragment StoreEntitySet="Fun_InvoiceReceivable_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="ReceId" ColumnName="ReceId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_LcReceivable_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_LcReceivable_Ref">
+        <MappingFragment StoreEntitySet="Fun_LcReceivable_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="ReceId" ColumnName="ReceId" />
+          <ScalarProperty Name="LcId" ColumnName="LcId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_PayApply">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_PayApply">
+        <MappingFragment StoreEntitySet="Fun_PayApply">
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="PayApplySource" ColumnName="PayApplySource" />
+          <ScalarProperty Name="RecBlocId" ColumnName="RecBlocId" />
+          <ScalarProperty Name="RecCorpId" ColumnName="RecCorpId" />
+          <ScalarProperty Name="RecBankId" ColumnName="RecBankId" />
+          <ScalarProperty Name="RecBankAccountId" ColumnName="RecBankAccountId" />
+          <ScalarProperty Name="RecBankAccount" ColumnName="RecBankAccount" />
+          <ScalarProperty Name="ApplyBala" ColumnName="ApplyBala" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="PayMode" ColumnName="PayMode" />
+          <ScalarProperty Name="PayDeadline" ColumnName="PayDeadline" />
+          <ScalarProperty Name="SpecialDesc" ColumnName="SpecialDesc" />
+          <ScalarProperty Name="PayMatter" ColumnName="PayMatter" />
+          <ScalarProperty Name="RealPayCorpId" ColumnName="RealPayCorpId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_PayApplyAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_PayApplyAttach">
+        <MappingFragment StoreEntitySet="Fun_PayApplyAttach">
+          <ScalarProperty Name="PayApplyAttachId" ColumnName="PayApplyAttachId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="AttachType" ColumnName="AttachType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_Payment">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_Payment">
+        <MappingFragment StoreEntitySet="Fun_Payment">
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="PaymentCode" ColumnName="PaymentCode" />
+          <ScalarProperty Name="PayBala" ColumnName="PayBala" />
+          <ScalarProperty Name="FundsBala" ColumnName="FundsBala" />
+          <ScalarProperty Name="VirtualBala" ColumnName="VirtualBala" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="PayStyle" ColumnName="PayStyle" />
+          <ScalarProperty Name="PayBankId" ColumnName="PayBankId" />
+          <ScalarProperty Name="PayBankAccountId" ColumnName="PayBankAccountId" />
+          <ScalarProperty Name="PayCorp" ColumnName="PayCorp" />
+          <ScalarProperty Name="PayDept" ColumnName="PayDept" />
+          <ScalarProperty Name="PayEmpId" ColumnName="PayEmpId" />
+          <ScalarProperty Name="PayDatetime" ColumnName="PayDatetime" />
+          <ScalarProperty Name="RecevableCorp" ColumnName="RecevableCorp" />
+          <ScalarProperty Name="ReceBankId" ColumnName="ReceBankId" />
+          <ScalarProperty Name="ReceBankAccountId" ColumnName="ReceBankAccountId" />
+          <ScalarProperty Name="ReceBankAccount" ColumnName="ReceBankAccount" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="FlowName" ColumnName="FlowName" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="FundsLogId" ColumnName="FundsLogId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_PaymentAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_PaymentAttach">
+        <MappingFragment StoreEntitySet="Fun_PaymentAttach">
+          <ScalarProperty Name="PaymentAttachId" ColumnName="PaymentAttachId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_PaymentContractDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_PaymentContractDetail">
+        <MappingFragment StoreEntitySet="Fun_PaymentContractDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractSubId" ColumnName="ContractSubId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="PayApplyDetailId" ColumnName="PayApplyDetailId" />
+          <ScalarProperty Name="PayBala" ColumnName="PayBala" />
+          <ScalarProperty Name="FundsBala" ColumnName="FundsBala" />
+          <ScalarProperty Name="VirtualBala" ColumnName="VirtualBala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_PaymentInvioceDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_PaymentInvioceDetail">
+        <MappingFragment StoreEntitySet="Fun_PaymentInvioceDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="PayApplyDetailId" ColumnName="PayApplyDetailId" />
+          <ScalarProperty Name="PayBala" ColumnName="PayBala" />
+          <ScalarProperty Name="FundsBala" ColumnName="FundsBala" />
+          <ScalarProperty Name="VirtualBala" ColumnName="VirtualBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_PaymentStockDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_PaymentStockDetail">
+        <MappingFragment StoreEntitySet="Fun_PaymentStockDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="ContractDetailId" ColumnName="ContractDetailId" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="PayApplyDetailId" ColumnName="PayApplyDetailId" />
+          <ScalarProperty Name="PayBala" ColumnName="PayBala" />
+          <ScalarProperty Name="FundsBala" ColumnName="FundsBala" />
+          <ScalarProperty Name="VirtualBala" ColumnName="VirtualBala" />
+          <ScalarProperty Name="SourceFrom" ColumnName="SourceFrom" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_PaymentVirtual">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_PaymentVirtual">
+        <MappingFragment StoreEntitySet="Fun_PaymentVirtual">
+          <ScalarProperty Name="VirtualId" ColumnName="VirtualId" />
+          <ScalarProperty Name="PaymentId" ColumnName="PaymentId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="PayBala" ColumnName="PayBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="IsConfirm" ColumnName="IsConfirm" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ConfirmMemo" ColumnName="ConfirmMemo" />
+          <ScalarProperty Name="FundsLogId" ColumnName="FundsLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_RecAllotDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_RecAllotDetail">
+        <MappingFragment StoreEntitySet="Fun_RecAllotDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_Receivable">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_Receivable">
+        <MappingFragment StoreEntitySet="Fun_Receivable">
+          <ScalarProperty Name="ReceivableId" ColumnName="ReceivableId" />
+          <ScalarProperty Name="ReceiveEmpId" ColumnName="ReceiveEmpId" />
+          <ScalarProperty Name="ReceiveDate" ColumnName="ReceiveDate" />
+          <ScalarProperty Name="ReceivableGroupId" ColumnName="ReceivableGroupId" />
+          <ScalarProperty Name="ReceivableCorpId" ColumnName="ReceivableCorpId" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="PayBala" ColumnName="PayBala" />
+          <ScalarProperty Name="ReceivableBank" ColumnName="ReceivableBank" />
+          <ScalarProperty Name="ReceivableAccoontId" ColumnName="ReceivableAccoontId" />
+          <ScalarProperty Name="PayGroupId" ColumnName="PayGroupId" />
+          <ScalarProperty Name="PayCorpId" ColumnName="PayCorpId" />
+          <ScalarProperty Name="PayCorpName" ColumnName="PayCorpName" />
+          <ScalarProperty Name="PayBankId" ColumnName="PayBankId" />
+          <ScalarProperty Name="PayBank" ColumnName="PayBank" />
+          <ScalarProperty Name="PayAccountId" ColumnName="PayAccountId" />
+          <ScalarProperty Name="PayAccount" ColumnName="PayAccount" />
+          <ScalarProperty Name="PayWord" ColumnName="PayWord" />
+          <ScalarProperty Name="BankLog" ColumnName="BankLog" />
+          <ScalarProperty Name="ReceiveStatus" ColumnName="ReceiveStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_ReceivableAllot">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_ReceivableAllot">
+        <MappingFragment StoreEntitySet="Fun_ReceivableAllot">
+          <ScalarProperty Name="ReceivableAllotId" ColumnName="ReceivableAllotId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="AllotType" ColumnName="AllotType" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="AllotDesc" ColumnName="AllotDesc" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="AllotTime" ColumnName="AllotTime" />
+          <ScalarProperty Name="AllotStatus" ColumnName="AllotStatus" />
+          <ScalarProperty Name="AllotFrom" ColumnName="AllotFrom" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_ReceivableAttach">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_ReceivableAttach">
+        <MappingFragment StoreEntitySet="Fun_ReceivableAttach">
+          <ScalarProperty Name="ReceivableAttachId" ColumnName="ReceivableAttachId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+          <ScalarProperty Name="ReceivableId" ColumnName="ReceivableId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_StcokReceivable_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_StcokReceivable_Ref">
+        <MappingFragment StoreEntitySet="Fun_StcokReceivable_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="CorpRefId" ColumnName="CorpRefId" />
+          <ScalarProperty Name="ContractRefId" ColumnName="ContractRefId" />
+          <ScalarProperty Name="RecId" ColumnName="RecId" />
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockNameId" ColumnName="StockNameId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fun_StockPayApply_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Fun_StockPayApply_Ref">
+        <MappingFragment StoreEntitySet="Fun_StockPayApply_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="PayApplyId" ColumnName="PayApplyId" />
+          <ScalarProperty Name="ContractRefId" ColumnName="ContractRefId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="ApplyBala" ColumnName="ApplyBala" />
+          <ScalarProperty Name="RefStatus" ColumnName="RefStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_BusinessInvoice">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_BusinessInvoice">
+        <MappingFragment StoreEntitySet="Inv_BusinessInvoice">
+          <ScalarProperty Name="BusinessInvoiceId" ColumnName="BusinessInvoiceId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="RefInvoiceId" ColumnName="RefInvoiceId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="IntegerAmount" ColumnName="IntegerAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="MUId" ColumnName="MUId" />
+          <ScalarProperty Name="MarginRatio" ColumnName="MarginRatio" />
+          <ScalarProperty Name="VATRatio" ColumnName="VATRatio" />
+          <ScalarProperty Name="VATBala" ColumnName="VATBala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_BusinessInvoiceDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_BusinessInvoiceDetail">
+        <MappingFragment StoreEntitySet="Inv_BusinessInvoiceDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="BusinessInvoiceId" ColumnName="BusinessInvoiceId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="RefDetailId" ColumnName="RefDetailId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="ConfirmPriceId" ColumnName="ConfirmPriceId" />
+          <ScalarProperty Name="ConfirmDetailId" ColumnName="ConfirmDetailId" />
+          <ScalarProperty Name="PricingId" ColumnName="PricingId" />
+          <ScalarProperty Name="PricingDetailId" ColumnName="PricingDetailId" />
+          <ScalarProperty Name="FeeType" ColumnName="FeeType" />
+          <ScalarProperty Name="IntegerAmount" ColumnName="IntegerAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="CalculateDay" ColumnName="CalculateDay" />
+          <ScalarProperty Name="Bala" ColumnName="Bala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_FinanceBusinessInvoice_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_FinanceBusinessInvoice_Ref">
+        <MappingFragment StoreEntitySet="Inv_FinanceBusinessInvoice_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="BusinessInvoiceId" ColumnName="BusinessInvoiceId" />
+          <ScalarProperty Name="FinanceInvoiceId" ColumnName="FinanceInvoiceId" />
+          <ScalarProperty Name="Bala" ColumnName="Bala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_FinanceInvoice">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_FinanceInvoice">
+        <MappingFragment StoreEntitySet="Inv_FinanceInvoice">
+          <ScalarProperty Name="FinanceInvoiceId" ColumnName="FinanceInvoiceId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="IntegerAmount" ColumnName="IntegerAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="MUId" ColumnName="MUId" />
+          <ScalarProperty Name="VATRatio" ColumnName="VATRatio" />
+          <ScalarProperty Name="VATBala" ColumnName="VATBala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_FinanceInvoiceDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_FinanceInvoiceDetail">
+        <MappingFragment StoreEntitySet="Inv_FinanceInvoiceDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="FinanceInvoiceId" ColumnName="FinanceInvoiceId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="IntegerAmount" ColumnName="IntegerAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="MUId" ColumnName="MUId" />
+          <ScalarProperty Name="VATRatio" ColumnName="VATRatio" />
+          <ScalarProperty Name="VATBala" ColumnName="VATBala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_FinBusInvAllot">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_FinBusInvAllot">
+        <MappingFragment StoreEntitySet="Inv_FinBusInvAllot">
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Alloter" ColumnName="Alloter" />
+          <ScalarProperty Name="AllotDate" ColumnName="AllotDate" />
+          <ScalarProperty Name="AllotStatus" ColumnName="AllotStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_FinBusInvAllotDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_FinBusInvAllotDetail">
+        <MappingFragment StoreEntitySet="Inv_FinBusInvAllotDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="AllotId" ColumnName="AllotId" />
+          <ScalarProperty Name="BusinessInvoiceId" ColumnName="BusinessInvoiceId" />
+          <ScalarProperty Name="FinanceInvoiceId" ColumnName="FinanceInvoiceId" />
+          <ScalarProperty Name="AllotBala" ColumnName="AllotBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_InvoiceApply">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_InvoiceApply">
+        <MappingFragment StoreEntitySet="Inv_InvoiceApply">
+          <ScalarProperty Name="InvoiceApplyId" ColumnName="InvoiceApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="TotalBala" ColumnName="TotalBala" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_InvoiceApplyDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_InvoiceApplyDetail">
+        <MappingFragment StoreEntitySet="Inv_InvoiceApplyDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="InvoiceApplyId" ColumnName="InvoiceApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="BussinessInvoiceId" ColumnName="BussinessInvoiceId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="InvoicePrice" ColumnName="InvoicePrice" />
+          <ScalarProperty Name="PaymentAmount" ColumnName="PaymentAmount" />
+          <ScalarProperty Name="InterestAmount" ColumnName="InterestAmount" />
+          <ScalarProperty Name="OtherAmount" ColumnName="OtherAmount" />
+          <ScalarProperty Name="InvoiceBala" ColumnName="InvoiceBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_InvoiceApplyFinance">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_InvoiceApplyFinance">
+        <MappingFragment StoreEntitySet="Inv_InvoiceApplyFinance">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="FinanceInvoiceId" ColumnName="FinanceInvoiceId" />
+          <ScalarProperty Name="InvoiceApplyId" ColumnName="InvoiceApplyId" />
+          <ScalarProperty Name="RefStatus" ColumnName="RefStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_InvoiceApplySIDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_InvoiceApplySIDetail">
+        <MappingFragment StoreEntitySet="Inv_InvoiceApplySIDetail">
+          <ScalarProperty Name="SIDetailId" ColumnName="SIDetailId" />
+          <ScalarProperty Name="InvoiceApplyId" ColumnName="InvoiceApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="SIId" ColumnName="SIId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_SI">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_SI">
+        <MappingFragment StoreEntitySet="Inv_SI">
+          <ScalarProperty Name="SIId" ColumnName="SIId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="ChangeCurrencyId" ColumnName="ChangeCurrencyId" />
+          <ScalarProperty Name="ChangeRate" ColumnName="ChangeRate" />
+          <ScalarProperty Name="ChangeBala" ColumnName="ChangeBala" />
+          <ScalarProperty Name="PayDept" ColumnName="PayDept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inv_SIDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Inv_SIDetail">
+        <MappingFragment StoreEntitySet="Inv_SIDetail">
+          <ScalarProperty Name="SIDetailId" ColumnName="SIDetailId" />
+          <ScalarProperty Name="SIId" ColumnName="SIId" />
+          <ScalarProperty Name="PayDept" ColumnName="PayDept" />
+          <ScalarProperty Name="FeeType" ColumnName="FeeType" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractSubId" ColumnName="ContractSubId" />
+          <ScalarProperty Name="DetailBala" ColumnName="DetailBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice">
+      <EntityTypeMapping TypeName="NFMTModel.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceName" ColumnName="InvoiceName" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="InvoiceBala" ColumnName="InvoiceBala" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="InvoiceDirection" ColumnName="InvoiceDirection" />
+          <ScalarProperty Name="OutBlocId" ColumnName="OutBlocId" />
+          <ScalarProperty Name="OutCorpId" ColumnName="OutCorpId" />
+          <ScalarProperty Name="OutCorpName" ColumnName="OutCorpName" />
+          <ScalarProperty Name="InBlocId" ColumnName="InBlocId" />
+          <ScalarProperty Name="InCorpId" ColumnName="InCorpId" />
+          <ScalarProperty Name="InCorpName" ColumnName="InCorpName" />
+          <ScalarProperty Name="InvoiceStatus" ColumnName="InvoiceStatus" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceAttach">
+      <EntityTypeMapping TypeName="NFMTModel.InvoiceAttach">
+        <MappingFragment StoreEntitySet="InvoiceAttach">
+          <ScalarProperty Name="InvoiceAttachId" ColumnName="InvoiceAttachId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_Interest">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_Interest">
+        <MappingFragment StoreEntitySet="Pri_Interest">
+          <ScalarProperty Name="InterestId" ColumnName="InterestId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="PricingUnit" ColumnName="PricingUnit" />
+          <ScalarProperty Name="Premium" ColumnName="Premium" />
+          <ScalarProperty Name="OtherPrice" ColumnName="OtherPrice" />
+          <ScalarProperty Name="InterestPrice" ColumnName="InterestPrice" />
+          <ScalarProperty Name="PayCapital" ColumnName="PayCapital" />
+          <ScalarProperty Name="CurCapital" ColumnName="CurCapital" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="InterestBala" ColumnName="InterestBala" />
+          <ScalarProperty Name="InterestAmountDay" ColumnName="InterestAmountDay" />
+          <ScalarProperty Name="InterestAmount" ColumnName="InterestAmount" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="InterestStyle" ColumnName="InterestStyle" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="InterestDate" ColumnName="InterestDate" />
+          <ScalarProperty Name="InterestStatus" ColumnName="InterestStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_InterestDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_InterestDetail">
+        <MappingFragment StoreEntitySet="Pri_InterestDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="InterestId" ColumnName="InterestId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="InterestAmount" ColumnName="InterestAmount" />
+          <ScalarProperty Name="PricingUnit" ColumnName="PricingUnit" />
+          <ScalarProperty Name="Premium" ColumnName="Premium" />
+          <ScalarProperty Name="OtherPrice" ColumnName="OtherPrice" />
+          <ScalarProperty Name="InterestPrice" ColumnName="InterestPrice" />
+          <ScalarProperty Name="StockBala" ColumnName="StockBala" />
+          <ScalarProperty Name="InterestStartDate" ColumnName="InterestStartDate" />
+          <ScalarProperty Name="InterestEndDate" ColumnName="InterestEndDate" />
+          <ScalarProperty Name="InterestDay" ColumnName="InterestDay" />
+          <ScalarProperty Name="InterestUnit" ColumnName="InterestUnit" />
+          <ScalarProperty Name="InterestBala" ColumnName="InterestBala" />
+          <ScalarProperty Name="InterestType" ColumnName="InterestType" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_PriceConfirm">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_PriceConfirm">
+        <MappingFragment StoreEntitySet="Pri_PriceConfirm">
+          <ScalarProperty Name="PriceConfirmId" ColumnName="PriceConfirmId" />
+          <ScalarProperty Name="OutCorpId" ColumnName="OutCorpId" />
+          <ScalarProperty Name="InCorpId" ColumnName="InCorpId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubId" ColumnName="SubId" />
+          <ScalarProperty Name="ContractAmount" ColumnName="ContractAmount" />
+          <ScalarProperty Name="SubAmount" ColumnName="SubAmount" />
+          <ScalarProperty Name="RealityAmount" ColumnName="RealityAmount" />
+          <ScalarProperty Name="PricingAvg" ColumnName="PricingAvg" />
+          <ScalarProperty Name="PremiumAvg" ColumnName="PremiumAvg" />
+          <ScalarProperty Name="InterestAvg" ColumnName="InterestAvg" />
+          <ScalarProperty Name="OtherAvg" ColumnName="OtherAvg" />
+          <ScalarProperty Name="InterestBala" ColumnName="InterestBala" />
+          <ScalarProperty Name="SettlePrice" ColumnName="SettlePrice" />
+          <ScalarProperty Name="SettleBala" ColumnName="SettleBala" />
+          <ScalarProperty Name="PricingDate" ColumnName="PricingDate" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="TakeCorpId" ColumnName="TakeCorpId" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="PriceConfirmStatus" ColumnName="PriceConfirmStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_PriceConfirmDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_PriceConfirmDetail">
+        <MappingFragment StoreEntitySet="Pri_PriceConfirmDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="PriceConfirmId" ColumnName="PriceConfirmId" />
+          <ScalarProperty Name="InterestDetailId" ColumnName="InterestDetailId" />
+          <ScalarProperty Name="InterestId" ColumnName="InterestId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="ConfirmAmount" ColumnName="ConfirmAmount" />
+          <ScalarProperty Name="SettlePrice" ColumnName="SettlePrice" />
+          <ScalarProperty Name="SettleBala" ColumnName="SettleBala" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_Pricing">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_Pricing">
+        <MappingFragment StoreEntitySet="Pri_Pricing">
+          <ScalarProperty Name="PricingId" ColumnName="PricingId" />
+          <ScalarProperty Name="PricingApplyId" ColumnName="PricingApplyId" />
+          <ScalarProperty Name="PricingWeight" ColumnName="PricingWeight" />
+          <ScalarProperty Name="MUId" ColumnName="MUId" />
+          <ScalarProperty Name="ExchangeId" ColumnName="ExchangeId" />
+          <ScalarProperty Name="FuturesCodeId" ColumnName="FuturesCodeId" />
+          <ScalarProperty Name="FuturesCodeEndDate" ColumnName="FuturesCodeEndDate" />
+          <ScalarProperty Name="SpotQP" ColumnName="SpotQP" />
+          <ScalarProperty Name="DelayFee" ColumnName="DelayFee" />
+          <ScalarProperty Name="Spread" ColumnName="Spread" />
+          <ScalarProperty Name="OtherFee" ColumnName="OtherFee" />
+          <ScalarProperty Name="AvgPrice" ColumnName="AvgPrice" />
+          <ScalarProperty Name="PricingTime" ColumnName="PricingTime" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Pricinger" ColumnName="Pricinger" />
+          <ScalarProperty Name="AssertId" ColumnName="AssertId" />
+          <ScalarProperty Name="PricingDirection" ColumnName="PricingDirection" />
+          <ScalarProperty Name="PricingStatus" ColumnName="PricingStatus" />
+          <ScalarProperty Name="FinalPrice" ColumnName="FinalPrice" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_PricingApply">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_PricingApply">
+        <MappingFragment StoreEntitySet="Pri_PricingApply">
+          <ScalarProperty Name="PricingApplyId" ColumnName="PricingApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="PricingDirection" ColumnName="PricingDirection" />
+          <ScalarProperty Name="QPDate" ColumnName="QPDate" />
+          <ScalarProperty Name="DelayAmount" ColumnName="DelayAmount" />
+          <ScalarProperty Name="DelayFee" ColumnName="DelayFee" />
+          <ScalarProperty Name="DelayQPDate" ColumnName="DelayQPDate" />
+          <ScalarProperty Name="OtherFee" ColumnName="OtherFee" />
+          <ScalarProperty Name="OtherDesc" ColumnName="OtherDesc" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+          <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="PricingBlocId" ColumnName="PricingBlocId" />
+          <ScalarProperty Name="PricingCorpId" ColumnName="PricingCorpId" />
+          <ScalarProperty Name="PricingWeight" ColumnName="PricingWeight" />
+          <ScalarProperty Name="MUId" ColumnName="MUId" />
+          <ScalarProperty Name="AssertId" ColumnName="AssertId" />
+          <ScalarProperty Name="PricingPersoinId" ColumnName="PricingPersoinId" />
+          <ScalarProperty Name="PricingStyle" ColumnName="PricingStyle" />
+          <ScalarProperty Name="DeclareDate" ColumnName="DeclareDate" />
+          <ScalarProperty Name="AvgPriceStart" ColumnName="AvgPriceStart" />
+          <ScalarProperty Name="AvgPriceEnd" ColumnName="AvgPriceEnd" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_PricingApplyDelay">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_PricingApplyDelay">
+        <MappingFragment StoreEntitySet="Pri_PricingApplyDelay">
+          <ScalarProperty Name="DelayId" ColumnName="DelayId" />
+          <ScalarProperty Name="PricingApplyId" ColumnName="PricingApplyId" />
+          <ScalarProperty Name="DelayAmount" ColumnName="DelayAmount" />
+          <ScalarProperty Name="DelayFee" ColumnName="DelayFee" />
+          <ScalarProperty Name="DelayQP" ColumnName="DelayQP" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_PricingApplyDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_PricingApplyDetail">
+        <MappingFragment StoreEntitySet="Pri_PricingApplyDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="PricingApplyId" ColumnName="PricingApplyId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="PricingWeight" ColumnName="PricingWeight" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_PricingDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_PricingDetail">
+        <MappingFragment StoreEntitySet="Pri_PricingDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="PricingId" ColumnName="PricingId" />
+          <ScalarProperty Name="PricingApplyId" ColumnName="PricingApplyId" />
+          <ScalarProperty Name="PricingApplyDetailId" ColumnName="PricingApplyDetailId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="PricingWeight" ColumnName="PricingWeight" />
+          <ScalarProperty Name="AvgPrice" ColumnName="AvgPrice" />
+          <ScalarProperty Name="PricingTime" ColumnName="PricingTime" />
+          <ScalarProperty Name="Pricinger" ColumnName="Pricinger" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_PricingPerson">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_PricingPerson">
+        <MappingFragment StoreEntitySet="Pri_PricingPerson">
+          <ScalarProperty Name="PersoinId" ColumnName="PersoinId" />
+          <ScalarProperty Name="BlocId" ColumnName="BlocId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="PricingName" ColumnName="PricingName" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="PricingPhone" ColumnName="PricingPhone" />
+          <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+          <ScalarProperty Name="PersoinStatus" ColumnName="PersoinStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_StopLoss">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_StopLoss">
+        <MappingFragment StoreEntitySet="Pri_StopLoss">
+          <ScalarProperty Name="StopLossId" ColumnName="StopLossId" />
+          <ScalarProperty Name="StopLossApplyId" ColumnName="StopLossApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="StopLossWeight" ColumnName="StopLossWeight" />
+          <ScalarProperty Name="MUId" ColumnName="MUId" />
+          <ScalarProperty Name="ExchangeId" ColumnName="ExchangeId" />
+          <ScalarProperty Name="FuturesCodeId" ColumnName="FuturesCodeId" />
+          <ScalarProperty Name="AvgPrice" ColumnName="AvgPrice" />
+          <ScalarProperty Name="PricingTime" ColumnName="PricingTime" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="StopLosser" ColumnName="StopLosser" />
+          <ScalarProperty Name="AssertId" ColumnName="AssertId" />
+          <ScalarProperty Name="PricingDirection" ColumnName="PricingDirection" />
+          <ScalarProperty Name="StopLossStatus" ColumnName="StopLossStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_StopLossApply">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_StopLossApply">
+        <MappingFragment StoreEntitySet="Pri_StopLossApply">
+          <ScalarProperty Name="StopLossApplyId" ColumnName="StopLossApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="PricingId" ColumnName="PricingId" />
+          <ScalarProperty Name="PricingDirection" ColumnName="PricingDirection" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="AssertId" ColumnName="AssertId" />
+          <ScalarProperty Name="StopLossPrice" ColumnName="StopLossPrice" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="StopLossWeight" ColumnName="StopLossWeight" />
+          <ScalarProperty Name="MUId" ColumnName="MUId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_StopLossApplyDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_StopLossApplyDetail">
+        <MappingFragment StoreEntitySet="Pri_StopLossApplyDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="StopLossApplyId" ColumnName="StopLossApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="PricingDetailId" ColumnName="PricingDetailId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="StopLossWeight" ColumnName="StopLossWeight" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pri_StopLossDetail">
+      <EntityTypeMapping TypeName="NFMTModel.Pri_StopLossDetail">
+        <MappingFragment StoreEntitySet="Pri_StopLossDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="StopLossId" ColumnName="StopLossId" />
+          <ScalarProperty Name="StopLossApplyId" ColumnName="StopLossApplyId" />
+          <ScalarProperty Name="StopLossApplyDetailId" ColumnName="StopLossApplyDetailId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="StopLossWeight" ColumnName="StopLossWeight" />
+          <ScalarProperty Name="AvgPrice" ColumnName="AvgPrice" />
+          <ScalarProperty Name="StopLossTime" ColumnName="StopLossTime" />
+          <ScalarProperty Name="StopLosser" ColumnName="StopLosser" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rep_ClientCurrent">
+      <EntityTypeMapping TypeName="NFMTModel.Rep_ClientCurrent">
+        <MappingFragment StoreEntitySet="Rep_ClientCurrent">
+          <ScalarProperty Name="CurId" ColumnName="CurId" />
+          <ScalarProperty Name="InBlocId" ColumnName="InBlocId" />
+          <ScalarProperty Name="InCorpId" ColumnName="InCorpId" />
+          <ScalarProperty Name="OutBlocId" ColumnName="OutBlocId" />
+          <ScalarProperty Name="OutCorpId" ColumnName="OutCorpId" />
+          <ScalarProperty Name="CurDate" ColumnName="CurDate" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CashInBala" ColumnName="CashInBala" />
+          <ScalarProperty Name="CashOutBala" ColumnName="CashOutBala" />
+          <ScalarProperty Name="InvoiceOutBala" ColumnName="InvoiceOutBala" />
+          <ScalarProperty Name="InvoiceInBala" ColumnName="InvoiceInBala" />
+          <ScalarProperty Name="CurStatus" ColumnName="CurStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_ContractStockIn_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.St_ContractStockIn_Ref">
+        <MappingFragment StoreEntitySet="St_ContractStockIn_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="StockInId" ColumnName="StockInId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractSubId" ColumnName="ContractSubId" />
+          <ScalarProperty Name="RefStatus" ColumnName="RefStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_CustomsApplyAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_CustomsApplyAttach">
+        <MappingFragment StoreEntitySet="St_CustomsApplyAttach">
+          <ScalarProperty Name="CustomsApplyAttachId" ColumnName="CustomsApplyAttachId" />
+          <ScalarProperty Name="CustomsApplyId" ColumnName="CustomsApplyId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_CustomsApplyDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_CustomsApplyDetail">
+        <MappingFragment StoreEntitySet="St_CustomsApplyDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="CustomsApplyId" ColumnName="CustomsApplyId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="CustomsPrice" ColumnName="CustomsPrice" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_CustomsAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_CustomsAttach">
+        <MappingFragment StoreEntitySet="St_CustomsAttach">
+          <ScalarProperty Name="CustomsAttachId" ColumnName="CustomsAttachId" />
+          <ScalarProperty Name="CustomsId" ColumnName="CustomsId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_CustomsClearance">
+      <EntityTypeMapping TypeName="NFMTModel.St_CustomsClearance">
+        <MappingFragment StoreEntitySet="St_CustomsClearance">
+          <ScalarProperty Name="CustomsId" ColumnName="CustomsId" />
+          <ScalarProperty Name="CustomsApplyId" ColumnName="CustomsApplyId" />
+          <ScalarProperty Name="Customser" ColumnName="Customser" />
+          <ScalarProperty Name="CustomsCorpId" ColumnName="CustomsCorpId" />
+          <ScalarProperty Name="CustomsDate" ColumnName="CustomsDate" />
+          <ScalarProperty Name="CustomsName" ColumnName="CustomsName" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CustomsPrice" ColumnName="CustomsPrice" />
+          <ScalarProperty Name="TariffRate" ColumnName="TariffRate" />
+          <ScalarProperty Name="AddedValueRate" ColumnName="AddedValueRate" />
+          <ScalarProperty Name="OtherFees" ColumnName="OtherFees" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CustomsStatus" ColumnName="CustomsStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_CustomsClearanceApply">
+      <EntityTypeMapping TypeName="NFMTModel.St_CustomsClearanceApply">
+        <MappingFragment StoreEntitySet="St_CustomsClearanceApply">
+          <ScalarProperty Name="CustomsApplyId" ColumnName="CustomsApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="OutCorpId" ColumnName="OutCorpId" />
+          <ScalarProperty Name="InCorpId" ColumnName="InCorpId" />
+          <ScalarProperty Name="CustomsCorpId" ColumnName="CustomsCorpId" />
+          <ScalarProperty Name="CustomsPrice" ColumnName="CustomsPrice" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_CustomsDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_CustomsDetail">
+        <MappingFragment StoreEntitySet="St_CustomsDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="CustomsId" ColumnName="CustomsId" />
+          <ScalarProperty Name="CustomsApplyId" ColumnName="CustomsApplyId" />
+          <ScalarProperty Name="CustomsApplyDetailId" ColumnName="CustomsApplyDetailId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="CustomsPrice" ColumnName="CustomsPrice" />
+          <ScalarProperty Name="DeliverPlaceId" ColumnName="DeliverPlaceId" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_Pledge">
+      <EntityTypeMapping TypeName="NFMTModel.St_Pledge">
+        <MappingFragment StoreEntitySet="St_Pledge">
+          <ScalarProperty Name="PledgeId" ColumnName="PledgeId" />
+          <ScalarProperty Name="PledgeApplyId" ColumnName="PledgeApplyId" />
+          <ScalarProperty Name="Pledger" ColumnName="Pledger" />
+          <ScalarProperty Name="PledgeTime" ColumnName="PledgeTime" />
+          <ScalarProperty Name="PledgeBank" ColumnName="PledgeBank" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="PledgeStatus" ColumnName="PledgeStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_PledgeApply">
+      <EntityTypeMapping TypeName="NFMTModel.St_PledgeApply">
+        <MappingFragment StoreEntitySet="St_PledgeApply">
+          <ScalarProperty Name="PledgeApplyId" ColumnName="PledgeApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="PledgeBank" ColumnName="PledgeBank" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_PledgeApplyAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_PledgeApplyAttach">
+        <MappingFragment StoreEntitySet="St_PledgeApplyAttach">
+          <ScalarProperty Name="PledgeApplyAttachId" ColumnName="PledgeApplyAttachId" />
+          <ScalarProperty Name="PledgeApplyId" ColumnName="PledgeApplyId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_PledgeApplyDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_PledgeApplyDetail">
+        <MappingFragment StoreEntitySet="St_PledgeApplyDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="PledgeApplyId" ColumnName="PledgeApplyId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="ApplyQty" ColumnName="ApplyQty" />
+          <ScalarProperty Name="UintId" ColumnName="UintId" />
+          <ScalarProperty Name="PledgePrice" ColumnName="PledgePrice" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_PledgeAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_PledgeAttach">
+        <MappingFragment StoreEntitySet="St_PledgeAttach">
+          <ScalarProperty Name="PledgeAttachId" ColumnName="PledgeAttachId" />
+          <ScalarProperty Name="PledgeId" ColumnName="PledgeId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_PledgeDetial">
+      <EntityTypeMapping TypeName="NFMTModel.St_PledgeDetial">
+        <MappingFragment StoreEntitySet="St_PledgeDetial">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="PledgeId" ColumnName="PledgeId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="PledgeApplyDetailId" ColumnName="PledgeApplyDetailId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="PledgePrice" ColumnName="PledgePrice" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_Repo">
+      <EntityTypeMapping TypeName="NFMTModel.St_Repo">
+        <MappingFragment StoreEntitySet="St_Repo">
+          <ScalarProperty Name="RepoId" ColumnName="RepoId" />
+          <ScalarProperty Name="RepoApplyId" ColumnName="RepoApplyId" />
+          <ScalarProperty Name="Repoer" ColumnName="Repoer" />
+          <ScalarProperty Name="RepoerTime" ColumnName="RepoerTime" />
+          <ScalarProperty Name="RepoStatus" ColumnName="RepoStatus" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_RepoApply">
+      <EntityTypeMapping TypeName="NFMTModel.St_RepoApply">
+        <MappingFragment StoreEntitySet="St_RepoApply">
+          <ScalarProperty Name="RepoApplyId" ColumnName="RepoApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_RepoApplyAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_RepoApplyAttach">
+        <MappingFragment StoreEntitySet="St_RepoApplyAttach">
+          <ScalarProperty Name="RepoApplyAttachId" ColumnName="RepoApplyAttachId" />
+          <ScalarProperty Name="RepoApplyId" ColumnName="RepoApplyId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_RepoApplyDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_RepoApplyDetail">
+        <MappingFragment StoreEntitySet="St_RepoApplyDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="RepoApplyId" ColumnName="RepoApplyId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_RepoAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_RepoAttach">
+        <MappingFragment StoreEntitySet="St_RepoAttach">
+          <ScalarProperty Name="RepoAttachId" ColumnName="RepoAttachId" />
+          <ScalarProperty Name="RepoId" ColumnName="RepoId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_RepoDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_RepoDetail">
+        <MappingFragment StoreEntitySet="St_RepoDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="RepoId" ColumnName="RepoId" />
+          <ScalarProperty Name="RepoDetailStatus" ColumnName="RepoDetailStatus" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="RepoApplyDetailId" ColumnName="RepoApplyDetailId" />
+          <ScalarProperty Name="RepoWeight" ColumnName="RepoWeight" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="RepoPrice" ColumnName="RepoPrice" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_SplitDoc">
+      <EntityTypeMapping TypeName="NFMTModel.St_SplitDoc">
+        <MappingFragment StoreEntitySet="St_SplitDoc">
+          <ScalarProperty Name="SplitDocId" ColumnName="SplitDocId" />
+          <ScalarProperty Name="Spliter" ColumnName="Spliter" />
+          <ScalarProperty Name="SplitDocTime" ColumnName="SplitDocTime" />
+          <ScalarProperty Name="SplitDocStatus" ColumnName="SplitDocStatus" />
+          <ScalarProperty Name="OldRefNoId" ColumnName="OldRefNoId" />
+          <ScalarProperty Name="OldRefNo" ColumnName="OldRefNo" />
+          <ScalarProperty Name="OldStockId" ColumnName="OldStockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_SplitDocAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_SplitDocAttach">
+        <MappingFragment StoreEntitySet="St_SplitDocAttach">
+          <ScalarProperty Name="SplitDocAttachId" ColumnName="SplitDocAttachId" />
+          <ScalarProperty Name="SplitDocId" ColumnName="SplitDocId" />
+          <ScalarProperty Name="SplitDocDetailId" ColumnName="SplitDocDetailId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_SplitDocDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_SplitDocDetail">
+        <MappingFragment StoreEntitySet="St_SplitDocDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="SplitDocId" ColumnName="SplitDocId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="NewRefNo" ColumnName="NewRefNo" />
+          <ScalarProperty Name="OldRefNoId" ColumnName="OldRefNoId" />
+          <ScalarProperty Name="OldStockId" ColumnName="OldStockId" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="PaperNo" ColumnName="PaperNo" />
+          <ScalarProperty Name="PaperHolder" ColumnName="PaperHolder" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_SplitDocStock_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.St_SplitDocStock_Ref">
+        <MappingFragment StoreEntitySet="St_SplitDocStock_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="SplitDocDetailId" ColumnName="SplitDocDetailId" />
+          <ScalarProperty Name="NewRefNoId" ColumnName="NewRefNoId" />
+          <ScalarProperty Name="NewStockId" ColumnName="NewStockId" />
+          <ScalarProperty Name="OldRefNoId" ColumnName="OldRefNoId" />
+          <ScalarProperty Name="OldStockId" ColumnName="OldStockId" />
+          <ScalarProperty Name="RefStatus" ColumnName="RefStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_Stock">
+      <EntityTypeMapping TypeName="NFMTModel.St_Stock">
+        <MappingFragment StoreEntitySet="St_Stock">
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockNameId" ColumnName="StockNameId" />
+          <ScalarProperty Name="StockNo" ColumnName="StockNo" />
+          <ScalarProperty Name="StockDate" ColumnName="StockDate" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="ReceiptInGap" ColumnName="ReceiptInGap" />
+          <ScalarProperty Name="ReceiptOutGap" ColumnName="ReceiptOutGap" />
+          <ScalarProperty Name="CurGrossAmount" ColumnName="CurGrossAmount" />
+          <ScalarProperty Name="CurNetAmount" ColumnName="CurNetAmount" />
+          <ScalarProperty Name="UintId" ColumnName="UintId" />
+          <ScalarProperty Name="DeliverPlaceId" ColumnName="DeliverPlaceId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="CustomsType" ColumnName="CustomsType" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="ProducerId" ColumnName="ProducerId" />
+          <ScalarProperty Name="PaperNo" ColumnName="PaperNo" />
+          <ScalarProperty Name="PaperHolder" ColumnName="PaperHolder" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="OriginPlaceId" ColumnName="OriginPlaceId" />
+          <ScalarProperty Name="OriginPlace" ColumnName="OriginPlace" />
+          <ScalarProperty Name="PreStatus" ColumnName="PreStatus" />
+          <ScalarProperty Name="StockStatus" ColumnName="StockStatus" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="StockType" ColumnName="StockType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockExclusive">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockExclusive">
+        <MappingFragment StoreEntitySet="St_StockExclusive">
+          <ScalarProperty Name="ExclusiveId" ColumnName="ExclusiveId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="StockApplyId" ColumnName="StockApplyId" />
+          <ScalarProperty Name="DetailApplyId" ColumnName="DetailApplyId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="ExclusiveAmount" ColumnName="ExclusiveAmount" />
+          <ScalarProperty Name="ExclusiveStatus" ColumnName="ExclusiveStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockIn">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockIn">
+        <MappingFragment StoreEntitySet="St_StockIn">
+          <ScalarProperty Name="StockInId" ColumnName="StockInId" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="StockInDate" ColumnName="StockInDate" />
+          <ScalarProperty Name="CustomType" ColumnName="CustomType" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="UintId" ColumnName="UintId" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="DeliverPlaceId" ColumnName="DeliverPlaceId" />
+          <ScalarProperty Name="ProducerId" ColumnName="ProducerId" />
+          <ScalarProperty Name="StockType" ColumnName="StockType" />
+          <ScalarProperty Name="StockOperateType" ColumnName="StockOperateType" />
+          <ScalarProperty Name="PaperNo" ColumnName="PaperNo" />
+          <ScalarProperty Name="PaperHolder" ColumnName="PaperHolder" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="OriginPlaceId" ColumnName="OriginPlaceId" />
+          <ScalarProperty Name="OriginPlace" ColumnName="OriginPlace" />
+          <ScalarProperty Name="StockInStatus" ColumnName="StockInStatus" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockInAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockInAttach">
+        <MappingFragment StoreEntitySet="St_StockInAttach">
+          <ScalarProperty Name="StockInAttachId" ColumnName="StockInAttachId" />
+          <ScalarProperty Name="StockInId" ColumnName="StockInId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+          <ScalarProperty Name="AttachType" ColumnName="AttachType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockInStock_Ref">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockInStock_Ref">
+        <MappingFragment StoreEntitySet="St_StockInStock_Ref">
+          <ScalarProperty Name="RefId" ColumnName="RefId" />
+          <ScalarProperty Name="StockInId" ColumnName="StockInId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="RefStatus" ColumnName="RefStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockLog">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockLog">
+        <MappingFragment StoreEntitySet="St_StockLog">
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockNameId" ColumnName="StockNameId" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+          <ScalarProperty Name="LogDirection" ColumnName="LogDirection" />
+          <ScalarProperty Name="LogType" ColumnName="LogType" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+          <ScalarProperty Name="OpPerson" ColumnName="OpPerson" />
+          <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="GapAmount" ColumnName="GapAmount" />
+          <ScalarProperty Name="MUId" ColumnName="MUId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="CorpId" ColumnName="CorpId" />
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="CustomsType" ColumnName="CustomsType" />
+          <ScalarProperty Name="DeliverPlaceId" ColumnName="DeliverPlaceId" />
+          <ScalarProperty Name="ProducerId" ColumnName="ProducerId" />
+          <ScalarProperty Name="PaperNo" ColumnName="PaperNo" />
+          <ScalarProperty Name="PaperHolder" ColumnName="PaperHolder" />
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="StockType" ColumnName="StockType" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="OriginPlaceId" ColumnName="OriginPlaceId" />
+          <ScalarProperty Name="OriginPlace" ColumnName="OriginPlace" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="LogStatus" ColumnName="LogStatus" />
+          <ScalarProperty Name="LogSourceBase" ColumnName="LogSourceBase" />
+          <ScalarProperty Name="LogSource" ColumnName="LogSource" />
+          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockLogAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockLogAttach">
+        <MappingFragment StoreEntitySet="St_StockLogAttach">
+          <ScalarProperty Name="StockLogAttachId" ColumnName="StockLogAttachId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockMove">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockMove">
+        <MappingFragment StoreEntitySet="St_StockMove">
+          <ScalarProperty Name="StockMoveId" ColumnName="StockMoveId" />
+          <ScalarProperty Name="StockMoveApplyId" ColumnName="StockMoveApplyId" />
+          <ScalarProperty Name="Mover" ColumnName="Mover" />
+          <ScalarProperty Name="MoveTime" ColumnName="MoveTime" />
+          <ScalarProperty Name="MoveStatus" ColumnName="MoveStatus" />
+          <ScalarProperty Name="MoveMemo" ColumnName="MoveMemo" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockMoveApply">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockMoveApply">
+        <MappingFragment StoreEntitySet="St_StockMoveApply">
+          <ScalarProperty Name="StockMoveApplyId" ColumnName="StockMoveApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockMoveApplyAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockMoveApplyAttach">
+        <MappingFragment StoreEntitySet="St_StockMoveApplyAttach">
+          <ScalarProperty Name="StockMoveApplyAttachId" ColumnName="StockMoveApplyAttachId" />
+          <ScalarProperty Name="StockMoveApplyId" ColumnName="StockMoveApplyId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockMoveApplyDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockMoveApplyDetail">
+        <MappingFragment StoreEntitySet="St_StockMoveApplyDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="StockMoveApplyId" ColumnName="StockMoveApplyId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="PaperNo" ColumnName="PaperNo" />
+          <ScalarProperty Name="DeliverPlaceId" ColumnName="DeliverPlaceId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockMoveAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockMoveAttach">
+        <MappingFragment StoreEntitySet="St_StockMoveAttach">
+          <ScalarProperty Name="StockMoveAttachId" ColumnName="StockMoveAttachId" />
+          <ScalarProperty Name="StockMoveId" ColumnName="StockMoveId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockMoveDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockMoveDetail">
+        <MappingFragment StoreEntitySet="St_StockMoveDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="StockMoveId" ColumnName="StockMoveId" />
+          <ScalarProperty Name="MoveDetailStatus" ColumnName="MoveDetailStatus" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="PaperNo" ColumnName="PaperNo" />
+          <ScalarProperty Name="DeliverPlaceId" ColumnName="DeliverPlaceId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockName">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockName">
+        <MappingFragment StoreEntitySet="St_StockName">
+          <ScalarProperty Name="StockNameId" ColumnName="StockNameId" />
+          <ScalarProperty Name="RefNo" ColumnName="RefNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockOut">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockOut">
+        <MappingFragment StoreEntitySet="St_StockOut">
+          <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
+          <ScalarProperty Name="StockOutApplyId" ColumnName="StockOutApplyId" />
+          <ScalarProperty Name="Executor" ColumnName="Executor" />
+          <ScalarProperty Name="Confirmor" ColumnName="Confirmor" />
+          <ScalarProperty Name="StockOutTime" ColumnName="StockOutTime" />
+          <ScalarProperty Name="GrosstAmount" ColumnName="GrosstAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="StockOperateType" ColumnName="StockOperateType" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="StockOutStatus" ColumnName="StockOutStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockOutApply">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockOutApply">
+        <MappingFragment StoreEntitySet="St_StockOutApply">
+          <ScalarProperty Name="StockOutApplyId" ColumnName="StockOutApplyId" />
+          <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="BuyCorpId" ColumnName="BuyCorpId" />
+          <ScalarProperty Name="CreateFrom" ColumnName="CreateFrom" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockOutApplyAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockOutApplyAttach">
+        <MappingFragment StoreEntitySet="St_StockOutApplyAttach">
+          <ScalarProperty Name="StockOutApplyAttachId" ColumnName="StockOutApplyAttachId" />
+          <ScalarProperty Name="StockOutApplyId" ColumnName="StockOutApplyId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockOutApplyDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockOutApplyDetail">
+        <MappingFragment StoreEntitySet="St_StockOutApplyDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="StockOutApplyId" ColumnName="StockOutApplyId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="SubContractId" ColumnName="SubContractId" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockOutAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockOutAttach">
+        <MappingFragment StoreEntitySet="St_StockOutAttach">
+          <ScalarProperty Name="StockOutAttachId" ColumnName="StockOutAttachId" />
+          <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockOutDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockOutDetail">
+        <MappingFragment StoreEntitySet="St_StockOutDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="StockOutId" ColumnName="StockOutId" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockOutApplyDetailId" ColumnName="StockOutApplyDetailId" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="GrossAmount" ColumnName="GrossAmount" />
+          <ScalarProperty Name="Bundles" ColumnName="Bundles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockReceipt">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockReceipt">
+        <MappingFragment StoreEntitySet="St_StockReceipt">
+          <ScalarProperty Name="ReceiptId" ColumnName="ReceiptId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractSubId" ColumnName="ContractSubId" />
+          <ScalarProperty Name="PreNetAmount" ColumnName="PreNetAmount" />
+          <ScalarProperty Name="ReceiptAmount" ColumnName="ReceiptAmount" />
+          <ScalarProperty Name="UnitId" ColumnName="UnitId" />
+          <ScalarProperty Name="QtyMiss" ColumnName="QtyMiss" />
+          <ScalarProperty Name="QtyRate" ColumnName="QtyRate" />
+          <ScalarProperty Name="ReceiptDate" ColumnName="ReceiptDate" />
+          <ScalarProperty Name="Receipter" ColumnName="Receipter" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="ReceiptType" ColumnName="ReceiptType" />
+          <ScalarProperty Name="ReceiptStatus" ColumnName="ReceiptStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StockReceiptDetail">
+      <EntityTypeMapping TypeName="NFMTModel.St_StockReceiptDetail">
+        <MappingFragment StoreEntitySet="St_StockReceiptDetail">
+          <ScalarProperty Name="DetailId" ColumnName="DetailId" />
+          <ScalarProperty Name="ReceiptId" ColumnName="ReceiptId" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="ContractSubId" ColumnName="ContractSubId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="StockLogId" ColumnName="StockLogId" />
+          <ScalarProperty Name="PreNetAmount" ColumnName="PreNetAmount" />
+          <ScalarProperty Name="ReceiptAmount" ColumnName="ReceiptAmount" />
+          <ScalarProperty Name="QtyMiss" ColumnName="QtyMiss" />
+          <ScalarProperty Name="QtyRate" ColumnName="QtyRate" />
+          <ScalarProperty Name="DetailStatus" ColumnName="DetailStatus" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+          <ScalarProperty Name="LastModifyId" ColumnName="LastModifyId" />
+          <ScalarProperty Name="LastModifyTime" ColumnName="LastModifyTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="St_StocktAttach">
+      <EntityTypeMapping TypeName="NFMTModel.St_StocktAttach">
+        <MappingFragment StoreEntitySet="St_StocktAttach">
+          <ScalarProperty Name="StockAttachId" ColumnName="StockAttachId" />
+          <ScalarProperty Name="StockId" ColumnName="StockId" />
+          <ScalarProperty Name="AttachId" ColumnName="AttachId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="NFMTModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="test">
+      <EntityTypeMapping TypeName="NFMTModel.test">
+        <MappingFragment StoreEntitySet="test">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="str1" ColumnName="str1" />
+          <ScalarProperty Name="str2" ColumnName="str2" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

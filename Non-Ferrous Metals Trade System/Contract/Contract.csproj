@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A58D209-0EBA-4E67-8570-78E7F609D1EF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFMT.Contract</RootNamespace>
+    <AssemblyName>NFMT.Contract</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\ContractAttachBLL.cs" />
+    <Compile Include="BLL\ContractBLL.cs" />
+    <Compile Include="BLL\ContractClauseBLL.cs" />
+    <Compile Include="BLL\ContractCorporationDetailBLL.cs" />
+    <Compile Include="BLL\ContractDeptBLL.cs" />
+    <Compile Include="BLL\ContractDetailBLL.cs" />
+    <Compile Include="BLL\ContractPriceBLL.cs" />
+    <Compile Include="BLL\ContractSubAttachBLL.cs" />
+    <Compile Include="BLL\ContractSubBLL.cs" />
+    <Compile Include="BLL\ContractSubQPBLL.cs" />
+    <Compile Include="BLL\ContractTypeDetailBLL.cs" />
+    <Compile Include="BLL\LcAttachBLL.cs" />
+    <Compile Include="BLL\LcBLL.cs" />
+    <Compile Include="BLL\SubCorporationDetailBLL.cs" />
+    <Compile Include="BLL\SubDetailBLL.cs" />
+    <Compile Include="BLL\SubPriceBLL.cs" />
+    <Compile Include="BLL\SubTypeDetailBLL.cs" />
+    <Compile Include="BLL\SummaryApplyAttachBLL.cs" />
+    <Compile Include="BLL\SummaryApplyBLL.cs" />
+    <Compile Include="BLL\SummaryApplyInvoiceBLL.cs" />
+    <Compile Include="BLL\SummaryApplyStockBLL.cs" />
+    <Compile Include="BLL\SummaryBLL.cs" />
+    <Compile Include="ContractInOutEnum.cs" />
+    <Compile Include="ContractLimitEnum.cs" />
+    <Compile Include="ContractType.cs" />
+    <Compile Include="DAL\ContractAttachDAL.cs" />
+    <Compile Include="DAL\ContractClauseDAL.cs" />
+    <Compile Include="DAL\ContractCorporationDetailDAL.cs" />
+    <Compile Include="DAL\ContractDAL.cs" />
+    <Compile Include="DAL\ContractDeptDAL.cs" />
+    <Compile Include="DAL\ContractDetailDAL.cs" />
+    <Compile Include="DAL\ContractPriceDAL.cs" />
+    <Compile Include="DAL\ContractSubAttachDAL.cs" />
+    <Compile Include="DAL\ContractSubDAL.cs" />
+    <Compile Include="DAL\ContractSubQPDAL.cs" />
+    <Compile Include="DAL\ContractTypeDetailDAL.cs" />
+    <Compile Include="DAL\LcAttachDAL.cs" />
+    <Compile Include="DAL\LcDAL.cs" />
+    <Compile Include="DAL\Partial\ContractDAL.cs" />
+    <Compile Include="DAL\Partial\ContractPriceDAL.cs" />
+    <Compile Include="DAL\Partial\ContractSubDAL.cs" />
+    <Compile Include="DAL\Partial\ContractTypeDetailDAL.cs" />
+    <Compile Include="DAL\Partial\SubPriceDAL.cs" />
+    <Compile Include="DAL\Partial\SubTypeDetailDAL.cs" />
+    <Compile Include="DAL\SubCorporationDetailDAL.cs" />
+    <Compile Include="DAL\SubDetailDAL.cs" />
+    <Compile Include="DAL\SubPriceDAL.cs" />
+    <Compile Include="DAL\SubTypeDetailDAL.cs" />
+    <Compile Include="DAL\SummaryApplyAttachDAL.cs" />
+    <Compile Include="DAL\SummaryApplyDAL.cs" />
+    <Compile Include="DAL\SummaryApplyInvoiceDAL.cs" />
+    <Compile Include="DAL\SummaryApplyStockDAL.cs" />
+    <Compile Include="DAL\SummaryDAL.cs" />
+    <Compile Include="DeliveryStyleEnum.cs" />
+    <Compile Include="IDAL\IContractAttachDAL.cs" />
+    <Compile Include="IDAL\IContractClauseDAL.cs" />
+    <Compile Include="IDAL\IContractCorporationDetailDAL.cs" />
+    <Compile Include="IDAL\IContractDAL.cs" />
+    <Compile Include="IDAL\IContractDeptDAL.cs" />
+    <Compile Include="IDAL\IContractDetailDAL.cs" />
+    <Compile Include="IDAL\IContractPriceDAL.cs" />
+    <Compile Include="IDAL\IContractSubAttachDAL.cs" />
+    <Compile Include="IDAL\IContractSubDAL.cs" />
+    <Compile Include="IDAL\IContractSubQPDAL.cs" />
+    <Compile Include="IDAL\IContractTypeDetailDAL.cs" />
+    <Compile Include="IDAL\ILcAttachDAL.cs" />
+    <Compile Include="IDAL\ILcDAL.cs" />
+    <Compile Include="IDAL\ISubCorporationDetailDAL.cs" />
+    <Compile Include="IDAL\ISubDetailDAL.cs" />
+    <Compile Include="IDAL\ISubPriceDAL.cs" />
+    <Compile Include="IDAL\ISubTypeDetailDAL.cs" />
+    <Compile Include="IDAL\ISummaryApplyAttachDAL.cs" />
+    <Compile Include="IDAL\ISummaryApplyDAL.cs" />
+    <Compile Include="IDAL\ISummaryApplyInvoiceDAL.cs" />
+    <Compile Include="IDAL\ISummaryApplyStockDAL.cs" />
+    <Compile Include="IDAL\ISummaryDAL.cs" />
+    <Compile Include="InvoiceTypeEnum.cs" />
+    <Compile Include="LogTypeEnum.cs" />
+    <Compile Include="Model\Contract.cs" />
+    <Compile Include="Model\ContractAttach.cs" />
+    <Compile Include="Model\ContractClause.cs" />
+    <Compile Include="Model\ContractCorporationDetail.cs" />
+    <Compile Include="Model\ContractDept.cs" />
+    <Compile Include="Model\ContractDetail.cs" />
+    <Compile Include="Model\ContractPrice.cs" />
+    <Compile Include="Model\ContractSub.cs" />
+    <Compile Include="Model\ContractSubAttach.cs" />
+    <Compile Include="Model\ContractSubQP.cs" />
+    <Compile Include="Model\ContractTypeDetail.cs" />
+    <Compile Include="Model\Lc.cs" />
+    <Compile Include="Model\LcAttach.cs" />
+    <Compile Include="Model\StockAdapterModel.cs" />
+    <Compile Include="Model\SubCorporationDetail.cs" />
+    <Compile Include="Model\SubDetail.cs" />
+    <Compile Include="Model\SubPrice.cs" />
+    <Compile Include="Model\SubTypeDetail.cs" />
+    <Compile Include="Model\Summary.cs" />
+    <Compile Include="Model\SummaryApply.cs" />
+    <Compile Include="Model\SummaryApplyAttach.cs" />
+    <Compile Include="Model\SummaryApplyInvoice.cs" />
+    <Compile Include="Model\SummaryApplyStock.cs" />
+    <Compile Include="PriceModeEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TaskProvider\ContractTaskProvider.cs" />
+    <Compile Include="TaskProvider\SubTaskProvider.cs" />
+    <Compile Include="TradeBorderEnum.cs" />
+    <Compile Include="TradeDirectionEnum.cs" />
+    <Compile Include="WhoDoPriceEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Authority\Authority.csproj">
+      <Project>{570900bd-88d6-45cb-88b4-f6b7b2de95d7}</Project>
+      <Name>Authority</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2ce37c4e-daee-4370-bf0e-56f7628bb299}</Project>
+      <Name>Common %28Common\Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{f80e8ea5-0e37-498a-9f8a-28057009ce76}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{97ea2492-4499-40da-a305-1538d4406ce1}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{d10c059f-3a20-4f98-a5dd-d16fc215a4e0}</Project>
+      <Name>User %28User\User%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkFlow\WorkFlow.csproj">
+      <Project>{b0fd1659-24f8-44d8-ad2f-1695385dd55b}</Project>
+      <Name>WorkFlow %28WorkFlow\WorkFlow%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

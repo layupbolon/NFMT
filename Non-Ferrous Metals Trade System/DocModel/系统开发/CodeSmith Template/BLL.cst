@@ -1,0 +1,161 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Description="Generates a very simple business object." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+<%@ Property Name="NameSpace" Type="System.String" Default="" Category="Text" Description="Namespace for this class" %>
+<%--<%@ Property Name="DBName" Type="System.String" Default="" Category="Text" Description="Database Name" %>--%>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Assembly Src="D:\work\软件\CodeSmith\Template\Templates\MyTemplate\SQLHelper.cs"%>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text" %>
+<%@ Import Namespace="System.Data.SqlClient" %>
+<%@ Import Namespace="DBUtility" %>
+
+/*----------------------------------------------------------------
+// Copyright (C) 2014-2015 上海迪亮信息科技有限公司 版权所有。 
+// 文件名：<%= GetClassName(SourceTable) %>BLL.cs
+// 文件功能描述：<%= SourceTable.Description + SourceTable.FullName %>业务逻辑类。
+// 创建人：CodeSmith
+// 创建时间： <% =DateTime.Now.ToLongDateString() %>
+----------------------------------------------------------------*/
+
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.Transactions;
+using <%= NameSpace %>.Model;
+using <%= NameSpace %>.DAL;
+using <%= NameSpace %>.IDAL;
+using <%= NameSpace.Substring(0,NameSpace.IndexOf(".")) %>.Common;
+
+namespace <%= NameSpace %>.BLL
+{
+    /// <summary>
+    /// <%= SourceTable.Description+SourceTable.FullName %>业务逻辑类。
+    /// </summary>
+    public class <%= GetClassName(SourceTable) %>BLL : Common.ExecBLL
+    {
+        private <%= GetClassName(SourceTable) %>DAL <% =GetLowerCaseName(GetClassName(SourceTable)) %>DAL = new <%= GetClassName(SourceTable) %>DAL();
+        private log4net.ILog log = log4net.LogManager.GetLogger(typeof(<%= GetClassName(SourceTable) %>DAL));
+        
+		#region 构造函数
+        
+		/// <summary>
+		/// 构造函数
+		/// </summary>
+		public <%= GetClassName(SourceTable) %>BLL()
+		{
+		}
+        
+		#endregion
+
+        #region 数据库操作
+		
+        protected override log4net.ILog Log
+        {
+            get { return this.log; }
+        }
+
+        public override IOperate Operate
+        {
+            get { return this.<% =GetLowerCaseName(GetClassName(SourceTable)) %>DAL; }
+        }
+		
+        #endregion
+    }
+}
+
+<script runat="template">
+    public string GetTableStatusCode(TableSchema table)
+    {
+        try 
+        {	        
+        	return SqlHelper.ExecuteScalar(SqlHelper.ConnectionStringNFMT,CommandType.Text,"select StatusNameCode from dbo.BDStatus where TableName = '"+ table.FullName +"'",null).ToString();
+        }
+        catch
+        {
+        	return string.Empty;
+        }
+    }
+
+    public string GetCamelCaseName(string value)
+    {
+        return value.Substring(0, 1).ToLower() + value.Substring(1);
+    }
+
+    public  string GetClassName(TableSchema table)
+    {
+		if(table==null)
+    	{
+    	    return string.Empty;
+    	}
+        
+    	string result = table.Name.Trim();
+        
+        if (table.Name.EndsWith("_Ref"))
+        {
+            result = result.Substring(0, table.Name.Length - 4);
+        }
+        
+        if(result.Split('_').Length>1)
+        {
+            result = result.Split('_')[1];
+        }
+    	
+    	return result ;
+    }
+
+	public string GetLowerCaseName(string value)
+    {
+	    return value.ToLower();
+    }
+
+	public string GetModuleInstanceName(TableSchema table)
+	{
+		return table.Name.ToLower();
+	}
+	
+	public string GetCSharpVariableType(ColumnSchema column)
+    {
+		if (column.Name.EndsWith("TypeCode")) return column.Name;
+		
+		switch (column.DataType)
+		{
+			case DbType.AnsiString: return "string";
+			case DbType.AnsiStringFixedLength: return "string";
+			case DbType.Binary: return "byte[]";
+			case DbType.Boolean: return "bool";
+			case DbType.Byte: return "byte";
+			case DbType.Currency: return "decimal";
+			case DbType.Date: return "DateTime";
+			case DbType.DateTime: return "DateTime";
+			case DbType.Decimal: return "decimal";
+			case DbType.Double: return "double";
+			case DbType.Guid: return "Guid";
+			case DbType.Int16: return "short";
+			case DbType.Int32: return "int";
+			case DbType.Int64: return "long";
+			case DbType.Object: return "object";
+			case DbType.SByte: return "sbyte";
+			case DbType.Single: return "float";
+			case DbType.String: return "string";
+			case DbType.StringFixedLength: return "string";
+			case DbType.Time: return "TimeSpan";
+			case DbType.UInt16: return "ushort";
+			case DbType.UInt32: return "uint";
+			case DbType.UInt64: return "ulong";
+			case DbType.VarNumeric: return "decimal";
+			default:
+			{
+				return "__UNKNOWN__" + column.NativeType;
+			}
+		}
+	}
+	public string GetPrimaryKeyCSharpType()
+	{
+		return GetCSharpVariableType(SourceTable.PrimaryKey.MemberColumns[0]);
+	}
+
+</script>

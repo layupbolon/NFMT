@@ -1,0 +1,311 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="Text" Src="" Inherits="" Debug="False" Description="Template description here." %>
+<%@ Property Name="Tables" Type="SchemaExplorer.TableSchemaCollection" Category="Source" %>
+<%@ Property Name="Interface" Type="System.String" Default="" Category="Source" Description="数据交互接口继承的接口名" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.CustomProperties" %> 
+<%@ Assembly Name="System.Data" %>
+<%@ Assembly Name="System.Design" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%
+
+Tables = TableUtilities.FilterTables(Tables);
+%>
+
+<% if(!Directory.Exists(OutputDirectory)) Directory.CreateDirectory(OutputDirectory); %>
+
+<% 
+CodeTemplate BLLTemplate = GetCodeTemplate("BLL.cst");
+CodeTemplate StoredProcedureTemplate = GetCodeTemplate("StoredProcedures.cst");
+CodeTemplate ModelTemplate = GetCodeTemplate("Model.cst");
+CodeTemplate DALTemplate = GetCodeTemplate("DAL.cst");
+CodeTemplate IDALTemplate = GetCodeTemplate("IDAL.cst");
+CodeTemplate FlowTemplate = GetCodeTemplate("Flow.cst");
+%>
+
+<% 
+string BLLDirectory = OutputDirectory + "\\BLL\\";
+string StoredProcedureDirectory = OutputDirectory + "\\StoredProcedure\\";
+string ModelDirectory = OutputDirectory + "\\Model\\";
+string DALDirectory = OutputDirectory + "\\DAL\\";
+string IDALDirectory = OutputDirectory + "\\IDAL\\";
+string FlowDirectory = OutputDirectory + "\\Flow\\";
+if(!Directory.Exists(BLLDirectory)) Directory.CreateDirectory(BLLDirectory);
+if(!Directory.Exists(StoredProcedureDirectory)) Directory.CreateDirectory(StoredProcedureDirectory);
+if(!Directory.Exists(ModelDirectory)) Directory.CreateDirectory(ModelDirectory);
+if(!Directory.Exists(DALDirectory)) Directory.CreateDirectory(DALDirectory);
+if(!Directory.Exists(IDALDirectory)) Directory.CreateDirectory(IDALDirectory);
+if(!Directory.Exists(FlowDirectory)) Directory.CreateDirectory(FlowDirectory);
+%>
+Create Folder completed!
+
+<% 
+for (int i = 0; i < Tables.Count; i++)
+{
+	RenderFileUsingProperties(BLLDirectory + GetClassName(Tables[i]) + "BLL.cs",true,ref BLLTemplate,Tables[i]);
+    RenderFileUsingProperties(ModelDirectory + GetClassName(Tables[i]) + ".cs",true,ref ModelTemplate,Tables[i]);
+    RenderFileUsingProperties(DALDirectory + GetClassName(Tables[i]) + "DAL.cs",true,ref DALTemplate,Tables[i]);
+    RenderFileUsingProperties(IDALDirectory + "I" + GetClassName(Tables[i]) + "DAL.cs",true,ref IDALTemplate,Tables[i]);
+    RenderFileUsingProperties(FlowDirectory + GetClassName(Tables[i]) + "Flow.cs",true,ref FlowTemplate,Tables[i]);
+    RenderFileUsingProperties(StoredProcedureDirectory + GetClassName(Tables[i]) + ".sql",true,ref StoredProcedureTemplate,Tables[i]);
+}
+%>
+
+Create File completed!
+
+<script runat="template">
+#region Properties
+    #region NameSpace
+	private string _NameSpace = "NFMT";
+    [Category("Namespaces")]
+	[Description("NameSpace for class.")]
+    public string NameSpace
+    {
+     	get 
+		{
+			return _NameSpace;
+		}
+     	set 
+    	{
+    		_NameSpace = value;
+    	}
+    }
+	#endregion
+	
+	#region Database Properties
+	
+	private string _DBName = "NFMTDB";
+    [Category("Database")]
+	[Description("Database Name.")]
+    public string DBName
+    {
+     	get 
+		{
+			return _DBName;
+		}
+     	set 
+    	{
+    		_DBName = value;
+    	}
+    }
+	private string _Prefix = "";
+    [Category("Database")]
+	[Description("Stroed Procedures Prefix.")]
+    public string Prefix
+    {
+     	get 
+		{
+			return _Prefix;
+		}
+     	set 
+    	{
+    		_Prefix = value;
+    	}
+    }
+	#endregion
+	
+    #region Output
+    private string _outputDirectory = String.Empty;
+	
+    [Editor(typeof(System.Windows.Forms.Design.FolderNameEditor), typeof(System.Drawing.Design.UITypeEditor))] 
+	[CodeTemplateProperty(CodeTemplatePropertyOption.Optional)]
+	[Category("General")]
+	[Description("The directory to output the results to.")]
+	[DefaultValue("")]
+	public string OutputDirectory 
+	{ 
+		get
+		{
+			if (_outputDirectory.Length == 0)
+			{
+				return @"D:\NFMT\";
+			}
+			else
+			{
+				return _outputDirectory;
+			}
+		}
+		set
+		{
+			if (value.EndsWith("\\")) value = value.Substring(0, value.Length - 1);
+			_outputDirectory = value;
+		} 
+	}
+	#endregion
+	
+	#region DBList
+    private CodeSmith.CustomProperties.StringCollection _DBList = 
+	  new CodeSmith.CustomProperties.StringCollection(new string[]{"NFMTDB"});
+
+    [CodeTemplateProperty(CodeTemplatePropertyOption.Required)]
+	[Category("Database")]
+	[Description("Database List")]
+	public CodeSmith.CustomProperties.StringCollection DBList
+	{ 
+		get
+		{
+			if(_DBList==null || _DBList.Count<=0 || _DBList[0].Length==0)
+			    return null;
+			return _DBList;
+		}
+		set
+		{
+			if(value==null || value.Count<=0)
+			{
+			    _DBList = null;
+			}
+			else
+			{
+			    _DBList = value;
+			}
+		} 
+	}
+	#endregion
+#endregion
+
+#region Methods
+	#region Get Template
+	public static CodeTemplate GetCodeTemplate(string TemplateName)
+	{			
+		CodeTemplate template;
+		CodeTemplateCompiler compiler = new CodeTemplateCompiler(TemplateName); 
+		compiler.Compile(); 
+     
+		if (compiler.Errors.Count == 0) 
+		{ 
+			template = compiler.CreateInstance();
+		} 
+		else 
+		{ 
+			System.Text.StringBuilder errorMessage = new System.Text.StringBuilder();				
+			for (int i = 0; i < compiler.Errors.Count; i++) 
+			{
+				errorMessage.Append(compiler.Errors[i].ToString()).Append("\n");
+			} 
+			throw new ApplicationException(errorMessage.ToString());
+		} 
+		      
+		return template;
+	}
+	#endregion
+	
+	#region Render File
+	/// Copies all properties to a template
+	/// Renders the file 
+	/// NB. the overrite property
+	public void RenderFileUsingProperties(string fullPath, bool overrite, ref CodeTemplate template)
+	{
+		if( overrite || (!File.Exists(fullPath)) )
+		{
+			CopyPropertiesTo(template);
+			template.RenderToFile(fullPath, overrite);
+		}
+	}
+	
+	/// Copies all properties to a template
+	/// Renders the file 
+	/// NB. the overrite property
+	/// Set Property SourceTable
+	public void RenderFileUsingProperties(string fullPath, bool overrite, ref CodeTemplate template,TableSchema SourceTable)
+	{
+		if( overrite || (!File.Exists(fullPath)) )
+		{
+			CopyPropertiesTo(template);
+			template.SetProperty("SourceTable",SourceTable);
+			template.RenderToFile(fullPath, overrite);
+		}
+	}
+	
+	/// Copies all properties to a template
+	/// Renders the file  using the preserve regions merge stratagy
+	public void MergeFileUsingPreserve(string fullPath, ref CodeTemplate template)
+	{		
+		CodeSmith.Engine.PreserveRegionsMergeStrategy preserveRegionsMergeStrategy = new PreserveRegionsMergeStrategy();
+		preserveRegionsMergeStrategy.Language = "C#";
+		preserveRegionsMergeStrategy.RegionNameRegex = "PRESERVE";
+		CopyPropertiesTo(template);
+		template.RenderToFile(fullPath,preserveRegionsMergeStrategy);
+	}
+	/// Copies all properties to a template
+	/// Renders the file  using the preserve regions merge stratagy
+	/// Set Property SourceTable
+	public void MergeFileUsingPreserve(string fullPath, ref CodeTemplate template,TableSchema SourceTable)
+	{		
+		CodeSmith.Engine.PreserveRegionsMergeStrategy preserveRegionsMergeStrategy = new PreserveRegionsMergeStrategy();
+		preserveRegionsMergeStrategy.Language = "C#";
+		preserveRegionsMergeStrategy.RegionNameRegex = "PRESERVE";
+		CopyPropertiesTo(template);
+		template.SetProperty("SourceTable",SourceTable);
+		template.RenderToFile(fullPath,preserveRegionsMergeStrategy);
+	}
+	/// Copies all properties to a template
+	/// Renders the file  using the Insert Region merge strategy
+	public void MergeFileUsingInsert(string fullPath, ref CodeTemplate template)
+	{		
+		CodeSmith.Engine.InsertRegionMergeStrategy mergeStrategy = new InsertRegionMergeStrategy();
+		mergeStrategy.Language = "C#";
+		mergeStrategy.RegionName = "PRESERVE";
+		CopyPropertiesTo(template);
+		template.RenderToFile(fullPath,mergeStrategy);
+		
+	}
+	/// Copies all properties to a template
+	/// Renders the file  using the Insert Region merge strategy
+	/// Set Property SourceTable
+	public void MergeFileUsingInsert(string fullPath, ref CodeTemplate template,TableSchema SourceTable)
+	{		
+		CodeSmith.Engine.InsertRegionMergeStrategy mergeStrategy = new InsertRegionMergeStrategy();
+		mergeStrategy.Language = "C#";
+		mergeStrategy.RegionName = "PRESERVE";
+		CopyPropertiesTo(template);
+		template.SetProperty("SourceTable",SourceTable);
+		template.RenderToFile(fullPath,mergeStrategy);
+		
+	}
+	#endregion
+#endregion	
+
+#region Inner Classes	
+	#region TableUtilities Class
+	public class TableUtilities
+	{
+		public static bool SkipTable(TableSchema table)
+		{
+			return (table.PrimaryKey == null || table.Columns.Count < 2);
+		}
+		public static TableSchemaCollection FilterTables(TableSchemaCollection tables)
+        {			
+            TableSchemaCollection filtered = new TableSchemaCollection();
+            foreach(TableSchema table in tables) 
+            {
+                if(!SkipTable(table)) filtered.Add(table);
+            }
+            return filtered;
+        }
+	}
+	
+	public static string GetClassName(TableSchema table)
+    {
+		if(table==null)
+    	{
+    	    return string.Empty;
+    	}
+        
+    	string result = table.Name.Trim();
+        
+        if (table.Name.EndsWith("_Ref"))
+        {
+            result = result.Substring(0, table.Name.Length - 4);
+        }
+        
+        if(result.Split('_').Length>1)
+        {
+            result = result.Split('_')[1];
+        }
+    	
+    	return result ;
+    }
+	#endregion
+#endregion	
+</script>

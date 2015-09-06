@@ -1,0 +1,6 @@
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DocModel\bin\Release\DocModel.dll
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DocModel\bin\Release\DocModel.pdb
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DocModel\bin\Release\NFMT.DBUtility.dll
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DocModel\obj\Release\DocModel.dll
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DocModel\obj\Release\DocModel.pdb
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DocModel\obj\Release\DocModel.csprojResolveAssemblyReference.cache

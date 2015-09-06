@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A18EF01-D4D5-4DD5-8B41-7AADA0333E00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocModel</RootNamespace>
+    <AssemblyName>DocModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NFMT.DBUtility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NFMT.DBUtility.4.0.0\lib\NFMT.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="系统开发\CodeSmith Template\SQLHelper.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="系统介绍\有色金属业务管理系统Web版介绍.pptx" />
+    <None Include="系统开发\CodeSmith Template\BLL.cst" />
+    <None Include="系统开发\CodeSmith Template\CodeFileFactory.cst" />
+    <None Include="系统开发\CodeSmith Template\DAL.cst" />
+    <None Include="系统开发\CodeSmith Template\Flow.cst" />
+    <None Include="系统开发\CodeSmith Template\IDAL.cst" />
+    <None Include="系统开发\CodeSmith Template\Model.cst" />
+    <None Include="系统开发\CodeSmith Template\StoredProcedures.cst" />
+    <None Include="系统开发\V2开发总结.pptx" />
+    <None Include="系统开发\V2报表.xlsx" />
+    <None Include="系统开发\V2报表_20141209.xlsx" />
+    <None Include="系统开发\V2编码注意事项.pptx" />
+    <None Include="系统开发\业务代码框架.vsd" />
+    <None Include="系统开发\业务代码框架V2.vsd" />
+    <None Include="系统开发\数据状态.vsd" />
+    <None Include="系统开发\进度回顾.vsd" />
+    <None Include="系统总结\2014年迈科业务系统V2总结报告.docx" />
+    <None Include="系统测试\hosts" />
+    <None Include="系统开发\V2编码规范.pptx" />
+    <None Include="系统开发\插件类库管理方案.docx" />
+    <None Include="系统测试\测试反馈\V2测试反馈.xlsx" />
+    <None Include="系统测试\测试反馈\V2测试反馈_20141029.xlsx" />
+    <None Include="系统测试\测试反馈\V2测试反馈_20141031 .xlsx" />
+    <None Include="系统测试\测试反馈\V2测试反馈_20141106.xlsx" />
+    <None Include="系统测试\测试反馈\V2测试反馈_20141107.xlsx" />
+    <None Include="系统测试\测试反馈\V2测试反馈_20141113.xlsx" />
+    <None Include="系统设计\UI设计\NFMT页面布局设计.rp" />
+    <None Include="系统设计\UI设计\NFMT页面设计.vsd" />
+    <None Include="系统设计\V2设计总结.pptx" />
+    <None Include="系统设计\数据库设计\NFMT.pdm" />
+    <None Include="系统设计\流程设计\内贸采购流程图.vsd" />
+    <None Include="系统设计\流程设计\内贸销售流程图.vsd" />
+    <None Include="系统设计\流程设计\制单指令流程图.vsd" />
+    <None Include="系统设计\流程设计\外贸采购流程图.vsd" />
+    <None Include="系统设计\流程设计\外贸销售流程图.vsd" />
+    <None Include="系统设计\流程设计\工作流设计图.vsd" />
+    <None Include="系统设计\流程设计\收款流程图.vsd" />
+    <None Include="系统设计\流程设计\虚拟收付款.vsd" />
+    <None Include="系统设计\流程设计\通用状态流.vsd" />
+    <None Include="编程规范\迪亮信息c#编程规范.docx" />
+    <None Include="编程规范\迪亮信息数据库规范.docx" />
+    <None Include="融资头寸管理系统\事故报告_20150529.doc" />
+    <None Include="融资头寸管理系统\副本融资头寸管理系统-Bug列表.xls" />
+    <None Include="融资头寸管理系统\报表字段.xlsx" />
+    <None Include="融资头寸管理系统\融资头寸管理系统-Bug、改进列表.xls" />
+    <None Include="融资头寸管理系统\迈科融资头寸管理系统-用户.xlsx" />
+    <None Include="融资头寸管理系统\迈科融资头寸管理系统-计划.mpp" />
+    <None Include="融资头寸管理系统\迈科融资头寸管理系统-项目周报0424.docx" />
+    <None Include="融资头寸管理系统\需求\迈科融资头寸管理系统-需求v1.0.doc" />
+    <None Include="融资头寸管理系统\需求\迈科融资头寸管理系统-需求v1.1.doc" />
+    <None Include="迈科资产管理\变更列表.xlsx" />
+    <None Include="迈科资产管理\合同文本\245P-246S-247P-248S.pdf" />
+    <None Include="迈科资产管理\合同文本\ZCSW20141127001P.pdf" />
+    <None Include="迈科资产管理\合同文本\ZCSW20141128002P.pdf" />
+    <None Include="迈科资产管理\数据状态.vsd" />
+    <None Include="迈科资产管理\迈科资产管理（上海）有限公司业务系统需求变更书.docx" />
+    <None Include="需求分析\NFMT功能列表.xlsx" />
+    <None Include="需求分析\有色金属大宗贸易信息系统启动会议.pptx" />
+    <None Include="需求分析\有色金属大宗贸易信息系统需求说明书.docx" />
+    <None Include="需求分析\有色金属大宗贸易信息系统需求说明书V2.0.docx" />
+    <None Include="需求分析\有色金属大宗贸易信息系统项目计划.doc" />
+    <None Include="需求分析\有色金属大宗贸易信息系统项目计划V1.01.doc" />
+    <None Include="需求分析\进度计划.vsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="系统开发\SQL_Basic.sql" />
+    <Content Include="系统开发\SQL_BDStyleid.sql" />
+    <Content Include="系统开发\SQL_Menu.sql" />
+    <Content Include="系统开发\业务代码框架V2.bmp" />
+    <Content Include="系统开发\付款申请与出库申请，双方公司余款计算方式.txt" />
+    <Content Include="系统开发\合约尾款付款申请校验规则.txt" />
+    <Content Include="系统开发\流水操作说明.txt" />
+    <Content Include="系统开发\流水操作说明_20141216.txt" />
+    <Content Include="系统开发\状态.bmp" />
+    <Content Include="系统测试\基础数据\Area.sql" />
+    <Content Include="系统测试\基础数据\Asset.sql" />
+    <Content Include="系统测试\基础数据\Bank.sql" />
+    <Content Include="系统测试\基础数据\BankAccount.sql" />
+    <Content Include="系统测试\基础数据\Brand.sql" />
+    <Content Include="系统测试\基础数据\Currency.sql" />
+    <Content Include="系统测试\基础数据\dbo.BDStatus.Table.sql" />
+    <Content Include="系统测试\基础数据\dbo.BDStatusDetail.Table.sql" />
+    <Content Include="系统测试\基础数据\dbo.BDStyle.Table.sql" />
+    <Content Include="系统测试\基础数据\dbo.BDStyleDetail.Table.sql" />
+    <Content Include="系统测试\基础数据\DeliverPlace.sql" />
+    <Content Include="系统测试\基础数据\Exchange.sql" />
+    <Content Include="系统测试\基础数据\FuturesCode.sql" />
+    <Content Include="系统测试\基础数据\MeasureUnit.sql" />
+    <Content Include="系统测试\基础数据\Producer.sql" />
+    <Content Include="系统测试\工作流数据清空.sql" />
+    <Content Include="系统测试\数据库更新\Finance\PledgeApply.sql" />
+    <Content Include="系统测试\数据库更新\Finance\PledgeApplyCashDetail.sql" />
+    <Content Include="系统测试\数据库更新\Finance\PledgeApplyStockDetail.sql" />
+    <Content Include="系统测试\数据库更新\Finance\RepoApply.sql" />
+    <Content Include="系统测试\数据库更新\Finance\RepoApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\Contract.sql" />
+    <Content Include="系统测试\工作流数据\Wf_FlowMaster.sql" />
+    <Content Include="系统测试\工作流数据\Wf_Node.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractClause.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractCorporationDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractDept.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractPrice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractSub.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractSubAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractSubQP.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\ContractTypeDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\Lc.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\LcAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\SubCorporationDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\SubDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\SubPrice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Contract\SubTypeDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Document\Document.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Document\DocumentInvoice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Document\DocumentOrder.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Document\DocumentOrderAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Document\DocumentOrderDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Document\DocumentOrderInvoice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Document\DocumentOrderStock.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Document\DocumentStock.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\CashIn.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\CashInAllot.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\CashInAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\CashInContract.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\CashInCorp.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\CashInInvoice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\CashInStcok.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\ContractPayApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\Funds.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\FundsLog.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\FundsLogAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\InvoicePayApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\PayApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\PayApplyAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\Payment.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\PaymentAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\PaymentContractDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\PaymentInvioceDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\PaymentStockDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\PaymentVirtual.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Funds\StockPayApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\BusinessInvoice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\BusinessInvoiceDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\FinanceInvoice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\FinanceInvoiceDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\FinBusInvAllot.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\FinBusInvAllotDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\Invoice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\InvoiceApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\InvoiceApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\InvoiceAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\SI.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Invoice\SIDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Operate\Apply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Operate\Attach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\Interest.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\InterestDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\PriceConfirm.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\PriceConfirmDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\Pricing.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\PricingApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\PricingApplyDelay.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\PricingApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\PricingDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\PricingPerson.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\StopLoss.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\StopLossApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\StopLossApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\Pricing\StopLossDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\ContractStockIn.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\CustomBala.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\CustomsApplyAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\CustomsApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\CustomsAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\CustomsClearance.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\CustomsClearanceApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\CustomsDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\ExchangeRate.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\Pledge.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\PledgeApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\PledgeApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\PledgeAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\PledgeDetial.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\Repo.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\RepoApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\RepoApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\RepoAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\RepoDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\SplitDoc.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\SplitDocAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\SplitDocDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\SplitDocStock.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\Stock.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockExclusive.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockIn.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockInAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockInStock.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockLog.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockLogAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockMove.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockMoveApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockMoveApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockMoveAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockMoveDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockName.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockOut.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockOutApply.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockOutApplyDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockOutAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockOutDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockReceipt.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StockReceiptDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\WareHouse\StocktAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Sms\Sms.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Sms\SmsDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Sms\SmsType.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\Area.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\Asset.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\Bank.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\BankAccount.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\BDStatus.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\BDStatusDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\BDStyle.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\BDStyleDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\Brand.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\BrandAsset.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\ClauseContract.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\ContractClause.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\ContractClauseDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\ContractMaster.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\Currency.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\DeliverPlace.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\Exchange.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\FuturesCode.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\FuturesPrice.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\MeasureUnit.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\PriceAuthority.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\Producer.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_Basic\Rate.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\Account.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\AuthGroup.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\AuthGroupDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\AuthOperate.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\Bloc.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\Contact.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\CorpDept.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\CorpDetailAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\Corporation.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\CorporationDetail.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\Department.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\DeptEmp.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\Employee.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\EmployeeContact.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\EmpMenu.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\EmpRole.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\Menu.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\Role.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_User\RoleDept.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\AuditEmp.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\DataSource.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\FlowMaster.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\FlowMasterConfig.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\Node.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\NodeCondition.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\Task.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\TaskAttach.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\TaskAttachOperateLog.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\TaskNode.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\TaskOperateLog.sql" />
+    <Content Include="系统测试\数据库更新\NFMT\清空业务数据.sql" />
+    <Content Include="系统测试\数据库更新\NFMT_WorkFlow\工作流数据清空.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.AssetAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.ContractAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.ContractAuthGroup.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.ContractInOutAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.ContractLimitAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.CorpAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.CorpTradeDirectionAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.CustomsTypeAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.DataAuthGroup.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.StockAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.StockInAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.StockLogAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.TradeBorderAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关函数\dbo.TradeDirectionAuth.UserDefinedFunction.sql" />
+    <Content Include="系统测试\数据库更新\相关存储过程\dbo.ContractBalancePayment.StoredProcedure.sql" />
+    <Content Include="系统测试\数据库更新\相关存储过程\dbo.CreateApplyNo.StoredProcedure.sql" />
+    <Content Include="系统测试\数据库更新\相关存储过程\dbo.CreateContractNo.StoredProcedure.sql" />
+    <Content Include="系统测试\数据库更新\相关存储过程\dbo.CreateContractSubNo.StoredProcedure.sql" />
+    <Content Include="系统测试\数据库更新\相关存储过程\dbo.CreateInvoiceNo.StoredProcedure.sql" />
+    <Content Include="系统测试\数据库更新\相关存储过程\dbo.CreateOrderNo.StoredProcedure.sql" />
+    <Content Include="系统测试\数据库更新\相关存储过程\dbo.CreatePaymentCode.StoredProcedure.sql" />
+    <Content Include="系统测试\数据库更新\相关存储过程\dbo.CustomBala.StoredProcedure.sql" />
+    <Content Include="系统测试\更新发布\20141104更新内容.txt" />
+    <Content Include="系统测试\更新发布\20141110发布更新内容.txt" />
+    <Content Include="系统测试\更新发布\20141111发布更新.txt" />
+    <Content Include="系统测试\更新发布\20141127发布更新.txt" />
+    <Content Include="系统测试\更新发布\20141203更新.txt" />
+    <Content Include="系统测试\更新发布\20141205Bug更新.txt" />
+    <Content Include="系统测试\更新发布\21041225发布更新.txt" />
+    <Content Include="系统测试\更新发布\21050106发布更新.txt" />
+    <Content Include="系统测试\更新发布\21050203发布更新.txt" />
+    <Content Include="系统测试\更新发布\21050204发布更新.txt" />
+    <Content Include="系统测试\消息数据\Sm_SmsType.sql" />
+    <Content Include="系统测试\清空业务数据.sql" />
+    <Content Include="系统测试\用户数据\Account.sql" />
+    <Content Include="系统测试\用户数据\Bloc.sql" />
+    <Content Include="系统测试\用户数据\Corporation.sql" />
+    <Content Include="系统测试\用户数据\Department.sql" />
+    <Content Include="系统测试\用户数据\Employee.sql" />
+    <Content Include="系统测试\用户数据\EmpRole.sql" />
+    <Content Include="系统测试\用户数据\Menu.sql" />
+    <Content Include="系统测试\用户数据\Role.sql" />
+    <Content Include="系统测试\用户数据\RoleMenu.sql" />
+    <Content Include="系统设计\数据库设计\DataBaseDiagram_Apply.png" />
+    <Content Include="系统设计\数据库设计\DataBaseDiagram_Attach.png" />
+    <Content Include="系统设计\数据库设计\DataBaseDiagram_BasicData.png" />
+    <Content Include="系统设计\数据库设计\DataBaseDiagram_Invoice.png" />
+    <Content Include="系统设计\数据库设计\DataBaseDiagram_Operate.png" />
+    <Content Include="系统设计\数据库设计\DataBaseDiagram_User.png" />
+    <Content Include="系统设计\流程设计\通用状态流.jpg" />
+    <Content Include="迈科资产管理\数据状态.bmp" />
+    <Content Include="需求分析\进度计划.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

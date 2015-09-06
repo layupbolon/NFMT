@@ -1,0 +1,516 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Description="Generates a very simple business object." %>
+<%@ Property Name="NameSpace" Type="String" Category="Context" Default="NFMT" Description="The namespace to use for this class" %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Assembly Src="D:\work\软件\CodeSmith\Template\Templates\MyTemplate\SQLHelper.cs"%>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Collections.Generic"%>
+<%@ Import Namespace="DBUtility" %>
+<%--<!--#include file="SQLHelper.cs"--> --%>
+
+/*----------------------------------------------------------------
+// Copyright (C) 2014-2015 上海迪亮信息科技有限公司 版权所有。 
+// 文件名：<%= GetClassName(SourceTable) %>.cs
+// 文件功能描述：<%= SourceTable.Description + SourceTable.FullName %>实体类。
+// 创建人：CodeSmith
+// 创建时间： <% =DateTime.Now.ToLongDateString() %>
+----------------------------------------------------------------*/
+
+using System;
+using <%= NameSpace.Substring(0,NameSpace.IndexOf(".")) %>.Common;
+
+namespace <%= NameSpace %>.Model
+{
+	/// <summary>
+	/// <%= SourceTable.Description + SourceTable.FullName %>实体类。
+	/// </summary>
+	[Serializable]
+	public class <%= GetClassName(SourceTable) %> : IModel
+	{
+		#region 字段
+        
+		<% foreach (ColumnSchema column in SourceTable.Columns) { %>
+        <%if(column.Name.ToString()==GetTableStatusCode(SourceTable)) {%>
+        private Common.StatusEnum <%= GetCamelCaseName(GetTableStatusCode(SourceTable))%>;
+        <%continue;} %>
+		<%= GetMemberVariableDeclarationStatement(column) %>
+		<% } %>
+        <% if(!IsExistTableName(SourceTable)){%>        
+        private string tableName = "<%=SourceTable.FullName%>";
+        <%}%>
+		#endregion
+		
+		#region 构造函数
+        
+		public <%= GetClassName(SourceTable) %>()
+		{
+		}
+		
+		<%--public <%= GetClassName(SourceTable) %>
+		(
+			<%= GetConstructorParameters() %>
+		)
+		{
+			<%= GetAssignValue() %>
+		}--%>
+		#endregion
+		
+		#region 属性
+		
+		<% for (int i = 0; i < SourceTable.Columns.Count; i++) { %>
+        /// <summary>
+        /// <%= SourceTable.Columns[i].Description %>
+        /// </summary>
+        <%if(SourceTable.Columns[i].Name.ToString()==GetTableStatusCode(SourceTable).ToString()) {%>
+        public Common.StatusEnum <%= GetTableStatusCode(SourceTable) %>
+        {
+            get{return <%=GetCamelCaseName(GetTableStatusCode(SourceTable))%>;}
+            set{<%=GetCamelCaseName(GetTableStatusCode(SourceTable))%> = value;}
+        }
+        <%continue;} %>
+		public <%= GetCSharpVariableType(SourceTable.Columns[i]) %> <%= SourceTable.Columns[i].Name %>
+		{
+			get {return <%= GetMemberVariableName(SourceTable.Columns[i]) %>;}
+			set {<%= GetMemberVariableName(SourceTable.Columns[i]) %> = value;}
+		}
+		<% if (i < SourceTable.Columns.Count - 1) Response.Write("\r\n"); %>		
+		<% } %>
+        
+        <%=SetInterfacePara(SourceTable)%>
+        
+        /// <summary>
+        /// 数据序号
+        /// </summary>
+        public int Id
+        {
+            get { return this.<%=GetCamelCaseName(ReturnPrimaryKey(SourceTable))%>;}
+            set { this.<%=GetCamelCaseName(ReturnPrimaryKey(SourceTable))%> = value;}
+        }
+        
+        
+        
+        /// <summary>
+        /// 数据状态
+        /// </summary>
+        public Common.StatusEnum Status
+        {
+            <% if(string.IsNullOrEmpty(GetTableStatusCode(SourceTable))){%>
+            get;set;
+            <%}else{%>
+            <%--get { return this.<%=GetCamelCaseName(GetTableStatusCode(SourceTable))%>; }
+            set { this.<%=GetCamelCaseName(GetTableStatusCode(SourceTable))%> = value; }--%>
+            <%--get{return (Common.StatusEnum)Enum.Parse(typeof(Common.StatusEnum), <%=GetCamelCaseName(GetTableStatusCode(SourceTable))%>.ToString());}
+            set{this.status = value;}--%>
+            get{return <%=GetCamelCaseName(GetTableStatusCode(SourceTable))%>;}
+            set{<%=GetCamelCaseName(GetTableStatusCode(SourceTable))%> = value;}
+            <%} %>
+        }
+        <%if(!string.IsNullOrEmpty(GetTableStatusCode(SourceTable))) {%>
+        /// <summary>
+        /// 数据状态名
+        /// </summary>
+        public string <%= GetTableStatusCode(SourceTable) %>Name
+        {
+            get { return this.<%= GetCamelCaseName(GetTableStatusCode(SourceTable))%>.ToString(); }
+        }
+        <%} %>
+        
+        <% if(!IsExistTableName(SourceTable)){%>
+        /// <summary>
+        /// 表名
+        /// </summary>
+        public string TableName
+        {
+            get { return tableName; }
+            set { tableName = value; }
+        }
+        <%}%>
+        
+        private string dalName = "<%= NameSpace %>.DAL.<%= GetClassName(SourceTable) %>DAL";
+        public string DalName
+        {
+            get { return this.dalName; }
+            set { this.dalName = value; }
+        }
+        
+        private string assName = "<%= NameSpace %>";
+        public string AssName
+        {
+            get { return this.assName; }
+            set { this.assName = value; }        
+        }
+        
+        public string StatusName
+        {
+            get { return this.Status.ToString(); }
+        }
+        
+        private string dataBaseName = "<%= GetDBName(SourceTable)%>";
+        public string DataBaseName
+        {
+            get { return this.dataBaseName; }
+        }
+		#endregion
+	}
+}<script runat="template">
+#region script
+public string GetDBName(TableSchema table)
+{
+    return table.Database.ToString();
+}
+        
+public string SetInterfacePara(TableSchema table)
+{
+    string result = string.Empty;
+    List<string> list = new List<string>();
+    foreach(ColumnSchema column in table.Columns)
+    {
+        list.Add(column.Name.ToString());
+    }
+    
+    if(!list.Contains("CreatorId"))
+    {
+        result += "public int CreatorId{get;set;}\r\n";
+    }
+    if(!list.Contains("CreateTime"))
+    {
+        result += "public DateTime CreateTime{get;set;}\r\n";
+    }
+    if(!list.Contains("LastModifyId"))
+    {
+        result += "public int LastModifyId{get;set;}\r\n";
+    }
+    if(!list.Contains("LastModifyTime"))
+    {
+        result += "public DateTime LastModifyTime{get;set;}\r\n";
+    }
+    return string.IsNullOrEmpty(result) ? string.Empty : result.Substring(0,result.Length-2);
+}
+
+public bool IsExistTableName(TableSchema table)
+{
+    List<string> list = new List<string>();
+    foreach(ColumnSchema column in table.Columns)
+    {
+        list.Add(column.Name.ToString());
+    }
+    
+    return list.Contains("TableName");
+}
+
+public string GetTableStatusCode(TableSchema table)
+{
+    try 
+    {	        
+    	return SqlHelper.ExecuteScalar(SqlHelper.ConnectionStringNFMT,CommandType.Text,"select StatusNameCode from dbo.BDStatus where TableName = '"+ table.FullName +"'",null).ToString();
+    }
+    catch
+    {
+    	return string.Empty;
+    }
+}
+        
+public string ReturnPrimaryKey(TableSchema table)
+{
+    return table.PrimaryKey.MemberColumns[0].Name;
+}
+        
+public string GetMemberVariableDeclarationStatement(ColumnSchema column)
+{
+	return GetMemberVariableDeclarationStatement("private", column);
+}
+
+public string GetMemberVariableDeclarationStatement(string protectionLevel, ColumnSchema column)
+{
+	string statement = protectionLevel + " ";
+	statement += GetCSharpVariableType(column) + " " + GetMemberVariableName(column);
+	
+	string defaultValue = GetMemberVariableDefaultValue(column);
+	if (defaultValue != "")
+	{
+		statement += " = " + defaultValue;
+	}
+	
+	statement += ";";
+	
+	return statement;
+}
+
+public string GetConstructorParameters()
+{
+	string ret = "";
+	foreach(ColumnSchema column in SourceTable.Columns)
+	{
+        if(!column.AllowDBNull)
+		    ret += GetCSharpVariableType(column) + " " + GetCamelCaseName(GetPropertyName(column)) + ",";
+	}
+    
+	return ret.Substring(0, ret.Length - 1);
+}
+
+public string GetAssignValue()
+{
+	string ret = "";
+	foreach(ColumnSchema column in SourceTable.Columns)
+	{
+        if(!column.AllowDBNull)
+		    ret += "this." + GetMemberVariableName(column)  + " = " + GetCamelCaseName(GetPropertyName(column)) + ";\n\t\t\t";
+	}
+	return ret;
+}
+
+public string GetReaderAssignmentStatement(ColumnSchema column, int index)
+{
+	string statement = "if (!reader.IsDBNull(" + index.ToString() + ")) ";
+	statement += GetMemberVariableName(column) + " = ";
+	
+	if (column.Name.EndsWith("TypeCode")) statement += "(" + column.Name + ")";
+	
+	statement += "reader." + GetReaderMethod(column) + "(" + index.ToString() + ");";
+	
+	return statement;
+}
+
+public string GetCamelCaseName(string value)
+{
+	return string.IsNullOrEmpty(value) ? string.Empty : value.Substring(0, 1).ToLower() + value.Substring(1);
+}
+
+public string GetMemberVariableName(ColumnSchema column)
+{
+	//string propertyName = GetPropertyName(column);
+	string propertyName = column.Name;
+	string memberVariableName = GetCamelCaseName(propertyName);
+	
+	return memberVariableName;
+}
+
+
+public string GetPropertyName(ColumnSchema column)
+{
+	string propertyName = column.Name;
+	
+	if (propertyName == column.Table.Name + "Name") return "Name";
+	if (propertyName == column.Table.Name + "Description") return "Description";
+	
+	if (propertyName.EndsWith("TypeCode")) propertyName = propertyName.Substring(0, propertyName.Length - 4);
+	
+	return propertyName;
+}
+
+public int GetPropertyNameLength(ColumnSchema column)
+{
+	return (GetPropertyName(column)).Length;
+}
+public int GetPropertyNameMaxLength()
+{
+	int ret = 0;
+	foreach(ColumnSchema column in SourceTable.Columns)
+	{
+		ret = ret < GetPropertyNameLength(column)?GetPropertyNameLength(column):ret;
+	}
+	return ret;
+}
+		
+public string GetMemberVariableDefaultValue(ColumnSchema column)
+{
+	if(column.IsPrimaryKeyMember)
+	{
+	    return "";
+	}
+	switch (column.DataType)
+	{
+		case DbType.Guid:
+		{
+			return "Guid.Empty";
+		}
+		case DbType.AnsiString:
+		case DbType.AnsiStringFixedLength:
+		case DbType.String:
+		case DbType.StringFixedLength:
+		{
+			return "String.Empty";
+		}
+		default:
+		{
+			return "";
+		}
+	}
+}
+
+public string GetCSharpVariableType(ColumnSchema column)
+{
+	if (column.Name.EndsWith("TypeCode")) return column.Name;
+	
+	switch (column.DataType)
+	{
+		case DbType.AnsiString: return "string";
+		case DbType.AnsiStringFixedLength: return "string";
+		case DbType.Binary: return "byte[]";
+		case DbType.Boolean: return "bool";
+		case DbType.Byte: return "byte";
+		case DbType.Currency: return "decimal";
+		case DbType.Date: return "DateTime";
+		case DbType.DateTime: return "DateTime";
+		case DbType.Decimal: return "decimal";
+		case DbType.Double: return "double";
+		case DbType.Guid: return "Guid";
+		case DbType.Int16: return "short";
+		case DbType.Int32: return "int";
+		case DbType.Int64: return "long";
+		case DbType.Object: return "object";
+		case DbType.SByte: return "sbyte";
+		case DbType.Single: return "float";
+		case DbType.String: return "string";
+		case DbType.StringFixedLength: return "string";
+		case DbType.Time: return "TimeSpan";
+		case DbType.UInt16: return "ushort";
+		case DbType.UInt32: return "uint";
+		case DbType.UInt64: return "ulong";
+		case DbType.VarNumeric: return "decimal";
+		default:
+		{
+			return "__UNKNOWN__" + column.NativeType;
+		}
+	}
+}
+
+public string GetReaderMethod(ColumnSchema column)
+{
+	switch (column.DataType)
+	{
+		case DbType.Byte:
+		{
+			return "GetByte";
+		}
+		case DbType.Int16:
+		{
+			return "GetInt16";
+		}
+		case DbType.Int32:
+		{
+			return "GetInt32";
+		}
+		case DbType.Int64:
+		{
+			return "GetInt64";
+		}
+		case DbType.AnsiStringFixedLength:
+		case DbType.AnsiString:
+		case DbType.String:
+		case DbType.StringFixedLength:
+		{
+			return "GetString";
+		}
+		case DbType.Boolean:
+		{
+			return "GetBoolean";
+		}
+		case DbType.Guid:
+		{
+			return "GetGuid";
+		}
+		case DbType.Currency:
+		case DbType.Decimal:
+		{
+			return "GetDecimal";
+		}
+		case DbType.DateTime:
+		case DbType.Date:
+		{
+			return "GetDateTime";
+		}
+		case DbType.Binary:
+		{
+			return "GetBytes";
+		}
+		default:
+		{
+			return "__SQL__" + column.DataType;
+		}
+	}
+}
+
+public  string GetClassName(TableSchema table)
+    {
+		if(table==null)
+    	{
+    	    return string.Empty;
+    	}
+        
+    	string result = table.Name.Trim();
+        
+        if (table.Name.EndsWith("_Ref"))
+        {
+            result = result.Substring(0, table.Name.Length - 4);
+        }
+        
+        if(result.Split('_').Length>1)
+        {
+            result = result.Split('_')[1];
+        }
+    	
+    	return result ;
+    }
+
+public string GetSqlDbType(ColumnSchema column)
+{
+	switch (column.NativeType)
+	{
+		case "bigint": return "BigInt";
+		case "binary": return "Binary";
+		case "bit": return "Bit";
+		case "char": return "Char";
+		case "datetime": return "DateTime";
+		case "decimal": return "Decimal";
+		case "float": return "Float";
+		case "image": return "Image";
+		case "int": return "Int";
+		case "money": return "Money";
+		case "nchar": return "NChar";
+		case "ntext": return "NText";
+		case "numeric": return "Decimal";
+		case "nvarchar": return "NVarChar";
+		case "real": return "Real";
+		case "smalldatetime": return "SmallDateTime";
+		case "smallint": return "SmallInt";
+		case "smallmoney": return "SmallMoney";
+		case "sql_variant": return "Variant";
+		case "sysname": return "NChar";
+		case "text": return "Text";
+		case "timestamp": return "Timestamp";
+		case "tinyint": return "TinyInt";
+		case "uniqueidentifier": return "UniqueIdentifier";
+		case "varbinary": return "VarBinary";
+		case "varchar": return "VarChar";
+		default: return "__UNKNOWN__" + column.NativeType;
+	}
+}
+
+public string GetPrimaryKeyType(TableSchema table)
+{
+	if (table.PrimaryKey != null)
+	{
+		if (table.PrimaryKey.MemberColumns.Count == 1)
+		{
+			return GetCSharpVariableType(table.PrimaryKey.MemberColumns[0]);
+		}
+		else
+		{
+			throw new ApplicationException("This template will not work on primary keys with more than one member column.");
+		}
+	}
+	else
+	{
+		throw new ApplicationException("This template will only work on tables with a primary key.");
+	}
+}
+
+public override string GetFileName()
+{
+	return this.GetClassName(this.SourceTable) + ".cs";
+}
+#endregion script
+</script>

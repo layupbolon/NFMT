@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0206444D-2496-44AA-8A48-0D90518D6A36}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFMT.Funds</RootNamespace>
+    <AssemblyName>NFMT.Funds</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CashInAllotBLL.cs" />
+    <Compile Include="BLL\CashInAllotDetailBLL.cs" />
+    <Compile Include="BLL\CashInBLL.cs" />
+    <Compile Include="BLL\CashInContractBLL.cs" />
+    <Compile Include="BLL\CashInCorpBLL.cs" />
+    <Compile Include="BLL\CashInInvoiceBLL.cs" />
+    <Compile Include="BLL\CashInStcokBLL.cs" />
+    <Compile Include="BLL\ContractFundsAllotStockBLL.cs" />
+    <Compile Include="BLL\ContractPayApplyBLL.cs" />
+    <Compile Include="BLL\ContractReceivableBLL.cs" />
+    <Compile Include="BLL\CorpFundsAllotContractBLL.cs" />
+    <Compile Include="BLL\CorpFundsAllotStockBLL.cs" />
+    <Compile Include="BLL\CorpReceivableBLL.cs" />
+    <Compile Include="BLL\FundAttach2BLL.cs" />
+    <Compile Include="BLL\FundsBLL.cs" />
+    <Compile Include="BLL\FundsLogAttachBLL.cs" />
+    <Compile Include="BLL\FundsLogBLL.cs" />
+    <Compile Include="BLL\InvoicePayApplyBLL.cs" />
+    <Compile Include="BLL\InvoiceReceivableBLL.cs" />
+    <Compile Include="BLL\LcReceivableBLL.cs" />
+    <Compile Include="BLL\PayApplyAttachBLL.cs" />
+    <Compile Include="BLL\PayApplyBLL.cs" />
+    <Compile Include="BLL\PaymentAttachBLL.cs" />
+    <Compile Include="BLL\PaymentBLL.cs" />
+    <Compile Include="BLL\PaymentContractDetailBLL.cs" />
+    <Compile Include="BLL\PaymentInvioceDetailBLL.cs" />
+    <Compile Include="BLL\PaymentStockDetailBLL.cs" />
+    <Compile Include="BLL\PaymentVirtualBLL.cs" />
+    <Compile Include="BLL\RecAllotDetailBLL.cs" />
+    <Compile Include="BLL\ReceivableAllotBLL.cs" />
+    <Compile Include="BLL\ReceivableAttachBLL.cs" />
+    <Compile Include="BLL\ReceivableBLL.cs" />
+    <Compile Include="BLL\StcokReceivableBLL.cs" />
+    <Compile Include="BLL\StockPayApplyBLL.cs" />
+    <Compile Include="DAL\CashInAllotDAL.cs" />
+    <Compile Include="DAL\CashInAllotDetailDAL.cs" />
+    <Compile Include="DAL\CashInContractDAL.cs" />
+    <Compile Include="DAL\CashInCorpDAL.cs" />
+    <Compile Include="DAL\CashInDAL.cs" />
+    <Compile Include="DAL\CashInInvoiceDAL.cs" />
+    <Compile Include="DAL\CashInStcokDAL.cs" />
+    <Compile Include="DAL\ContractFundsAllotStockDAL.cs" />
+    <Compile Include="DAL\ContractPayApplyDAL.cs" />
+    <Compile Include="DAL\ContractReceivableDAL.cs" />
+    <Compile Include="DAL\CorpFundsAllotContractDAL.cs" />
+    <Compile Include="DAL\CorpFundsAllotStockDAL.cs" />
+    <Compile Include="DAL\CorpReceivableDAL.cs" />
+    <Compile Include="DAL\FundAttach2DAL.cs" />
+    <Compile Include="DAL\FundsDAL.cs" />
+    <Compile Include="DAL\FundsLogAttachDAL.cs" />
+    <Compile Include="DAL\FundsLogDAL.cs" />
+    <Compile Include="DAL\InvoicePayApplyDAL.cs" />
+    <Compile Include="DAL\InvoiceReceivableDAL.cs" />
+    <Compile Include="DAL\LcReceivableDAL.cs" />
+    <Compile Include="DAL\partial\CashInAllotDAL.cs" />
+    <Compile Include="DAL\partial\CashInDAL.cs" />
+    <Compile Include="DAL\partial\CashInStockDAL.cs" />
+    <Compile Include="DAL\partial\PayApplyDAL.cs" />
+    <Compile Include="DAL\partial\PaymentStockDetailDAL.cs" />
+    <Compile Include="DAL\PayApplyAttachDAL.cs" />
+    <Compile Include="DAL\PayApplyDAL.cs" />
+    <Compile Include="DAL\PaymentAttachDAL.cs" />
+    <Compile Include="DAL\PaymentContractDetailDAL.cs" />
+    <Compile Include="DAL\PaymentDAL.cs" />
+    <Compile Include="DAL\PaymentInvioceDetailDAL.cs" />
+    <Compile Include="DAL\PaymentStockDetailDAL.cs" />
+    <Compile Include="DAL\PaymentVirtualDAL.cs" />
+    <Compile Include="DAL\RecAllotDetailDAL.cs" />
+    <Compile Include="DAL\ReceivableAllotDAL.cs" />
+    <Compile Include="DAL\ReceivableAttachDAL.cs" />
+    <Compile Include="DAL\ReceivableDAL.cs" />
+    <Compile Include="DAL\StcokReceivableDAL.cs" />
+    <Compile Include="DAL\StockPayApplyDAL.cs" />
+    <Compile Include="FundsStyleEnum.cs" />
+    <Compile Include="IDAL\ICashInAllotDAL.cs" />
+    <Compile Include="IDAL\ICashInAllotDetailDAL.cs" />
+    <Compile Include="IDAL\ICashInContractDAL.cs" />
+    <Compile Include="IDAL\ICashInCorpDAL.cs" />
+    <Compile Include="IDAL\ICashInDAL.cs" />
+    <Compile Include="IDAL\ICashInInvoiceDAL.cs" />
+    <Compile Include="IDAL\ICashInStcokDAL.cs" />
+    <Compile Include="IDAL\IContractFundsAllotStockDAL.cs" />
+    <Compile Include="IDAL\IContractPayApplyDAL.cs" />
+    <Compile Include="IDAL\IContractReceivableDAL.cs" />
+    <Compile Include="IDAL\ICorpFundsAllotContractDAL.cs" />
+    <Compile Include="IDAL\ICorpFundsAllotStockDAL.cs" />
+    <Compile Include="IDAL\ICorpReceivableDAL.cs" />
+    <Compile Include="IDAL\IFundAttach2DAL.cs" />
+    <Compile Include="IDAL\IFundsDAL.cs" />
+    <Compile Include="IDAL\IFundsLogAttachDAL.cs" />
+    <Compile Include="IDAL\IFundsLogDAL.cs" />
+    <Compile Include="IDAL\IInvoicePayApplyDAL.cs" />
+    <Compile Include="IDAL\IInvoiceReceivableDAL.cs" />
+    <Compile Include="IDAL\ILcReceivableDAL.cs" />
+    <Compile Include="IDAL\IPayApplyAttachDAL.cs" />
+    <Compile Include="IDAL\IPayApplyDAL.cs" />
+    <Compile Include="IDAL\IPaymentAttachDAL.cs" />
+    <Compile Include="IDAL\IPaymentContractDetailDAL.cs" />
+    <Compile Include="IDAL\IPaymentDAL.cs" />
+    <Compile Include="IDAL\IPaymentInvioceDetailDAL.cs" />
+    <Compile Include="IDAL\IPaymentStockDetailDAL.cs" />
+    <Compile Include="IDAL\IPaymentVirtualDAL.cs" />
+    <Compile Include="IDAL\IRecAllotDetailDAL.cs" />
+    <Compile Include="IDAL\IReceivableAllotDAL.cs" />
+    <Compile Include="IDAL\IReceivableAttachDAL.cs" />
+    <Compile Include="IDAL\IReceivableDAL.cs" />
+    <Compile Include="IDAL\IStcokReceivableDAL.cs" />
+    <Compile Include="IDAL\IStockPayApplyDAL.cs" />
+    <Compile Include="Model\CashIn.cs" />
+    <Compile Include="Model\CashInAllot.cs" />
+    <Compile Include="Model\CashInAllotDetail.cs" />
+    <Compile Include="Model\CashInAttach.cs" />
+    <Compile Include="Model\CashInContract.cs" />
+    <Compile Include="Model\CashInContractDirect.cs" />
+    <Compile Include="Model\CashInCorp.cs" />
+    <Compile Include="Model\CashInInvoice.cs" />
+    <Compile Include="Model\CashInStcok.cs" />
+    <Compile Include="Model\ContractFundsAllotStock.cs" />
+    <Compile Include="Model\ContractPayApply.cs" />
+    <Compile Include="Model\ContractReceivable.cs" />
+    <Compile Include="Model\CorpFundsAllotContract.cs" />
+    <Compile Include="Model\CorpFundsAllotStock.cs" />
+    <Compile Include="Model\CorpReceivable.cs" />
+    <Compile Include="Model\FundAttach2.cs" />
+    <Compile Include="Model\Funds.cs" />
+    <Compile Include="Model\FundsLog.cs" />
+    <Compile Include="Model\FundsLogAttach.cs" />
+    <Compile Include="Model\InvoicePayApply.cs" />
+    <Compile Include="Model\InvoiceReceivable.cs" />
+    <Compile Include="Model\LcReceivable.cs" />
+    <Compile Include="Model\PayApply.cs" />
+    <Compile Include="Model\PayApplyAttach.cs" />
+    <Compile Include="Model\Payment.cs" />
+    <Compile Include="Model\PaymentAttach.cs" />
+    <Compile Include="Model\PaymentContractDetail.cs" />
+    <Compile Include="Model\PaymentInvioceDetail.cs" />
+    <Compile Include="Model\PaymentStockDetail.cs" />
+    <Compile Include="Model\PaymentVirtual.cs" />
+    <Compile Include="Model\RecAllotDetail.cs" />
+    <Compile Include="Model\Receivable.cs" />
+    <Compile Include="Model\ReceivableAllot.cs" />
+    <Compile Include="Model\ReceivableAttach.cs" />
+    <Compile Include="Model\StcokReceivable.cs" />
+    <Compile Include="Model\StockPayApply.cs" />
+    <Compile Include="PayMatterEnum.cs" />
+    <Compile Include="PaymenyAllotTypeEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CashInAllotTypeEnum.cs" />
+    <Compile Include="TaskProvider\PayApplyTaskProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FundsTypeEnum.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Authority\Authority.csproj">
+      <Project>{570900bd-88d6-45cb-88b4-f6b7b2de95d7}</Project>
+      <Name>Authority</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2ce37c4e-daee-4370-bf0e-56f7628bb299}</Project>
+      <Name>Common %28Common\Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{6a58d209-0eba-4e67-8570-78e7f609d1ef}</Project>
+      <Name>Contract %28Contract\Contract%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{f80e8ea5-0e37-498a-9f8a-28057009ce76}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{97ea2492-4499-40da-a305-1538d4406ce1}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invoice\Invoice.csproj">
+      <Project>{177ad775-a4fb-41d9-9c11-419cb954dd2b}</Project>
+      <Name>Invoice %28Invoice\Invoice%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Operate\Operate.csproj">
+      <Project>{d0506c4b-c48a-426a-bbcb-732165c28e85}</Project>
+      <Name>Operate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{d10c059f-3a20-4f98-a5dd-d16fc215a4e0}</Project>
+      <Name>User %28User\User%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WareHouse\WareHouse.csproj">
+      <Project>{b379fdab-4cf5-4b2d-a55c-17a091e94459}</Project>
+      <Name>WareHouse %28WareHouse\WareHouse%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkFlow\WorkFlow.csproj">
+      <Project>{b0fd1659-24f8-44d8-ad2f-1695385dd55b}</Project>
+      <Name>WorkFlow %28WorkFlow\WorkFlow%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

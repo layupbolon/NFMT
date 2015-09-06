@@ -1,0 +1,2486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NFMTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Apply">
+    <Key>
+      <PropertyRef Name="ApplyId" />
+    </Key>
+    <Property Name="ApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ApplyType" Type="Int32" />
+    <Property Name="EmpId" Type="Int32" />
+    <Property Name="ApplyTime" Type="DateTime" Precision="3" />
+    <Property Name="ApplyStatus" Type="Int32" />
+    <Property Name="ApplyDept" Type="Int32" />
+    <Property Name="ApplyCorp" Type="Int32" />
+    <Property Name="ApplyDesc" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Attach">
+    <Key>
+      <PropertyRef Name="AttachId" />
+    </Key>
+    <Property Name="AttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ServerAttachName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AttachExt" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AttachType" Type="Int32" />
+    <Property Name="AttachInfo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="AttachLength" Type="Int32" />
+    <Property Name="AttachPath" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="AttachStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_Contract">
+    <Key>
+      <PropertyRef Name="ContractId" />
+    </Key>
+    <Property Name="ContractId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="OutContractNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ContractDate" Type="DateTime" Precision="3" />
+    <Property Name="ContractName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="TradeBorder" Type="Int32" />
+    <Property Name="ContractLimit" Type="Int32" />
+    <Property Name="ContractSide" Type="Int32" />
+    <Property Name="TradeDirection" Type="Int32" />
+    <Property Name="HaveGoodsFlow" Type="Int32" />
+    <Property Name="ContractPeriodS" Type="DateTime" Precision="3" />
+    <Property Name="ContractPeriodE" Type="DateTime" Precision="3" />
+    <Property Name="Premium" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InitQP" Type="DateTime" Precision="3" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="SettleCurrency" Type="Int32" />
+    <Property Name="SignAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ExeAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="PriceMode" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryStyle" Type="Int32" />
+    <Property Name="DeliveryDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateFrom" Type="Int32" />
+    <Property Name="ContractStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_ContractAttach">
+    <Key>
+      <PropertyRef Name="ContractAttachId" />
+    </Key>
+    <Property Name="ContractAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Con_ContractClause_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="MasterId" Type="Int32" />
+    <Property Name="ClauseId" Type="Int32" />
+    <Property Name="RefStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_ContractCorporationDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="CorpName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DeptId" Type="Int32" />
+    <Property Name="DeptName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="IsDefaultCorp" Type="Boolean" />
+    <Property Name="IsInnerCorp" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Con_ContractDept">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="DeptId" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Con_ContractDetail">
+    <Key>
+      <PropertyRef Name="ContractDetailId" />
+    </Key>
+    <Property Name="ContractDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="DiscountBase" Type="Int32" />
+    <Property Name="DiscountType" Type="Int32" />
+    <Property Name="DiscountRate" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="DelayType" Type="Int32" />
+    <Property Name="DelayRate" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="MoreOrLess" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_ContractPrice">
+    <Key>
+      <PropertyRef Name="ContractPriceId" />
+    </Key>
+    <Property Name="ContractPriceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="FixedPrice" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="FixedPriceMemo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="WhoDoPrice" Type="Int32" />
+    <Property Name="AlmostPrice" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="DoPriceBeginDate" Type="DateTime" Precision="3" />
+    <Property Name="DoPriceEndDate" Type="DateTime" Precision="3" />
+    <Property Name="IsQP" Type="Boolean" />
+    <Property Name="PriceFrom" Type="Int32" />
+    <Property Name="PriceStyle1" Type="Int32" />
+    <Property Name="PriceStyle2" Type="Int32" />
+    <Property Name="MarginMode" Type="Int32" />
+    <Property Name="MarginAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MarginMemo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_ContractSub">
+    <Key>
+      <PropertyRef Name="SubId" />
+    </Key>
+    <Property Name="SubId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractDate" Type="DateTime" Precision="3" />
+    <Property Name="TradeBorder" Type="Int32" />
+    <Property Name="ContractLimit" Type="Int32" />
+    <Property Name="ContractSide" Type="Int32" />
+    <Property Name="TradeDirection" Type="Int32" />
+    <Property Name="ContractPeriodS" Type="DateTime" Precision="3" />
+    <Property Name="ContractPeriodE" Type="DateTime" Precision="3" />
+    <Property Name="Premium" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="SubNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="OutContractNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SubName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SettleCurrency" Type="Int32" />
+    <Property Name="SignAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ExeAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="PriceMode" Type="Int32" />
+    <Property Name="ShipTime" Type="DateTime" Precision="3" />
+    <Property Name="ArriveTime" Type="DateTime" Precision="3" />
+    <Property Name="InitQP" Type="DateTime" Precision="3" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DeliveryStyle" Type="Int32" />
+    <Property Name="DeliveryDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateFrom" Type="Int32" />
+    <Property Name="SubStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="AssetId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Con_ContractSubAttach">
+    <Key>
+      <PropertyRef Name="SubAttachId" />
+    </Key>
+    <Property Name="SubAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Con_ContractSubQP">
+    <Key>
+      <PropertyRef Name="QPId" />
+    </Key>
+    <Property Name="QPId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="CurQP" Type="Int32" />
+    <Property Name="InitAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="ChgedAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="QPChgDate" Type="Int32" Nullable="false" />
+    <Property Name="QPFrom" Type="Int32" Nullable="false" />
+    <Property Name="ThisQPFeeBala" Type="Decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="QPMemo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalInitFeeBala" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_ContractTypeDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractType" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_Lc">
+    <Key>
+      <PropertyRef Name="LcId" />
+    </Key>
+    <Property Name="LcId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IssueBank" Type="Int32" />
+    <Property Name="AdviseBank" Type="Int32" />
+    <Property Name="IssueDate" Type="DateTime" Precision="3" />
+    <Property Name="FutureDay" Type="Int32" />
+    <Property Name="LcBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Currency" Type="Int32" />
+    <Property Name="LCStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_LcAttach">
+    <Key>
+      <PropertyRef Name="LcAttachId" />
+    </Key>
+    <Property Name="LcAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Con_Premium">
+    <Key>
+      <PropertyRef Name="PremiumId" />
+    </Key>
+    <Property Name="PremiumId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="PremiumType" Type="Int32" />
+    <Property Name="PrimiumMemo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="PrimiumStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_SubCorporationDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="CorpName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DeptId" Type="Int32" />
+    <Property Name="DeptName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+    <Property Name="IsDefaultCorp" Type="Boolean" />
+    <Property Name="IsInnerCorp" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Con_SubDetail">
+    <Key>
+      <PropertyRef Name="SubDetailId" />
+    </Key>
+    <Property Name="SubDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="DiscountBase" Type="Int32" />
+    <Property Name="DiscountType" Type="Int32" />
+    <Property Name="DiscountRate" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="DelayType" Type="Int32" />
+    <Property Name="DelayRate" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="MoreOrLess" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_SubPrice">
+    <Key>
+      <PropertyRef Name="SubPriceId" />
+    </Key>
+    <Property Name="SubPriceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="FixedPrice" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="FixedPriceMemo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="WhoDoPrice" Type="Int32" />
+    <Property Name="AlmostPrice" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="DoPriceBeginDate" Type="DateTime" Precision="3" />
+    <Property Name="DoPriceEndDate" Type="DateTime" Precision="3" />
+    <Property Name="IsQP" Type="Boolean" />
+    <Property Name="PriceFrom" Type="Int32" />
+    <Property Name="PriceStyle1" Type="Int32" />
+    <Property Name="PriceStyle2" Type="Int32" />
+    <Property Name="MarginMode" Type="Int32" />
+    <Property Name="MarginAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MarginMemo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_SubTypeDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="ContractType" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_Summary">
+    <Key>
+      <PropertyRef Name="SummaryId" />
+    </Key>
+    <Property Name="SummaryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SummaryApplyId" Type="Int32" />
+    <Property Name="SummaryDate" Type="DateTime" Precision="3" />
+    <Property Name="SummaryEmpId" Type="Int32" />
+    <Property Name="Meno" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="SummaryStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_SummaryApply">
+    <Key>
+      <PropertyRef Name="SummaryApplyId" />
+    </Key>
+    <Property Name="SummaryApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="SAType" Type="Int32" />
+    <Property Name="SADate" Type="DateTime" Precision="3" />
+    <Property Name="ApplyDept" Type="Int32" />
+    <Property Name="BuyerCorp" Type="Int32" />
+    <Property Name="BuyerAddress" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentStyle" Type="Int32" />
+    <Property Name="RecBankId" Type="Int32" />
+    <Property Name="OutPricOption" Type="Int32" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="AreaId" Type="Int32" />
+    <Property Name="BankCode" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Curency" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Bala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Meno" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="SAStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_SummaryApplyAttach">
+    <Key>
+      <PropertyRef Name="SAAttachId" />
+    </Key>
+    <Property Name="SAAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SummaryApplyId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Con_SummaryApplyInvoice_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SAId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="RefStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Con_SummaryApplyStock_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SAId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockNameId" Type="Int32" />
+    <Property Name="RefStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Doc_Document">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+    </Key>
+    <Property Name="DocumentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="3" />
+    <Property Name="DocEmpId" Type="Int32" />
+    <Property Name="PresentDate" Type="DateTime" Precision="3" />
+    <Property Name="Presenter" Type="Int32" />
+    <Property Name="AcceptanceDate" Type="DateTime" Precision="3" />
+    <Property Name="Acceptancer" Type="Int32" />
+    <Property Name="Meno" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Doc_DocumentInvoice">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="Int32" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="StockDetailId" Type="Int32" />
+    <Property Name="OrderInvoiceDetailId" Type="Int32" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="InvoiceBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Doc_DocumentOrder">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CommercialId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="LCId" Type="Int32" />
+    <Property Name="LCNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="LCDay" Type="Int32" />
+    <Property Name="OrderType" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="3" />
+    <Property Name="ApplyCorp" Type="Int32" />
+    <Property Name="ApplyDept" Type="Int32" />
+    <Property Name="SellerCorp" Type="Int32" />
+    <Property Name="BuyerCorp" Type="Int32" />
+    <Property Name="BuyerCorpName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BuyerAddress" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentStyle" Type="Int32" />
+    <Property Name="RecBankId" Type="Int32" />
+    <Property Name="DiscountBase" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="AreaId" Type="Int32" />
+    <Property Name="AreaName" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="BankCode" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="Currency" Type="Int32" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InvBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InvGap" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Bundles" Type="Int32" />
+    <Property Name="Meno" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="OrderStatus" Type="Int32" />
+    <Property Name="ApplyEmpId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Doc_DocumentOrderAttach">
+    <Key>
+      <PropertyRef Name="OrderAttachId" />
+    </Key>
+    <Property Name="OrderAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Doc_DocumentOrderDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="InvoiceCopies" Type="Int32" />
+    <Property Name="InvoiceSpecific" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="QualityCopies" Type="Int32" />
+    <Property Name="QualitySpecific" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="WeightCopies" Type="Int32" />
+    <Property Name="WeightSpecific" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="TexCopies" Type="Int32" />
+    <Property Name="TexSpecific" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DeliverCopies" Type="Int32" />
+    <Property Name="DeliverSpecific" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="TotalInvCopies" Type="Int32" />
+    <Property Name="TotalInvSpecific" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Doc_DocumentOrderInvoice">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="StockDetailId" Type="Int32" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Doc_DocumentOrderStock">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComDetailId" Type="Int32" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockNameId" Type="Int32" />
+    <Property Name="RefNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ApplyAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Doc_DocumentStock">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="Int32" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="OrderStockDetailId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockNameId" Type="Int32" />
+    <Property Name="RefNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_CashIn">
+    <Key>
+      <PropertyRef Name="CashInId" />
+    </Key>
+    <Property Name="CashInId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CashInEmpId" Type="Int32" />
+    <Property Name="CashInDate" Type="DateTime" Precision="3" />
+    <Property Name="CashInBlocId" Type="Int32" />
+    <Property Name="CashInCorpId" Type="Int32" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="CashInBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CashInBank" Type="Int32" />
+    <Property Name="CashInAccoontId" Type="Int32" />
+    <Property Name="CashInMode" Type="Int32" />
+    <Property Name="PayBlocId" Type="Int32" />
+    <Property Name="PayCorpId" Type="Int32" />
+    <Property Name="PayCorpName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayBankId" Type="Int32" />
+    <Property Name="PayBank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayAccountId" Type="Int32" />
+    <Property Name="PayAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayWord" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="BankLog" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CashInStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_CashInAllot">
+    <Key>
+      <PropertyRef Name="AllotId" />
+    </Key>
+    <Property Name="AllotId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="AllotType" Type="Int32" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="AllotDesc" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Alloter" Type="Int32" />
+    <Property Name="AllotTime" Type="DateTime" Precision="3" />
+    <Property Name="AllotStatus" Type="Int32" />
+    <Property Name="AllotFrom" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_CashInAttach">
+    <Key>
+      <PropertyRef Name="CashInAttachId" />
+    </Key>
+    <Property Name="CashInAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachId" Type="Int32" />
+    <Property Name="CashInId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_CashInContract_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CorpRefId" Type="Int32" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="CashInId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="FundsLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_CashInCorp_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="BlocId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="CashInId" Type="Int32" />
+    <Property Name="IsShare" Type="Boolean" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="FundsLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_CashInInvoice_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="CorpRefId" Type="Int32" />
+    <Property Name="ContractRefId" Type="Int32" />
+    <Property Name="CashInId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="FundsLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_CashInStcok_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="CorpRefId" Type="Int32" />
+    <Property Name="ContractRefId" Type="Int32" />
+    <Property Name="CashInId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="StockNameId" Type="Int32" />
+    <Property Name="AllotNetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="FundsLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_ContractFundsAllotStock_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="ReceId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_ContractPayApply_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractSubId" Type="Int32" />
+    <Property Name="ApplyBala" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Fun_ContractReceivable_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CorpRefId" Type="Int32" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="DetailId" Type="Int32" />
+    <Property Name="RecId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_CorpFundsAllotContract_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="ReceId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="AllotGroupId" Type="Int32" />
+    <Property Name="AllotCorpId" Type="Int32" />
+    <Property Name="FundsValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_CorpFundsAllotStock_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="ReceId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_CorpReceivable_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="DetailId" Type="Int32" />
+    <Property Name="BlocId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="RecId" Type="Int32" />
+    <Property Name="IsShare" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Fun_Funds">
+    <Key>
+      <PropertyRef Name="FundsId" />
+    </Key>
+    <Property Name="FundsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FundsLimitd" Type="Int32" />
+    <Property Name="BlocId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="FundsValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="FundsType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_FundsLog">
+    <Key>
+      <PropertyRef Name="FundsLogId" />
+    </Key>
+    <Property Name="FundsLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="LogDate" Type="DateTime" Precision="3" />
+    <Property Name="InBlocId" Type="Int32" />
+    <Property Name="InCorpId" Type="Int32" />
+    <Property Name="InBankId" Type="Int32" />
+    <Property Name="InAccountId" Type="Int32" />
+    <Property Name="OutBlocId" Type="Int32" />
+    <Property Name="OutCorpId" Type="Int32" />
+    <Property Name="OutBankId" Type="Int32" />
+    <Property Name="OutBank" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="OutAccountId" Type="Int32" />
+    <Property Name="OutAccount" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FundsBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="FundsType" Type="Int32" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="LogDirection" Type="Int32" />
+    <Property Name="LogType" Type="Int32" Nullable="false" />
+    <Property Name="PayMode" Type="Int32" />
+    <Property Name="IsVirtualPay" Type="Boolean" />
+    <Property Name="FundsDesc" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="OpPerson" Type="Int32" />
+    <Property Name="LogSourceBase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogSource" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SourceId" Type="Int32" />
+    <Property Name="LogStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_FundsLogAttach">
+    <Key>
+      <PropertyRef Name="FundsLogAttachId" />
+    </Key>
+    <Property Name="FundsLogAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachId" Type="Int32" />
+    <Property Name="FundsLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_InvoicePayApply_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="SIId" Type="Int32" />
+    <Property Name="ApplyBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_InvoiceReceivable_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReceId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="DetailId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_LcReceivable_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReceId" Type="Int32" />
+    <Property Name="LcId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_PayApply">
+    <Key>
+      <PropertyRef Name="PayApplyId" />
+    </Key>
+    <Property Name="PayApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="PayApplySource" Type="Int32" />
+    <Property Name="RecBlocId" Type="Int32" />
+    <Property Name="RecCorpId" Type="Int32" />
+    <Property Name="RecBankId" Type="Int32" />
+    <Property Name="RecBankAccountId" Type="Int32" />
+    <Property Name="RecBankAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ApplyBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="PayMode" Type="Int32" />
+    <Property Name="PayDeadline" Type="DateTime" Precision="3" />
+    <Property Name="SpecialDesc" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="PayMatter" Type="Int32" />
+    <Property Name="RealPayCorpId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_PayApplyAttach">
+    <Key>
+      <PropertyRef Name="PayApplyAttachId" />
+    </Key>
+    <Property Name="PayApplyAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachId" Type="Int32" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="AttachType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_Payment">
+    <Key>
+      <PropertyRef Name="PaymentId" />
+    </Key>
+    <Property Name="PaymentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="PaymentCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PayBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="FundsBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VirtualBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="PayStyle" Type="Int32" />
+    <Property Name="PayBankId" Type="Int32" />
+    <Property Name="PayBankAccountId" Type="Int32" />
+    <Property Name="PayCorp" Type="Int32" />
+    <Property Name="PayDept" Type="Int32" />
+    <Property Name="PayEmpId" Type="Int32" />
+    <Property Name="PayDatetime" Type="DateTime" Precision="3" />
+    <Property Name="RecevableCorp" Type="Int32" />
+    <Property Name="ReceBankId" Type="Int32" />
+    <Property Name="ReceBankAccountId" Type="Int32" />
+    <Property Name="ReceBankAccount" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentStatus" Type="Int32" />
+    <Property Name="FlowName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="FundsLogId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_PaymentAttach">
+    <Key>
+      <PropertyRef Name="PaymentAttachId" />
+    </Key>
+    <Property Name="PaymentAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachId" Type="Int32" />
+    <Property Name="PaymentId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_PaymentContractDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentId" Type="Int32" Nullable="false" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractSubId" Type="Int32" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="PayApplyDetailId" Type="Int32" />
+    <Property Name="PayBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="FundsBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VirtualBala" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Fun_PaymentInvioceDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentId" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="PayApplyDetailId" Type="Int32" />
+    <Property Name="PayBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="FundsBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VirtualBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_PaymentStockDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractDetailId" Type="Int32" />
+    <Property Name="PaymentId" Type="Int32" Nullable="false" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="PayApplyDetailId" Type="Int32" />
+    <Property Name="PayBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="FundsBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VirtualBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="SourceFrom" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_PaymentVirtual">
+    <Key>
+      <PropertyRef Name="VirtualId" />
+    </Key>
+    <Property Name="VirtualId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymentId" Type="Int32" Nullable="false" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="PayBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="IsConfirm" Type="Boolean" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="ConfirmMemo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="FundsLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_RecAllotDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RecId" Type="Int32" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_Receivable">
+    <Key>
+      <PropertyRef Name="ReceivableId" />
+    </Key>
+    <Property Name="ReceivableId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReceiveEmpId" Type="Int32" />
+    <Property Name="ReceiveDate" Type="DateTime" Precision="3" />
+    <Property Name="ReceivableGroupId" Type="Int32" />
+    <Property Name="ReceivableCorpId" Type="Int32" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="PayBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ReceivableBank" Type="Int32" />
+    <Property Name="ReceivableAccoontId" Type="Int32" />
+    <Property Name="PayGroupId" Type="Int32" />
+    <Property Name="PayCorpId" Type="Int32" />
+    <Property Name="PayCorpName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayBankId" Type="Int32" />
+    <Property Name="PayBank" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayAccountId" Type="Int32" />
+    <Property Name="PayAccount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PayWord" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="BankLog" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiveStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_ReceivableAllot">
+    <Key>
+      <PropertyRef Name="ReceivableAllotId" />
+    </Key>
+    <Property Name="ReceivableAllotId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="AllotType" Type="Int32" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="AllotDesc" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="EmpId" Type="Int32" />
+    <Property Name="AllotTime" Type="DateTime" Precision="3" />
+    <Property Name="AllotStatus" Type="Int32" />
+    <Property Name="AllotFrom" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Fun_ReceivableAttach">
+    <Key>
+      <PropertyRef Name="ReceivableAttachId" />
+    </Key>
+    <Property Name="ReceivableAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachId" Type="Int32" />
+    <Property Name="ReceivableId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_StcokReceivable_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="CorpRefId" Type="Int32" />
+    <Property Name="ContractRefId" Type="Int32" />
+    <Property Name="RecId" Type="Int32" />
+    <Property Name="DetailId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockNameId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Fun_StockPayApply_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PayApplyId" Type="Int32" />
+    <Property Name="ContractRefId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="ApplyBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="RefStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Inv_BusinessInvoice">
+    <Key>
+      <PropertyRef Name="BusinessInvoiceId" />
+    </Key>
+    <Property Name="BusinessInvoiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="RefInvoiceId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="IntegerAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MUId" Type="Int32" />
+    <Property Name="MarginRatio" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VATRatio" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VATBala" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Inv_BusinessInvoiceDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessInvoiceId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="RefDetailId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="ConfirmPriceId" Type="Int32" />
+    <Property Name="ConfirmDetailId" Type="Int32" />
+    <Property Name="PricingId" Type="Int32" />
+    <Property Name="PricingDetailId" Type="Int32" />
+    <Property Name="FeeType" Type="Int32" />
+    <Property Name="IntegerAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CalculateDay" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Bala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Inv_FinanceBusinessInvoice_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessInvoiceId" Type="Int32" />
+    <Property Name="FinanceInvoiceId" Type="Int32" />
+    <Property Name="Bala" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Inv_FinanceInvoice">
+    <Key>
+      <PropertyRef Name="FinanceInvoiceId" />
+    </Key>
+    <Property Name="FinanceInvoiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="IntegerAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MUId" Type="Int32" />
+    <Property Name="VATRatio" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VATBala" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Inv_FinanceInvoiceDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FinanceInvoiceId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="IntegerAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MUId" Type="Int32" />
+    <Property Name="VATRatio" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="VATBala" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Inv_FinBusInvAllot">
+    <Key>
+      <PropertyRef Name="AllotId" />
+    </Key>
+    <Property Name="AllotId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="Alloter" Type="Int32" />
+    <Property Name="AllotDate" Type="DateTime" Precision="3" />
+    <Property Name="AllotStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Inv_FinBusInvAllotDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllotId" Type="Int32" />
+    <Property Name="BusinessInvoiceId" Type="Int32" />
+    <Property Name="FinanceInvoiceId" Type="Int32" />
+    <Property Name="AllotBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Inv_InvoiceApply">
+    <Key>
+      <PropertyRef Name="InvoiceApplyId" />
+    </Key>
+    <Property Name="InvoiceApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="TotalBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Inv_InvoiceApplyDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceApplyId" Type="Int32" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="BussinessInvoiceId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="InvoicePrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PaymentAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="OtherAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InvoiceBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Inv_InvoiceApplyFinance">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="FinanceInvoiceId" Type="Int32" />
+    <Property Name="InvoiceApplyId" Type="Int32" />
+    <Property Name="RefStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Inv_InvoiceApplySIDetail">
+    <Key>
+      <PropertyRef Name="SIDetailId" />
+    </Key>
+    <Property Name="SIDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceApplyId" Type="Int32" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="SIId" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Inv_SI">
+    <Key>
+      <PropertyRef Name="SIId" />
+    </Key>
+    <Property Name="SIId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceId" Type="Int32" />
+    <Property Name="ChangeCurrencyId" Type="Int32" />
+    <Property Name="ChangeRate" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ChangeBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PayDept" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Inv_SIDetail">
+    <Key>
+      <PropertyRef Name="SIDetailId" />
+    </Key>
+    <Property Name="SIDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SIId" Type="Int32" />
+    <Property Name="PayDept" Type="Int32" />
+    <Property Name="FeeType" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractSubId" Type="Int32" />
+    <Property Name="DetailBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceId" />
+    </Key>
+    <Property Name="InvoiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceType" Type="Int32" />
+    <Property Name="InvoiceBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="InvoiceDirection" Type="Int32" />
+    <Property Name="OutBlocId" Type="Int32" />
+    <Property Name="OutCorpId" Type="Int32" />
+    <Property Name="OutCorpName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InBlocId" Type="Int32" />
+    <Property Name="InCorpId" Type="Int32" />
+    <Property Name="InCorpName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="InvoiceStatus" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="InvoiceAttach">
+    <Key>
+      <PropertyRef Name="InvoiceAttachId" />
+    </Key>
+    <Property Name="InvoiceAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AttachId" Type="Int32" />
+    <Property Name="InvoiceId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Pri_Interest">
+    <Key>
+      <PropertyRef Name="InterestId" />
+    </Key>
+    <Property Name="InterestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="PricingUnit" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Premium" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="OtherPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PayCapital" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="CurCapital" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="InterestBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestAmountDay" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Unit" Type="Int32" />
+    <Property Name="InterestStyle" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="InterestDate" Type="DateTime" Precision="3" />
+    <Property Name="InterestStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_InterestDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InterestId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="InterestAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PricingUnit" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Premium" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="OtherPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="StockBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestStartDate" Type="DateTime" Precision="3" />
+    <Property Name="InterestEndDate" Type="DateTime" Precision="3" />
+    <Property Name="InterestDay" Type="Int32" />
+    <Property Name="InterestUnit" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestType" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_PriceConfirm">
+    <Key>
+      <PropertyRef Name="PriceConfirmId" />
+    </Key>
+    <Property Name="PriceConfirmId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OutCorpId" Type="Int32" />
+    <Property Name="InCorpId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubId" Type="Int32" />
+    <Property Name="ContractAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="SubAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="RealityAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PricingAvg" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PremiumAvg" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestAvg" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="OtherAvg" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="SettlePrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="SettleBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PricingDate" Type="DateTime" Precision="3" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="TakeCorpId" Type="Int32" />
+    <Property Name="ContactPerson" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="PriceConfirmStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_PriceConfirmDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PriceConfirmId" Type="Int32" />
+    <Property Name="InterestDetailId" Type="Int32" />
+    <Property Name="InterestId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="ConfirmAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="SettlePrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="SettleBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_Pricing">
+    <Key>
+      <PropertyRef Name="PricingId" />
+    </Key>
+    <Property Name="PricingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PricingApplyId" Type="Int32" />
+    <Property Name="PricingWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MUId" Type="Int32" />
+    <Property Name="ExchangeId" Type="Int32" />
+    <Property Name="FuturesCodeId" Type="Int32" />
+    <Property Name="FuturesCodeEndDate" Type="DateTime" Precision="3" />
+    <Property Name="SpotQP" Type="DateTime" Precision="3" />
+    <Property Name="DelayFee" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Spread" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="OtherFee" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="AvgPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PricingTime" Type="DateTime" Precision="3" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="Pricinger" Type="Int32" />
+    <Property Name="AssertId" Type="Int32" />
+    <Property Name="PricingDirection" Type="Int32" />
+    <Property Name="PricingStatus" Type="Int32" />
+    <Property Name="FinalPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_PricingApply">
+    <Key>
+      <PropertyRef Name="PricingApplyId" />
+    </Key>
+    <Property Name="PricingApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="PricingDirection" Type="Int32" />
+    <Property Name="QPDate" Type="DateTime" Precision="3" />
+    <Property Name="DelayAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DelayFee" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DelayQPDate" Type="DateTime" Precision="3" />
+    <Property Name="OtherFee" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="OtherDesc" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
+    <Property Name="MinPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MaxPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="PricingBlocId" Type="Int32" />
+    <Property Name="PricingCorpId" Type="Int32" />
+    <Property Name="PricingWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MUId" Type="Int32" />
+    <Property Name="AssertId" Type="Int32" />
+    <Property Name="PricingPersoinId" Type="Int32" />
+    <Property Name="PricingStyle" Type="Int32" />
+    <Property Name="DeclareDate" Type="DateTime" Precision="3" />
+    <Property Name="AvgPriceStart" Type="DateTime" Precision="3" />
+    <Property Name="AvgPriceEnd" Type="DateTime" Precision="3" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_PricingApplyDelay">
+    <Key>
+      <PropertyRef Name="DelayId" />
+    </Key>
+    <Property Name="DelayId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PricingApplyId" Type="Int32" />
+    <Property Name="DelayAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DelayFee" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DelayQP" Type="DateTime" Precision="3" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_PricingApplyDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PricingApplyId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="PricingWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_PricingDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PricingId" Type="Int32" />
+    <Property Name="PricingApplyId" Type="Int32" />
+    <Property Name="PricingApplyDetailId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="PricingWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="AvgPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PricingTime" Type="DateTime" Precision="3" />
+    <Property Name="Pricinger" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_PricingPerson">
+    <Key>
+      <PropertyRef Name="PersoinId" />
+    </Key>
+    <Property Name="PersoinId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BlocId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="PricingName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Job" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PricingPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Phone2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PersoinStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_StopLoss">
+    <Key>
+      <PropertyRef Name="StopLossId" />
+    </Key>
+    <Property Name="StopLossId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StopLossApplyId" Type="Int32" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="StopLossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MUId" Type="Int32" />
+    <Property Name="ExchangeId" Type="Int32" />
+    <Property Name="FuturesCodeId" Type="Int32" />
+    <Property Name="AvgPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PricingTime" Type="DateTime" Precision="3" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="StopLosser" Type="Int32" />
+    <Property Name="AssertId" Type="Int32" />
+    <Property Name="PricingDirection" Type="Int32" />
+    <Property Name="StopLossStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_StopLossApply">
+    <Key>
+      <PropertyRef Name="StopLossApplyId" />
+    </Key>
+    <Property Name="StopLossApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="PricingId" Type="Int32" />
+    <Property Name="PricingDirection" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="AssertId" Type="Int32" />
+    <Property Name="StopLossPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="StopLossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MUId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Pri_StopLossApplyDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StopLossApplyId" Type="Int32" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="PricingDetailId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="StopLossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Pri_StopLossDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StopLossId" Type="Int32" />
+    <Property Name="StopLossApplyId" Type="Int32" />
+    <Property Name="StopLossApplyDetailId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="StopLossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="AvgPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="StopLossTime" Type="DateTime" Precision="3" />
+    <Property Name="StopLosser" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Rep_ClientCurrent">
+    <Key>
+      <PropertyRef Name="CurId" />
+    </Key>
+    <Property Name="CurId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InBlocId" Type="Int32" />
+    <Property Name="InCorpId" Type="Int32" />
+    <Property Name="OutBlocId" Type="Int32" />
+    <Property Name="OutCorpId" Type="Int32" />
+    <Property Name="CurDate" Type="DateTime" Precision="3" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="CashInBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CashOutBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InvoiceOutBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InvoiceInBala" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_ContractStockIn_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockInId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractSubId" Type="Int32" />
+    <Property Name="RefStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_CustomsApplyAttach">
+    <Key>
+      <PropertyRef Name="CustomsApplyAttachId" />
+    </Key>
+    <Property Name="CustomsApplyAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomsApplyId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_CustomsApplyDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomsApplyId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="GrossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CustomsPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_CustomsAttach">
+    <Key>
+      <PropertyRef Name="CustomsAttachId" />
+    </Key>
+    <Property Name="CustomsAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomsId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_CustomsClearance">
+    <Key>
+      <PropertyRef Name="CustomsId" />
+    </Key>
+    <Property Name="CustomsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomsApplyId" Type="Int32" />
+    <Property Name="Customser" Type="Int32" />
+    <Property Name="CustomsCorpId" Type="Int32" />
+    <Property Name="CustomsDate" Type="DateTime" Precision="3" />
+    <Property Name="CustomsName" Type="Int32" />
+    <Property Name="GrossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="CustomsPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="TariffRate" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="AddedValueRate" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="OtherFees" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CustomsStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_CustomsClearanceApply">
+    <Key>
+      <PropertyRef Name="CustomsApplyId" />
+    </Key>
+    <Property Name="CustomsApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="GrossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="OutCorpId" Type="Int32" />
+    <Property Name="InCorpId" Type="Int32" />
+    <Property Name="CustomsCorpId" Type="Int32" />
+    <Property Name="CustomsPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_CustomsDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomsId" Type="Int32" />
+    <Property Name="CustomsApplyId" Type="Int32" />
+    <Property Name="CustomsApplyDetailId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="GrossWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CustomsPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DeliverPlaceId" Type="Int32" />
+    <Property Name="CardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_Pledge">
+    <Key>
+      <PropertyRef Name="PledgeId" />
+    </Key>
+    <Property Name="PledgeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PledgeApplyId" Type="Int32" />
+    <Property Name="Pledger" Type="Int32" />
+    <Property Name="PledgeTime" Type="DateTime" Precision="3" />
+    <Property Name="PledgeBank" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="PledgeStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_PledgeApply">
+    <Key>
+      <PropertyRef Name="PledgeApplyId" />
+    </Key>
+    <Property Name="PledgeApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="PledgeBank" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_PledgeApplyAttach">
+    <Key>
+      <PropertyRef Name="PledgeApplyAttachId" />
+    </Key>
+    <Property Name="PledgeApplyAttachId" Type="Int32" Nullable="false" />
+    <Property Name="PledgeApplyId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_PledgeApplyDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PledgeApplyId" Type="Int32" Nullable="false" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="ApplyQty" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UintId" Type="Int32" />
+    <Property Name="PledgePrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_PledgeAttach">
+    <Key>
+      <PropertyRef Name="PledgeAttachId" />
+    </Key>
+    <Property Name="PledgeAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PledgeId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_PledgeDetial">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PledgeId" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="PledgeApplyDetailId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Unit" Type="Int32" />
+    <Property Name="PledgePrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_Repo">
+    <Key>
+      <PropertyRef Name="RepoId" />
+    </Key>
+    <Property Name="RepoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RepoApplyId" Type="Int32" Nullable="false" />
+    <Property Name="Repoer" Type="Int32" />
+    <Property Name="RepoerTime" Type="DateTime" Precision="3" />
+    <Property Name="RepoStatus" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_RepoApply">
+    <Key>
+      <PropertyRef Name="RepoApplyId" />
+    </Key>
+    <Property Name="RepoApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_RepoApplyAttach">
+    <Key>
+      <PropertyRef Name="RepoApplyAttachId" />
+    </Key>
+    <Property Name="RepoApplyAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RepoApplyId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_RepoApplyDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RepoApplyId" Type="Int32" Nullable="false" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_RepoAttach">
+    <Key>
+      <PropertyRef Name="RepoAttachId" />
+    </Key>
+    <Property Name="RepoAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RepoId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_RepoDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RepoId" Type="Int32" />
+    <Property Name="RepoDetailStatus" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="RepoApplyDetailId" Type="Int32" />
+    <Property Name="RepoWeight" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Unit" Type="Int32" />
+    <Property Name="RepoPrice" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Currency" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_SplitDoc">
+    <Key>
+      <PropertyRef Name="SplitDocId" />
+    </Key>
+    <Property Name="SplitDocId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Spliter" Type="Int32" />
+    <Property Name="SplitDocTime" Type="DateTime" Precision="3" />
+    <Property Name="SplitDocStatus" Type="Int32" />
+    <Property Name="OldRefNoId" Type="Int32" />
+    <Property Name="OldRefNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OldStockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_SplitDocAttach">
+    <Key>
+      <PropertyRef Name="SplitDocAttachId" />
+    </Key>
+    <Property Name="SplitDocAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SplitDocId" Type="Int32" />
+    <Property Name="SplitDocDetailId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_SplitDocDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SplitDocId" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="NewRefNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OldRefNoId" Type="Int32" />
+    <Property Name="OldStockId" Type="Int32" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="Bundles" Type="Int32" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="PaperNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PaperHolder" Type="Int32" />
+    <Property Name="CardNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_SplitDocStock_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SplitDocDetailId" Type="Int32" />
+    <Property Name="NewRefNoId" Type="Int32" />
+    <Property Name="NewStockId" Type="Int32" />
+    <Property Name="OldRefNoId" Type="Int32" />
+    <Property Name="OldStockId" Type="Int32" />
+    <Property Name="RefStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_Stock">
+    <Key>
+      <PropertyRef Name="StockId" />
+    </Key>
+    <Property Name="StockId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockNameId" Type="Int32" />
+    <Property Name="StockNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="StockDate" Type="DateTime" Precision="3" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="Bundles" Type="Int32" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ReceiptInGap" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ReceiptOutGap" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurGrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CurNetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UintId" Type="Int32" />
+    <Property Name="DeliverPlaceId" Type="Int32" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="CustomsType" Type="Int32" />
+    <Property Name="GroupId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="DeptId" Type="Int32" />
+    <Property Name="ProducerId" Type="Int32" />
+    <Property Name="PaperNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PaperHolder" Type="Int32" />
+    <Property Name="Format" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="OriginPlaceId" Type="Int32" />
+    <Property Name="OriginPlace" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PreStatus" Type="Int32" />
+    <Property Name="StockStatus" Type="Int32" />
+    <Property Name="CardNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="StockType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockExclusive">
+    <Key>
+      <PropertyRef Name="ExclusiveId" />
+    </Key>
+    <Property Name="ExclusiveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="StockApplyId" Type="Int32" />
+    <Property Name="DetailApplyId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="ExclusiveAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ExclusiveStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockIn">
+    <Key>
+      <PropertyRef Name="StockInId" />
+    </Key>
+    <Property Name="StockInId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="DeptId" Type="Int32" />
+    <Property Name="StockInDate" Type="DateTime" Precision="3" />
+    <Property Name="CustomType" Type="Int32" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UintId" Type="Int32" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="Bundles" Type="Int32" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="DeliverPlaceId" Type="Int32" />
+    <Property Name="ProducerId" Type="Int32" />
+    <Property Name="StockType" Type="Int32" />
+    <Property Name="StockOperateType" Type="Int32" />
+    <Property Name="PaperNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PaperHolder" Type="Int32" />
+    <Property Name="CardNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Format" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="OriginPlaceId" Type="Int32" />
+    <Property Name="OriginPlace" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StockInStatus" Type="Int32" />
+    <Property Name="RefNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_StockInAttach">
+    <Key>
+      <PropertyRef Name="StockInAttachId" />
+    </Key>
+    <Property Name="StockInAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockInId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+    <Property Name="AttachType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockInStock_Ref">
+    <Key>
+      <PropertyRef Name="RefId" />
+    </Key>
+    <Property Name="RefId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockInId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="RefStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockLog">
+    <Key>
+      <PropertyRef Name="StockLogId" />
+    </Key>
+    <Property Name="StockLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockNameId" Type="Int32" />
+    <Property Name="RefNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogDirection" Type="Int32" />
+    <Property Name="LogType" Type="Int32" Nullable="false" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="LogDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="OpPerson" Type="Int32" />
+    <Property Name="AssetId" Type="Int32" />
+    <Property Name="Bundles" Type="Int32" Nullable="false" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="GapAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="MUId" Type="Int32" />
+    <Property Name="BrandId" Type="Int32" />
+    <Property Name="GroupId" Type="Int32" />
+    <Property Name="CorpId" Type="Int32" />
+    <Property Name="DeptId" Type="Int32" />
+    <Property Name="CustomsType" Type="Int32" />
+    <Property Name="DeliverPlaceId" Type="Int32" />
+    <Property Name="ProducerId" Type="Int32" />
+    <Property Name="PaperNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PaperHolder" Type="Int32" />
+    <Property Name="CardNo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="StockType" Type="Int32" />
+    <Property Name="Format" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="OriginPlaceId" Type="Int32" />
+    <Property Name="OriginPlace" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LogStatus" Type="Int32" />
+    <Property Name="LogSourceBase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LogSource" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SourceId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_StockLogAttach">
+    <Key>
+      <PropertyRef Name="StockLogAttachId" />
+    </Key>
+    <Property Name="StockLogAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockMove">
+    <Key>
+      <PropertyRef Name="StockMoveId" />
+    </Key>
+    <Property Name="StockMoveId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockMoveApplyId" Type="Int32" Nullable="false" />
+    <Property Name="Mover" Type="Int32" />
+    <Property Name="MoveTime" Type="DateTime" Precision="3" />
+    <Property Name="MoveStatus" Type="Int32" />
+    <Property Name="MoveMemo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_StockMoveApply">
+    <Key>
+      <PropertyRef Name="StockMoveApplyId" />
+    </Key>
+    <Property Name="StockMoveApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_StockMoveApplyAttach">
+    <Key>
+      <PropertyRef Name="StockMoveApplyAttachId" />
+    </Key>
+    <Property Name="StockMoveApplyAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockMoveApplyId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockMoveApplyDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockMoveApplyId" Type="Int32" Nullable="false" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="PaperNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="DeliverPlaceId" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockMoveAttach">
+    <Key>
+      <PropertyRef Name="StockMoveAttachId" />
+    </Key>
+    <Property Name="StockMoveAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockMoveId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockMoveDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockMoveId" Type="Int32" />
+    <Property Name="MoveDetailStatus" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="PaperNo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="DeliverPlaceId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockName">
+    <Key>
+      <PropertyRef Name="StockNameId" />
+    </Key>
+    <Property Name="StockNameId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RefNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="St_StockOut">
+    <Key>
+      <PropertyRef Name="StockOutId" />
+    </Key>
+    <Property Name="StockOutId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockOutApplyId" Type="Int32" />
+    <Property Name="Executor" Type="Int32" />
+    <Property Name="Confirmor" Type="Int32" />
+    <Property Name="StockOutTime" Type="DateTime" Precision="3" />
+    <Property Name="GrosstAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Bundles" Type="Int32" />
+    <Property Name="Unit" Type="Int32" />
+    <Property Name="StockOperateType" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="StockOutStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_StockOutApply">
+    <Key>
+      <PropertyRef Name="StockOutApplyId" />
+    </Key>
+    <Property Name="StockOutApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApplyId" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Bundles" Type="Int32" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="BuyCorpId" Type="Int32" />
+    <Property Name="CreateFrom" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_StockOutApplyAttach">
+    <Key>
+      <PropertyRef Name="StockOutApplyAttachId" />
+    </Key>
+    <Property Name="StockOutApplyAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockOutApplyId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockOutApplyDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockOutApplyId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="SubContractId" Type="Int32" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Bundles" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockOutAttach">
+    <Key>
+      <PropertyRef Name="StockOutAttachId" />
+    </Key>
+    <Property Name="StockOutAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockOutId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockOutDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockOutId" Type="Int32" Nullable="false" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockOutApplyDetailId" Type="Int32" />
+    <Property Name="NetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="GrossAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Bundles" Type="Int32" />
+  </EntityType>
+  <EntityType Name="St_StockReceipt">
+    <Key>
+      <PropertyRef Name="ReceiptId" />
+    </Key>
+    <Property Name="ReceiptId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractSubId" Type="Int32" />
+    <Property Name="PreNetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ReceiptAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="UnitId" Type="Int32" />
+    <Property Name="QtyMiss" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="QtyRate" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="ReceiptDate" Type="DateTime" Precision="3" />
+    <Property Name="Receipter" Type="Int32" />
+    <Property Name="Memo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiptType" Type="Int32" />
+    <Property Name="ReceiptStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_StockReceiptDetail">
+    <Key>
+      <PropertyRef Name="DetailId" />
+    </Key>
+    <Property Name="DetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReceiptId" Type="Int32" Nullable="false" />
+    <Property Name="ContractId" Type="Int32" />
+    <Property Name="ContractSubId" Type="Int32" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="StockLogId" Type="Int32" />
+    <Property Name="PreNetAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ReceiptAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="QtyMiss" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="QtyRate" Type="Decimal" Precision="18" Scale="8" />
+    <Property Name="DetailStatus" Type="Int32" />
+    <Property Name="CreatorId" Type="Int32" />
+    <Property Name="CreateTime" Type="DateTime" Precision="3" />
+    <Property Name="LastModifyId" Type="Int32" />
+    <Property Name="LastModifyTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="St_StocktAttach">
+    <Key>
+      <PropertyRef Name="StockAttachId" />
+    </Key>
+    <Property Name="StockAttachId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StockId" Type="Int32" />
+    <Property Name="AttachId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="test">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="str1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="str2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="NFMTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Apply" EntityType="Self.Apply" />
+    <EntitySet Name="Attach" EntityType="Self.Attach" />
+    <EntitySet Name="Con_Contract" EntityType="Self.Con_Contract" />
+    <EntitySet Name="Con_ContractAttach" EntityType="Self.Con_ContractAttach" />
+    <EntitySet Name="Con_ContractClause_Ref" EntityType="Self.Con_ContractClause_Ref" />
+    <EntitySet Name="Con_ContractCorporationDetail" EntityType="Self.Con_ContractCorporationDetail" />
+    <EntitySet Name="Con_ContractDept" EntityType="Self.Con_ContractDept" />
+    <EntitySet Name="Con_ContractDetail" EntityType="Self.Con_ContractDetail" />
+    <EntitySet Name="Con_ContractPrice" EntityType="Self.Con_ContractPrice" />
+    <EntitySet Name="Con_ContractSub" EntityType="Self.Con_ContractSub" />
+    <EntitySet Name="Con_ContractSubAttach" EntityType="Self.Con_ContractSubAttach" />
+    <EntitySet Name="Con_ContractSubQP" EntityType="Self.Con_ContractSubQP" />
+    <EntitySet Name="Con_ContractTypeDetail" EntityType="Self.Con_ContractTypeDetail" />
+    <EntitySet Name="Con_Lc" EntityType="Self.Con_Lc" />
+    <EntitySet Name="Con_LcAttach" EntityType="Self.Con_LcAttach" />
+    <EntitySet Name="Con_Premium" EntityType="Self.Con_Premium" />
+    <EntitySet Name="Con_SubCorporationDetail" EntityType="Self.Con_SubCorporationDetail" />
+    <EntitySet Name="Con_SubDetail" EntityType="Self.Con_SubDetail" />
+    <EntitySet Name="Con_SubPrice" EntityType="Self.Con_SubPrice" />
+    <EntitySet Name="Con_SubTypeDetail" EntityType="Self.Con_SubTypeDetail" />
+    <EntitySet Name="Con_Summary" EntityType="Self.Con_Summary" />
+    <EntitySet Name="Con_SummaryApply" EntityType="Self.Con_SummaryApply" />
+    <EntitySet Name="Con_SummaryApplyAttach" EntityType="Self.Con_SummaryApplyAttach" />
+    <EntitySet Name="Con_SummaryApplyInvoice_Ref" EntityType="Self.Con_SummaryApplyInvoice_Ref" />
+    <EntitySet Name="Con_SummaryApplyStock_Ref" EntityType="Self.Con_SummaryApplyStock_Ref" />
+    <EntitySet Name="Doc_Document" EntityType="Self.Doc_Document" />
+    <EntitySet Name="Doc_DocumentInvoice" EntityType="Self.Doc_DocumentInvoice" />
+    <EntitySet Name="Doc_DocumentOrder" EntityType="Self.Doc_DocumentOrder" />
+    <EntitySet Name="Doc_DocumentOrderAttach" EntityType="Self.Doc_DocumentOrderAttach" />
+    <EntitySet Name="Doc_DocumentOrderDetail" EntityType="Self.Doc_DocumentOrderDetail" />
+    <EntitySet Name="Doc_DocumentOrderInvoice" EntityType="Self.Doc_DocumentOrderInvoice" />
+    <EntitySet Name="Doc_DocumentOrderStock" EntityType="Self.Doc_DocumentOrderStock" />
+    <EntitySet Name="Doc_DocumentStock" EntityType="Self.Doc_DocumentStock" />
+    <EntitySet Name="Fun_CashIn" EntityType="Self.Fun_CashIn" />
+    <EntitySet Name="Fun_CashInAllot" EntityType="Self.Fun_CashInAllot" />
+    <EntitySet Name="Fun_CashInAttach" EntityType="Self.Fun_CashInAttach" />
+    <EntitySet Name="Fun_CashInContract_Ref" EntityType="Self.Fun_CashInContract_Ref" />
+    <EntitySet Name="Fun_CashInCorp_Ref" EntityType="Self.Fun_CashInCorp_Ref" />
+    <EntitySet Name="Fun_CashInInvoice_Ref" EntityType="Self.Fun_CashInInvoice_Ref" />
+    <EntitySet Name="Fun_CashInStcok_Ref" EntityType="Self.Fun_CashInStcok_Ref" />
+    <EntitySet Name="Fun_ContractFundsAllotStock_Ref" EntityType="Self.Fun_ContractFundsAllotStock_Ref" />
+    <EntitySet Name="Fun_ContractPayApply_Ref" EntityType="Self.Fun_ContractPayApply_Ref" />
+    <EntitySet Name="Fun_ContractReceivable_Ref" EntityType="Self.Fun_ContractReceivable_Ref" />
+    <EntitySet Name="Fun_CorpFundsAllotContract_Ref" EntityType="Self.Fun_CorpFundsAllotContract_Ref" />
+    <EntitySet Name="Fun_CorpFundsAllotStock_Ref" EntityType="Self.Fun_CorpFundsAllotStock_Ref" />
+    <EntitySet Name="Fun_CorpReceivable_Ref" EntityType="Self.Fun_CorpReceivable_Ref" />
+    <EntitySet Name="Fun_Funds" EntityType="Self.Fun_Funds" />
+    <EntitySet Name="Fun_FundsLog" EntityType="Self.Fun_FundsLog" />
+    <EntitySet Name="Fun_FundsLogAttach" EntityType="Self.Fun_FundsLogAttach" />
+    <EntitySet Name="Fun_InvoicePayApply_Ref" EntityType="Self.Fun_InvoicePayApply_Ref" />
+    <EntitySet Name="Fun_InvoiceReceivable_Ref" EntityType="Self.Fun_InvoiceReceivable_Ref" />
+    <EntitySet Name="Fun_LcReceivable_Ref" EntityType="Self.Fun_LcReceivable_Ref" />
+    <EntitySet Name="Fun_PayApply" EntityType="Self.Fun_PayApply" />
+    <EntitySet Name="Fun_PayApplyAttach" EntityType="Self.Fun_PayApplyAttach" />
+    <EntitySet Name="Fun_Payment" EntityType="Self.Fun_Payment" />
+    <EntitySet Name="Fun_PaymentAttach" EntityType="Self.Fun_PaymentAttach" />
+    <EntitySet Name="Fun_PaymentContractDetail" EntityType="Self.Fun_PaymentContractDetail" />
+    <EntitySet Name="Fun_PaymentInvioceDetail" EntityType="Self.Fun_PaymentInvioceDetail" />
+    <EntitySet Name="Fun_PaymentStockDetail" EntityType="Self.Fun_PaymentStockDetail" />
+    <EntitySet Name="Fun_PaymentVirtual" EntityType="Self.Fun_PaymentVirtual" />
+    <EntitySet Name="Fun_RecAllotDetail" EntityType="Self.Fun_RecAllotDetail" />
+    <EntitySet Name="Fun_Receivable" EntityType="Self.Fun_Receivable" />
+    <EntitySet Name="Fun_ReceivableAllot" EntityType="Self.Fun_ReceivableAllot" />
+    <EntitySet Name="Fun_ReceivableAttach" EntityType="Self.Fun_ReceivableAttach" />
+    <EntitySet Name="Fun_StcokReceivable_Ref" EntityType="Self.Fun_StcokReceivable_Ref" />
+    <EntitySet Name="Fun_StockPayApply_Ref" EntityType="Self.Fun_StockPayApply_Ref" />
+    <EntitySet Name="Inv_BusinessInvoice" EntityType="Self.Inv_BusinessInvoice" />
+    <EntitySet Name="Inv_BusinessInvoiceDetail" EntityType="Self.Inv_BusinessInvoiceDetail" />
+    <EntitySet Name="Inv_FinanceBusinessInvoice_Ref" EntityType="Self.Inv_FinanceBusinessInvoice_Ref" />
+    <EntitySet Name="Inv_FinanceInvoice" EntityType="Self.Inv_FinanceInvoice" />
+    <EntitySet Name="Inv_FinanceInvoiceDetail" EntityType="Self.Inv_FinanceInvoiceDetail" />
+    <EntitySet Name="Inv_FinBusInvAllot" EntityType="Self.Inv_FinBusInvAllot" />
+    <EntitySet Name="Inv_FinBusInvAllotDetail" EntityType="Self.Inv_FinBusInvAllotDetail" />
+    <EntitySet Name="Inv_InvoiceApply" EntityType="Self.Inv_InvoiceApply" />
+    <EntitySet Name="Inv_InvoiceApplyDetail" EntityType="Self.Inv_InvoiceApplyDetail" />
+    <EntitySet Name="Inv_InvoiceApplyFinance" EntityType="Self.Inv_InvoiceApplyFinance" />
+    <EntitySet Name="Inv_InvoiceApplySIDetail" EntityType="Self.Inv_InvoiceApplySIDetail" />
+    <EntitySet Name="Inv_SI" EntityType="Self.Inv_SI" />
+    <EntitySet Name="Inv_SIDetail" EntityType="Self.Inv_SIDetail" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" />
+    <EntitySet Name="InvoiceAttach" EntityType="Self.InvoiceAttach" />
+    <EntitySet Name="Pri_Interest" EntityType="Self.Pri_Interest" />
+    <EntitySet Name="Pri_InterestDetail" EntityType="Self.Pri_InterestDetail" />
+    <EntitySet Name="Pri_PriceConfirm" EntityType="Self.Pri_PriceConfirm" />
+    <EntitySet Name="Pri_PriceConfirmDetail" EntityType="Self.Pri_PriceConfirmDetail" />
+    <EntitySet Name="Pri_Pricing" EntityType="Self.Pri_Pricing" />
+    <EntitySet Name="Pri_PricingApply" EntityType="Self.Pri_PricingApply" />
+    <EntitySet Name="Pri_PricingApplyDelay" EntityType="Self.Pri_PricingApplyDelay" />
+    <EntitySet Name="Pri_PricingApplyDetail" EntityType="Self.Pri_PricingApplyDetail" />
+    <EntitySet Name="Pri_PricingDetail" EntityType="Self.Pri_PricingDetail" />
+    <EntitySet Name="Pri_PricingPerson" EntityType="Self.Pri_PricingPerson" />
+    <EntitySet Name="Pri_StopLoss" EntityType="Self.Pri_StopLoss" />
+    <EntitySet Name="Pri_StopLossApply" EntityType="Self.Pri_StopLossApply" />
+    <EntitySet Name="Pri_StopLossApplyDetail" EntityType="Self.Pri_StopLossApplyDetail" />
+    <EntitySet Name="Pri_StopLossDetail" EntityType="Self.Pri_StopLossDetail" />
+    <EntitySet Name="Rep_ClientCurrent" EntityType="Self.Rep_ClientCurrent" />
+    <EntitySet Name="St_ContractStockIn_Ref" EntityType="Self.St_ContractStockIn_Ref" />
+    <EntitySet Name="St_CustomsApplyAttach" EntityType="Self.St_CustomsApplyAttach" />
+    <EntitySet Name="St_CustomsApplyDetail" EntityType="Self.St_CustomsApplyDetail" />
+    <EntitySet Name="St_CustomsAttach" EntityType="Self.St_CustomsAttach" />
+    <EntitySet Name="St_CustomsClearance" EntityType="Self.St_CustomsClearance" />
+    <EntitySet Name="St_CustomsClearanceApply" EntityType="Self.St_CustomsClearanceApply" />
+    <EntitySet Name="St_CustomsDetail" EntityType="Self.St_CustomsDetail" />
+    <EntitySet Name="St_Pledge" EntityType="Self.St_Pledge" />
+    <EntitySet Name="St_PledgeApply" EntityType="Self.St_PledgeApply" />
+    <EntitySet Name="St_PledgeApplyAttach" EntityType="Self.St_PledgeApplyAttach" />
+    <EntitySet Name="St_PledgeApplyDetail" EntityType="Self.St_PledgeApplyDetail" />
+    <EntitySet Name="St_PledgeAttach" EntityType="Self.St_PledgeAttach" />
+    <EntitySet Name="St_PledgeDetial" EntityType="Self.St_PledgeDetial" />
+    <EntitySet Name="St_Repo" EntityType="Self.St_Repo" />
+    <EntitySet Name="St_RepoApply" EntityType="Self.St_RepoApply" />
+    <EntitySet Name="St_RepoApplyAttach" EntityType="Self.St_RepoApplyAttach" />
+    <EntitySet Name="St_RepoApplyDetail" EntityType="Self.St_RepoApplyDetail" />
+    <EntitySet Name="St_RepoAttach" EntityType="Self.St_RepoAttach" />
+    <EntitySet Name="St_RepoDetail" EntityType="Self.St_RepoDetail" />
+    <EntitySet Name="St_SplitDoc" EntityType="Self.St_SplitDoc" />
+    <EntitySet Name="St_SplitDocAttach" EntityType="Self.St_SplitDocAttach" />
+    <EntitySet Name="St_SplitDocDetail" EntityType="Self.St_SplitDocDetail" />
+    <EntitySet Name="St_SplitDocStock_Ref" EntityType="Self.St_SplitDocStock_Ref" />
+    <EntitySet Name="St_Stock" EntityType="Self.St_Stock" />
+    <EntitySet Name="St_StockExclusive" EntityType="Self.St_StockExclusive" />
+    <EntitySet Name="St_StockIn" EntityType="Self.St_StockIn" />
+    <EntitySet Name="St_StockInAttach" EntityType="Self.St_StockInAttach" />
+    <EntitySet Name="St_StockInStock_Ref" EntityType="Self.St_StockInStock_Ref" />
+    <EntitySet Name="St_StockLog" EntityType="Self.St_StockLog" />
+    <EntitySet Name="St_StockLogAttach" EntityType="Self.St_StockLogAttach" />
+    <EntitySet Name="St_StockMove" EntityType="Self.St_StockMove" />
+    <EntitySet Name="St_StockMoveApply" EntityType="Self.St_StockMoveApply" />
+    <EntitySet Name="St_StockMoveApplyAttach" EntityType="Self.St_StockMoveApplyAttach" />
+    <EntitySet Name="St_StockMoveApplyDetail" EntityType="Self.St_StockMoveApplyDetail" />
+    <EntitySet Name="St_StockMoveAttach" EntityType="Self.St_StockMoveAttach" />
+    <EntitySet Name="St_StockMoveDetail" EntityType="Self.St_StockMoveDetail" />
+    <EntitySet Name="St_StockName" EntityType="Self.St_StockName" />
+    <EntitySet Name="St_StockOut" EntityType="Self.St_StockOut" />
+    <EntitySet Name="St_StockOutApply" EntityType="Self.St_StockOutApply" />
+    <EntitySet Name="St_StockOutApplyAttach" EntityType="Self.St_StockOutApplyAttach" />
+    <EntitySet Name="St_StockOutApplyDetail" EntityType="Self.St_StockOutApplyDetail" />
+    <EntitySet Name="St_StockOutAttach" EntityType="Self.St_StockOutAttach" />
+    <EntitySet Name="St_StockOutDetail" EntityType="Self.St_StockOutDetail" />
+    <EntitySet Name="St_StockReceipt" EntityType="Self.St_StockReceipt" />
+    <EntitySet Name="St_StockReceiptDetail" EntityType="Self.St_StockReceiptDetail" />
+    <EntitySet Name="St_StocktAttach" EntityType="Self.St_StocktAttach" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="test" EntityType="Self.test" />
+  </EntityContainer>
+</Schema>

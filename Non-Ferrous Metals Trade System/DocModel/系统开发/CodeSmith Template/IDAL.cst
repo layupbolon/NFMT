@@ -1,0 +1,156 @@
+﻿<%@ CodeTemplate Language="C#" TargetLanguage="C#" Description="Generates a very simple business object." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+<%@ Property Name="NameSpace" Type="System.String" Default="" Category="Text" Description="Namespace for this class" %>
+<%@ Property Name="Interface" Type="System.String" Default="" Category="Text" Description="数据交互接口继承的接口名" %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+
+/*----------------------------------------------------------------
+// Copyright (C) 2014-2015 上海迪亮信息科技有限公司 版权所有。 
+// 文件名：I<%= GetClassName(SourceTable) %>DAL.cs
+// 文件功能描述：<%= SourceTable.Description + SourceTable.FullName %>数据交互接口。
+// 创建人：CodeSmith
+// 创建时间： <% =DateTime.Now.ToLongDateString() %>
+----------------------------------------------------------------*/
+
+using System;
+using System.Collections;
+using System.Data;
+using System.Collections.Generic;
+using <%= NameSpace %>.Model;
+using <%= NameSpace.Substring(0,NameSpace.IndexOf(".")) %>.Common;
+
+namespace <%= NameSpace %>.IDAL
+{
+    /// <summary>
+    /// <%= SourceTable.Description + SourceTable.FullName %>数据交互接口。
+    /// </summary>
+    public interface I<%= GetClassName(SourceTable) %>DAL : <%= Interface %>
+    {
+		#region Interfaces
+        
+		<%--/// <summary>
+		/// 添加一个<%= GetLowerCaseName(SourceTable.Name)%>对象，返回影响行数
+		/// </summary>
+        /// <param name="<%=GetModuleInstanceName(SourceTable)%>"><%= GetClassName(SourceTable) %>对象</param>
+        /// <returns>影响行数</returns>
+		int Insert(<%= GetClassName(SourceTable) %> <%=GetModuleInstanceName(SourceTable)%>);
+
+        /// <summary>
+		/// 获取指定<%= GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) %>值的<%= GetLowerCaseName(SourceTable.Name)%>对象
+		/// </summary>
+		/// <param name="<%= GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) %>">主键值</param>
+		/// <returns><%= GetClassName(SourceTable) %>对象</returns>
+		<%= GetClassName(SourceTable) %> Get(<%=GetPrimaryKeyCSharpType() %> <%= GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) %>);
+		
+		/// <summary>
+		/// 获取所有<%= GetLowerCaseName(SourceTable.Name)%>对象的集合
+		/// </summary>
+        /// <returns><%= GetClassName(SourceTable) %>集合</returns>
+		List<<%= GetClassName(SourceTable) %>> Load();
+			
+		/// <summary>
+		/// 更新<%= GetLowerCaseName(SourceTable.Name)%>对象，返回影响行数
+		/// </summary>
+		/// <param name="<%=GetModuleInstanceName(SourceTable)%>"><%= GetClassName(SourceTable) %>对象</param>
+        /// <returns>影响行数</returns>
+		int Update(<%= GetClassName(SourceTable) %> <%=GetModuleInstanceName(SourceTable)%>);
+		
+		
+		/// <summary>
+		/// Delete a <%= GetLowerCaseName(SourceTable.Name)%> record from the database.
+		/// </summary>
+	    /// <param name="<%= GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) %>">The primary key value</param>
+		int Delete(<%= GetPrimaryKeyCSharpType() %> <%= GetCamelCaseName(SourceTable.PrimaryKey.MemberColumns[0].Name) %>);--%>
+
+        #endregion
+    }
+}
+
+<script runat="template">
+
+    public string GetCamelCaseName(string value)
+    {
+        return value.Substring(0, 1).ToLower() + value.Substring(1);
+    }
+
+    public string ConvertFirstCharToUpper(string value)
+    {
+        return value.Substring(0, 1).ToUpper() + value.Substring(1);
+    }
+
+    public  string GetClassName(TableSchema table)
+    {
+		if(table==null)
+    	{
+    	    return string.Empty;
+    	}
+        
+    	string result = table.Name.Trim();
+        
+        if (table.Name.EndsWith("_Ref"))
+        {
+            result = result.Substring(0, table.Name.Length - 4);
+        }
+        
+        if(result.Split('_').Length>1)
+        {
+            result = result.Split('_')[1];
+        }
+    	
+    	return result ;
+    }
+
+	public string GetLowerCaseName(string value)
+    {
+	    return value.ToLower();
+    }
+	
+	public string GetModuleInstanceName(TableSchema table)
+	{
+		return table.Name.ToLower();
+	}
+
+    public string GetCSharpVariableType(ColumnSchema column)
+    {
+		if (column.Name.EndsWith("TypeCode")) return column.Name;
+		
+		switch (column.DataType)
+		{
+			case DbType.AnsiString: return "string";
+			case DbType.AnsiStringFixedLength: return "string";
+			case DbType.Binary: return "byte[]";
+			case DbType.Boolean: return "bool";
+			case DbType.Byte: return "byte";
+			case DbType.Currency: return "decimal";
+			case DbType.Date: return "DateTime";
+			case DbType.DateTime: return "DateTime";
+			case DbType.Decimal: return "decimal";
+			case DbType.Double: return "double";
+			case DbType.Guid: return "Guid";
+			case DbType.Int16: return "short";
+			case DbType.Int32: return "int";
+			case DbType.Int64: return "long";
+			case DbType.Object: return "object";
+			case DbType.SByte: return "sbyte";
+			case DbType.Single: return "float";
+			case DbType.String: return "string";
+			case DbType.StringFixedLength: return "string";
+			case DbType.Time: return "TimeSpan";
+			case DbType.UInt16: return "ushort";
+			case DbType.UInt32: return "uint";
+			case DbType.UInt64: return "ulong";
+			case DbType.VarNumeric: return "decimal";
+			default:
+			{
+				return "__UNKNOWN__" + column.NativeType;
+			}
+		}
+	}
+	
+	public string GetPrimaryKeyCSharpType()
+	{
+		return GetCSharpVariableType(SourceTable.PrimaryKey.MemberColumns[0]);
+	}
+</script>

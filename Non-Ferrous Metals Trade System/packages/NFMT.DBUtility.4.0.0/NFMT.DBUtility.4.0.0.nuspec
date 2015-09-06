@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>NFMT.DBUtility</id>
+    <version>4.0.0</version>
+    <authors>pekah</authors>
+    <owners>pekah</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>My package description.</description>
+    <references>
+      <reference file="NFMT.DBUtility.dll" />
+    </references>
+  </metadata>
+</package>

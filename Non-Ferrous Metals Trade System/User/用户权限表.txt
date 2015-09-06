@@ -1,0 +1,17 @@
+﻿dbo.Account	系统账户表
+dbo.AuthGroup	权限组表	
+dbo.Bloc	集团表
+dbo.Contact	联系人表
+dbo.CorpEmp	公司员工关联表
+dbo.Corporation	公司表
+dbo.Department	部门表
+dbo.DeptEmp	部门员工关联表
+dbo.EmpAuthGroup	员工权限组表
+dbo.Employee	员工表
+dbo.EmployeeContact	员工联系人表
+dbo.EmpRole	员工角色表
+dbo.Menu	菜单表
+dbo.UserLogin	用户登录记录表
+dbo.UserOperation	用户操作表
+dbo.Role 角色表
+dbo.RoleMenu	角色菜单关联表

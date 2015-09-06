@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B379FDAB-4CF5-4B2D-A55C-17A091E94459}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFMT.WareHouse</RootNamespace>
+    <AssemblyName>NFMT.WareHouse</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.1.0.0\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\ContractStockInBLL.cs" />
+    <Compile Include="BLL\CustomsApplyAttachBLL.cs" />
+    <Compile Include="BLL\CustomsApplyDetailBLL.cs" />
+    <Compile Include="BLL\CustomsAttachBLL.cs" />
+    <Compile Include="BLL\CustomsClearanceApplyBLL.cs" />
+    <Compile Include="BLL\CustomsClearanceBLL.cs" />
+    <Compile Include="BLL\CustomsDetailBLL.cs" />
+    <Compile Include="BLL\PledgeApplyAttachBLL.cs" />
+    <Compile Include="BLL\PledgeApplyBLL.cs" />
+    <Compile Include="BLL\PledgeApplyDetailBLL.cs" />
+    <Compile Include="BLL\PledgeAttachBLL.cs" />
+    <Compile Include="BLL\PledgeBLL.cs" />
+    <Compile Include="BLL\PledgeDetialBLL.cs" />
+    <Compile Include="BLL\RepoApplyAttachBLL.cs" />
+    <Compile Include="BLL\RepoApplyBLL.cs" />
+    <Compile Include="BLL\RepoApplyDetailBLL.cs" />
+    <Compile Include="BLL\RepoAttachBLL.cs" />
+    <Compile Include="BLL\RepoBLL.cs" />
+    <Compile Include="BLL\RepoDetailBLL.cs" />
+    <Compile Include="BLL\SplitDocAttachBLL.cs" />
+    <Compile Include="BLL\SplitDocBLL.cs" />
+    <Compile Include="BLL\SplitDocDetailBLL.cs" />
+    <Compile Include="BLL\SplitDocStockBLL.cs" />
+    <Compile Include="BLL\StockBLL.cs" />
+    <Compile Include="BLL\StockExclusiveBLL.cs" />
+    <Compile Include="BLL\StockInAttachBLL.cs" />
+    <Compile Include="BLL\StockInBLL.cs" />
+    <Compile Include="BLL\StockInStockBLL.cs" />
+    <Compile Include="BLL\StockLogAttachBLL.cs" />
+    <Compile Include="BLL\StockLogBLL.cs" />
+    <Compile Include="BLL\StockMoveApplyAttachBLL.cs" />
+    <Compile Include="BLL\StockMoveApplyBLL.cs" />
+    <Compile Include="BLL\StockMoveApplyDetailBLL.cs" />
+    <Compile Include="BLL\StockMoveAttachBLL.cs" />
+    <Compile Include="BLL\StockMoveBLL.cs" />
+    <Compile Include="BLL\StockMoveDetailBLL.cs" />
+    <Compile Include="BLL\StockNameBLL.cs" />
+    <Compile Include="BLL\StockOutApplyAttachBLL.cs" />
+    <Compile Include="BLL\StockOutApplyBLL.cs" />
+    <Compile Include="BLL\StockOutApplyDetailBLL.cs" />
+    <Compile Include="BLL\StockOutAttachBLL.cs" />
+    <Compile Include="BLL\StockOutBLL.cs" />
+    <Compile Include="BLL\StockOutDetailBLL.cs" />
+    <Compile Include="BLL\StockReceiptBLL.cs" />
+    <Compile Include="BLL\StockReceiptDetailBLL.cs" />
+    <Compile Include="BLL\StocktAttachBLL.cs" />
+    <Compile Include="CustomTypeEnum.cs" />
+    <Compile Include="DAL\ContractStockInDAL.cs" />
+    <Compile Include="DAL\CustomsApplyAttachDAL.cs" />
+    <Compile Include="DAL\CustomsApplyDetailDAL.cs" />
+    <Compile Include="DAL\CustomsAttachDAL.cs" />
+    <Compile Include="DAL\CustomsClearanceApplyDAL.cs" />
+    <Compile Include="DAL\CustomsClearanceDAL.cs" />
+    <Compile Include="DAL\CustomsDetailDAL.cs" />
+    <Compile Include="DAL\Partial\ContractStockInDAL.cs" />
+    <Compile Include="DAL\Partial\StockInAttachDAL.cs" />
+    <Compile Include="DAL\Partial\StockInDAL.cs" />
+    <Compile Include="DAL\Partial\StockInStockDAL.cs" />
+    <Compile Include="DAL\Partial\StockOutApplyDAL.cs" />
+    <Compile Include="DAL\Partial\StockOutDAL.cs" />
+    <Compile Include="DAL\PledgeApplyAttachDAL.cs" />
+    <Compile Include="DAL\PledgeApplyDAL.cs" />
+    <Compile Include="DAL\PledgeApplyDetailDAL.cs" />
+    <Compile Include="DAL\PledgeAttachDAL.cs" />
+    <Compile Include="DAL\PledgeDAL.cs" />
+    <Compile Include="DAL\PledgeDetialDAL.cs" />
+    <Compile Include="DAL\RepoApplyAttachDAL.cs" />
+    <Compile Include="DAL\RepoApplyDAL.cs" />
+    <Compile Include="DAL\RepoApplyDetailDAL.cs" />
+    <Compile Include="DAL\RepoAttachDAL.cs" />
+    <Compile Include="DAL\RepoDAL.cs" />
+    <Compile Include="DAL\RepoDetailDAL.cs" />
+    <Compile Include="DAL\SplitDocAttachDAL.cs" />
+    <Compile Include="DAL\SplitDocDAL.cs" />
+    <Compile Include="DAL\SplitDocDetailDAL.cs" />
+    <Compile Include="DAL\SplitDocStockDAL.cs" />
+    <Compile Include="DAL\StockDAL.cs" />
+    <Compile Include="DAL\StockExclusiveDAL.cs" />
+    <Compile Include="DAL\StockInAttachDAL.cs" />
+    <Compile Include="DAL\StockInDAL.cs" />
+    <Compile Include="DAL\StockInStockDAL.cs" />
+    <Compile Include="DAL\StockLogAttachDAL.cs" />
+    <Compile Include="DAL\StockLogDAL.cs" />
+    <Compile Include="DAL\StockMoveApplyAttachDAL.cs" />
+    <Compile Include="DAL\StockMoveApplyDAL.cs" />
+    <Compile Include="DAL\StockMoveApplyDetailDAL.cs" />
+    <Compile Include="DAL\StockMoveAttachDAL.cs" />
+    <Compile Include="DAL\StockMoveDAL.cs" />
+    <Compile Include="DAL\StockMoveDetailDAL.cs" />
+    <Compile Include="DAL\StockNameDAL.cs" />
+    <Compile Include="DAL\StockOutApplyAttachDAL.cs" />
+    <Compile Include="DAL\StockOutApplyDAL.cs" />
+    <Compile Include="DAL\StockOutApplyDetailDAL.cs" />
+    <Compile Include="DAL\StockOutAttachDAL.cs" />
+    <Compile Include="DAL\StockOutDAL.cs" />
+    <Compile Include="DAL\StockOutDetailDAL.cs" />
+    <Compile Include="DAL\StockReceiptDAL.cs" />
+    <Compile Include="DAL\StockReceiptDetailDAL.cs" />
+    <Compile Include="DAL\StocktAttachDAL.cs" />
+    <Compile Include="IDAL\IContractStockInDAL.cs" />
+    <Compile Include="IDAL\ICustomsApplyAttachDAL.cs" />
+    <Compile Include="IDAL\ICustomsApplyDetailDAL.cs" />
+    <Compile Include="IDAL\ICustomsAttachDAL.cs" />
+    <Compile Include="IDAL\ICustomsClearanceApplyDAL.cs" />
+    <Compile Include="IDAL\ICustomsClearanceDAL.cs" />
+    <Compile Include="IDAL\ICustomsDetailDAL.cs" />
+    <Compile Include="IDAL\IPledgeApplyAttachDAL.cs" />
+    <Compile Include="IDAL\IPledgeApplyDAL.cs" />
+    <Compile Include="IDAL\IPledgeApplyDetailDAL.cs" />
+    <Compile Include="IDAL\IPledgeAttachDAL.cs" />
+    <Compile Include="IDAL\IPledgeDAL.cs" />
+    <Compile Include="IDAL\IPledgeDetialDAL.cs" />
+    <Compile Include="IDAL\IRepoApplyAttachDAL.cs" />
+    <Compile Include="IDAL\IRepoApplyDAL.cs" />
+    <Compile Include="IDAL\IRepoApplyDetailDAL.cs" />
+    <Compile Include="IDAL\IRepoAttachDAL.cs" />
+    <Compile Include="IDAL\IRepoDAL.cs" />
+    <Compile Include="IDAL\IRepoDetailDAL.cs" />
+    <Compile Include="IDAL\ISplitDocAttachDAL.cs" />
+    <Compile Include="IDAL\ISplitDocDAL.cs" />
+    <Compile Include="IDAL\ISplitDocDetailDAL.cs" />
+    <Compile Include="IDAL\ISplitDocStockDAL.cs" />
+    <Compile Include="IDAL\IStockDAL.cs" />
+    <Compile Include="IDAL\IStockExclusiveDAL.cs" />
+    <Compile Include="IDAL\IStockInAttachDAL.cs" />
+    <Compile Include="IDAL\IStockInDAL.cs" />
+    <Compile Include="IDAL\IStockInStockDAL.cs" />
+    <Compile Include="IDAL\IStockLogAttachDAL.cs" />
+    <Compile Include="IDAL\IStockLogDAL.cs" />
+    <Compile Include="IDAL\IStockMoveApplyAttachDAL.cs" />
+    <Compile Include="IDAL\IStockMoveApplyDAL.cs" />
+    <Compile Include="IDAL\IStockMoveApplyDetailDAL.cs" />
+    <Compile Include="IDAL\IStockMoveAttachDAL.cs" />
+    <Compile Include="IDAL\IStockMoveDAL.cs" />
+    <Compile Include="IDAL\IStockMoveDetailDAL.cs" />
+    <Compile Include="IDAL\IStockNameDAL.cs" />
+    <Compile Include="IDAL\IStockOutApplyAttachDAL.cs" />
+    <Compile Include="IDAL\IStockOutApplyDAL.cs" />
+    <Compile Include="IDAL\IStockOutApplyDetailDAL.cs" />
+    <Compile Include="IDAL\IStockOutAttachDAL.cs" />
+    <Compile Include="IDAL\IStockOutDAL.cs" />
+    <Compile Include="IDAL\IStockOutDetailDAL.cs" />
+    <Compile Include="IDAL\IStockReceiptDAL.cs" />
+    <Compile Include="IDAL\IStockReceiptDetailDAL.cs" />
+    <Compile Include="IDAL\IStocktAttachDAL.cs" />
+    <Compile Include="LogDirectionEnum.cs" />
+    <Compile Include="LogTypeEnum.cs" />
+    <Compile Include="Model\ContractStockIn.cs" />
+    <Compile Include="Model\CustomsApplyAttach.cs" />
+    <Compile Include="Model\CustomsApplyDetail.cs" />
+    <Compile Include="Model\CustomsAttach.cs" />
+    <Compile Include="Model\CustomsClearance.cs" />
+    <Compile Include="Model\CustomsClearanceApply.cs" />
+    <Compile Include="Model\CustomsDetail.cs" />
+    <Compile Include="Model\Pledge.cs" />
+    <Compile Include="Model\PledgeApply.cs" />
+    <Compile Include="Model\PledgeApplyAttach.cs" />
+    <Compile Include="Model\PledgeApplyDetail.cs" />
+    <Compile Include="Model\PledgeAttach.cs" />
+    <Compile Include="Model\PledgeDetial.cs" />
+    <Compile Include="Model\Repo.cs" />
+    <Compile Include="Model\RepoApply.cs" />
+    <Compile Include="Model\RepoApplyAttach.cs" />
+    <Compile Include="Model\RepoApplyDetail.cs" />
+    <Compile Include="Model\RepoAttach.cs" />
+    <Compile Include="Model\RepoDetail.cs" />
+    <Compile Include="Model\SplitDoc.cs" />
+    <Compile Include="Model\SplitDocAttach.cs" />
+    <Compile Include="Model\SplitDocDetail.cs" />
+    <Compile Include="Model\SplitDocStock.cs" />
+    <Compile Include="Model\Stock.cs" />
+    <Compile Include="Model\StockExclusive.cs" />
+    <Compile Include="Model\StockIn.cs" />
+    <Compile Include="Model\StockInAttach.cs" />
+    <Compile Include="Model\StockInStock.cs" />
+    <Compile Include="Model\StockLog.cs" />
+    <Compile Include="Model\StockLogAttach.cs" />
+    <Compile Include="Model\StockMove.cs" />
+    <Compile Include="Model\StockMoveApply.cs" />
+    <Compile Include="Model\StockMoveApplyAttach.cs" />
+    <Compile Include="Model\StockMoveApplyDetail.cs" />
+    <Compile Include="Model\StockMoveAttach.cs" />
+    <Compile Include="Model\StockMoveDetail.cs" />
+    <Compile Include="Model\StockName.cs" />
+    <Compile Include="Model\StockOutApply.cs" />
+    <Compile Include="Model\StockOut.cs" />
+    <Compile Include="Model\StockOutApplyAttach.cs" />
+    <Compile Include="Model\StockOutApplyDetail.cs" />
+    <Compile Include="Model\StockOutAttach.cs" />
+    <Compile Include="Model\StockOutDetail.cs" />
+    <Compile Include="Model\StockReceipt.cs" />
+    <Compile Include="Model\StockReceiptDetail.cs" />
+    <Compile Include="Model\StocktAttach.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptTypeEnum.cs" />
+    <Compile Include="StockOperateEnum.cs" />
+    <Compile Include="StockOperateType.cs" />
+    <Compile Include="StockStatusEnum.cs" />
+    <Compile Include="TaskProvider\PreToRealTaskProvider.cs" />
+    <Compile Include="TaskProvider\StockInTaskProvider.cs" />
+    <Compile Include="TaskProvider\StockOutTaskProvider.cs" />
+    <Compile Include="TaskProvider\StockReceiptTaskProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="仓储业务说明.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Authority\Authority.csproj">
+      <Project>{570900bd-88d6-45cb-88b4-f6b7b2de95d7}</Project>
+      <Name>Authority</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2ce37c4e-daee-4370-bf0e-56f7628bb299}</Project>
+      <Name>Common %28Common\Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{6a58d209-0eba-4e67-8570-78e7f609d1ef}</Project>
+      <Name>Contract %28Contract\Contract%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{f80e8ea5-0e37-498a-9f8a-28057009ce76}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{97ea2492-4499-40da-a305-1538d4406ce1}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Operate\Operate.csproj">
+      <Project>{d0506c4b-c48a-426a-bbcb-732165c28e85}</Project>
+      <Name>Operate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{d10c059f-3a20-4f98-a5dd-d16fc215a4e0}</Project>
+      <Name>User %28User\User%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkFlow\WorkFlow.csproj">
+      <Project>{b0fd1659-24f8-44d8-ad2f-1695385dd55b}</Project>
+      <Name>WorkFlow %28WorkFlow\WorkFlow%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="仓储业务明细.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA4EA053-8F2D-45CC-B6AA-E4185ED53EB8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NFMT.Document</RootNamespace>
+    <AssemblyName>NFMT.Document</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.0.0\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DocumentBLL.cs" />
+    <Compile Include="BLL\DocumentInvoiceBLL.cs" />
+    <Compile Include="BLL\DocumentOrderAttachBLL.cs" />
+    <Compile Include="BLL\DocumentOrderBLL.cs" />
+    <Compile Include="BLL\DocumentOrderDetailBLL.cs" />
+    <Compile Include="BLL\DocumentOrderInvoiceBLL.cs" />
+    <Compile Include="BLL\DocumentOrderStockBLL.cs" />
+    <Compile Include="BLL\DocumentStockBLL.cs" />
+    <Compile Include="DAL\DocumentDAL.cs" />
+    <Compile Include="DAL\DocumentInvoiceDAL.cs" />
+    <Compile Include="DAL\DocumentOrderAttachDAL.cs" />
+    <Compile Include="DAL\DocumentOrderDAL.cs" />
+    <Compile Include="DAL\DocumentOrderDetailDAL.cs" />
+    <Compile Include="DAL\DocumentOrderInvoiceDAL.cs" />
+    <Compile Include="DAL\DocumentOrderStockDAL.cs" />
+    <Compile Include="DAL\DocumentStockDAL.cs" />
+    <Compile Include="DocumentStatusEnum.cs" />
+    <Compile Include="IDAL\IDocumentDAL.cs" />
+    <Compile Include="IDAL\IDocumentInvoiceDAL.cs" />
+    <Compile Include="IDAL\IDocumentOrderAttachDAL.cs" />
+    <Compile Include="IDAL\IDocumentOrderDAL.cs" />
+    <Compile Include="IDAL\IDocumentOrderDetailDAL.cs" />
+    <Compile Include="IDAL\IDocumentOrderInvoiceDAL.cs" />
+    <Compile Include="IDAL\IDocumentOrderStockDAL.cs" />
+    <Compile Include="IDAL\IDocumentStockDAL.cs" />
+    <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\DocumentInvoice.cs" />
+    <Compile Include="Model\DocumentOrder.cs" />
+    <Compile Include="Model\DocumentOrderAttach.cs" />
+    <Compile Include="Model\DocumentOrderDetail.cs" />
+    <Compile Include="Model\DocumentOrderInvoice.cs" />
+    <Compile Include="Model\DocumentOrderStock.cs" />
+    <Compile Include="Model\DocumentStock.cs" />
+    <Compile Include="Model\OrderStockInvoice.cs" />
+    <Compile Include="OrderTypeEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskProvider\DocumentTaskProvider.cs" />
+    <Compile Include="TaskProvider\OrderTaskProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2ce37c4e-daee-4370-bf0e-56f7628bb299}</Project>
+      <Name>Common %28Common\Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{6a58d209-0eba-4e67-8570-78e7f609d1ef}</Project>
+      <Name>Contract %28Contract\Contract%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{f80e8ea5-0e37-498a-9f8a-28057009ce76}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{97ea2492-4499-40da-a305-1538d4406ce1}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invoice\Invoice.csproj">
+      <Project>{177ad775-a4fb-41d9-9c11-419cb954dd2b}</Project>
+      <Name>Invoice %28Invoice\Invoice%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\User\User.csproj">
+      <Project>{d10c059f-3a20-4f98-a5dd-d16fc215a4e0}</Project>
+      <Name>User %28User\User%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WareHouse\WareHouse.csproj">
+      <Project>{b379fdab-4cf5-4b2d-a55c-17a091e94459}</Project>
+      <Name>WareHouse %28WareHouse\WareHouse%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WorkFlow\WorkFlow.csproj">
+      <Project>{b0fd1659-24f8-44d8-ad2f-1695385dd55b}</Project>
+      <Name>WorkFlow %28WorkFlow\WorkFlow%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

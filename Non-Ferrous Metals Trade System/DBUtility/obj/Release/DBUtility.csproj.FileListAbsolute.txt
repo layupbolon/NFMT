@@ -1,0 +1,4 @@
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\bin\Release\NFMT.DBUtility.dll
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\bin\Release\NFMT.DBUtility.pdb
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\obj\Release\NFMT.DBUtility.dll
+D:\DefaultCollection\Non-Ferrous Metals Trade System\DBUtility\obj\Release\NFMT.DBUtility.pdb
